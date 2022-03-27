@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* CLASS  */
+
+.BOX{
+	background-color: #FFFFFF;
+	position: relative;
+	margin: 5px;
+	float: left;
+	padding: 10px;
+	}
+	
+.SUBSECTION{
+	background-color: #161C87;
+	position: relative;
+	float: left;
+	margin: 5px;
+	padding: 10px;
+	height: 50px;
+	width: 960px;
+	}
+
+.BOX13{
+	background-color: #FFFFFF;
+	position: relative;
+	margin: 5px;
+	float: left;
+	padding: 10px;
+	width: 300px;
+	height: 226px;
+	}
+	
+.BOX23{
+	background-color: #FFFFFF;
+	position: relative;
+	margin: 5px;
+	float: left;
+	padding: 10px;
+	width: 630px;
+	height: 226px;
+	}
+	
+	
+.BOX11{
+	background-color: #FFFFFF;
+	position: relative;
+	margin: 5px;
+	float: left;
+	padding: 10px;
+	width: 960px;
+	}
+	
+.BOX13L{
+	background-color: #FFFFFF;
+	position: relative;
+	margin: 5px;
+	float: left;
+	padding: 10px;
+	width: 300px;
+	height: 400px;
+	}
+	
+.BOX23L{
+	background-color: #FFFFFF;
+	position: relative;
+	margin: 5px;
+	float: left;
+	padding: 10px;
+	width: 630px;
+	height: 400px;
+	}
+	
+	
+.BOX11L{
+	background-color: #FFFFFF;
+	position: relative;
+	margin: 5px;
+	float: left;
+	padding: 10px;
+	width: 960px;
+	height: 400px;
+	}
+	
+	
+/* Styles */	
+	
+	p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+	text-align:justify;
+	}
+	
+	li {
+    font-family: "Times New Roman";
+    font-size: 20px;
+	}
+	
+	dl {
+    font-family: "Times New Roman";
+    font-size: 20px;
+	}
+
+/* ID */
+
+/* Background*/
+#BACKGROUND {
+	background-attachment: fixed;
+	background-color: #3E72A1;
+	background-image: url(IMG/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 3160px;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Section mobile de la page*/
+#ALL {
+	width: 990px;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+/* Entête principale*/
+#BANNER {
+	background-color: #000066;
+	height: 90px;
+	width: 980px;
+	padding: 0px;
+}
+#BANNER a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#BANNER a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+#BANNER a:hover {
+	text-decoration: underline;
+	color: #E88600;
+}
+#BANNER a:active {
+	text-decoration: underline;
+	color: #00F;
+}
+#ALL #BANNER #Banner_Menu {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	color: #FFF;
+}
+#ALL #BANNER #Banner_Menu p {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#MAIN {
+	width: 960px;
+	height: 120px;
+}
+
+
+
+/* Message d'acceuil principale*/
+#MAIN {
+	width: 960px;
+	height: 120px;
+}
+
+
+h2 {
+	font-size: 36px;
+	color: #FFF;
+	font-family: "Comic Sans MS", cursive;
+	margin-top: 0px;
+	margin-left: 10px;
+}
