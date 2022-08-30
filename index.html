@@ -1,108 +1,144 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="test" />
-<meta name="keywords" content="alexandre,girard" />
-<meta name="subject" content="test" />
-<meta name="classification" content="test" />
+<title>Alex Robotics</title>
+<meta charset="UTF-8">
 <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="copyright" content="Tous droits réservé à Alexandre Girard" />
-<meta NAME="RATING" CONTENT="General">
-<meta NAME="DISTRIBUTION" CONTENT="Global">
-<title>Alexandre Girard </title>
-<link href="oldalex.css" rel="stylesheet" type="text/css" />
-<!--
-<link rel="shortcut icon" href="ico32.ico">
--->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-
-
-
 <body>
 
-<div id="BACKGROUND">
-
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#material" class="w3-bar-item w3-button">Material</a>
+      <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
+      <!--  <a href="#students" class="w3-bar-item w3-button">Students</a> -->
+      <!-- <a href="#clients" class="w3-bar-item w3-button">Clients</a> -->
+      <a href="#contact" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
 </div>
 
-<div id="ALL">
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="IMG/bg3.jpg" alt="sky" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
+  </div>
+</header>
 
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
 
-<div class="BOX" id="BANNER">
-  <img src="hd2.gif" width="980" height="90" alt="CAMUS" />
-      <div id="Banner_Menu">
-      <p>| <a href="index.html">Main</a> | <a href="dp0.html">DP</a> | <a href="gro501.html">GRO501</a> | <a href="#D">Contact</a> |</p>
+  <!-- Intro -->
+  <div class="w3-container w3-padding">
+    <p>This page is under construction! please see <a href="https://alexandregirard.ca"> www.alexandregirard.ca </a> for my complete portfolio
+    </p>
+  </div>
+
+  <!-- Teaching material-->
+  <div class="w3-container w3-padding-32" id="material">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Learning material</h3>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="dp0.html"> Dynamic programming, reinforcement learning and optimal control</a>
+        </div>
+        <iframe style="width:100%" height="250" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="https://www.youtube.com/c/AlexandreGirard87"> Robotics videos (modeling and controls) </a>
+        </div>
+        <iframe style="width:100%" height="250" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="https://github.com/SherbyRobotics/pyro"> Pyro: A python toolbox for robotics </a>
+        </div>
+        <img src="IMG/rocket.gif" height="250" alt="rocket" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="PDF/Notes_Robotique_UdeS.pdf">
+          Lecture Notes on Robotics </a>
+        </div>
+        <img src="IMG/base.png" height="250" alt="p4" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="portfolio">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Research Portfolio</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Project 1</div>
+        <img src="IMG/bg3.jpg" alt="p1" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Project 2</div>
+        <img src="IMG/bg3.jpg" alt="p2" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Project 3</div>
+        <img src="IMG/bg3.jpg" alt="p3" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Project 4</div>
+        <img src="IMG/bg3.jpg" alt="p4" style="width:100%">
+      </div>
+    </div>
   </div>
 
 
-<!-- Voici un commentaire -->
-<div class="BOX13" id="intro">
-    <p>
-      This page is under construction! please see <a href="https://alexandregirard.ca"> www.alexandregirard.ca </a>
-      <ul>
-        <li>Portfolio of my robotic projets</li>
-        <li>Learning robotics material</li>
-        <li>Information on robotics at UdeS</li>
-      </ul> 
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p> Greetings! I am Alexandre Girard a roboticist and Professor at Université de Sherbrooke, Qc, Canada.  I am especially interested in the science of controlling how things move, from mechanical design up to control laws and algorithms: robots, mechanisms, actuators, sensors, vehicles, etc. Feel free to contact me if your are interested in robotics research projects!
     </p>
   </div>
 
- <!-- Voici un commentaire -->
-<div class="BOX23" id="intropic">
-<a href="index.html"><img src="630x226.jpg" width="630" height="226" alt="630x226" /></a>
-  </div>
 
 
-  <!-- Voici un commentaire -->
-<div class="SUBSECTION" id="A">
-    <h2>A</h2>
-  </div>
-
-  <div class="BOX13L" id="B1">
-    <p>Université de Sherbrooke </p>
-  </div>
-
-<div class="BOX23L" id="B2">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.562190830133!2d-71.93147178469825!3d45.377829047223955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb7b34b54d801d9%3A0x40c883635033470a!2sUniversit%C3%A9%20de%20Sherbrooke!5e0!3m2!1sen!2sca!4v1648399467655!5m2!1sen!2sca" width="630" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
-
-<div class="SUBSECTION" id="C">
-    <h2>C</h2>
-  </div>
-
-   <div class="BOX11" id="C1">
-    <p> 123!
-    </p>
-  </div>
 
 
-<div class="SUBSECTION" id="D">
-    <h2>Contact</h2>
-  </div>
 
 
-<!-- Voici un commentaire -->
 
-  <div class="BOX13" id="D1">
-  <center>
-  <h3> Alexandre Girard </h3> <h4> xxx@ <br> xxx-xxx-xxxx </h4>
-  </center>
-  </div>
-
-   <div class="BOX13" id="D2">
-   <center>
-   <h3>  abc  </h3>
-   <h4> abc <br> xxx-xxx-xxxx     </h4>
-   </center>
-  </div>
-
-  <div class="BOX13" id="Contactinfopic">
-	<a href="index.html"><img src="300x226.jpg" width="300" height="226" alt="3000x226" /></a>
-  </div>
-
-
+<!-- End page content -->
 </div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
+  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
+  LinkedIn.com/in/alx87grd </a>  </p>
+</footer>
+
 </body>
 </html>
