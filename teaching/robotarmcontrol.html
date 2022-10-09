@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Robotic Arm Controls</title>
+<meta charset="UTF-8">
+<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+    <!-- Float links to the right. Hide them on small screens 
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Button 1</a>
+    </div>
+  -->
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <div class="w3-container w3-padding-16" id="preface">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Robotics Arm Controls
+     </h1>
+     <p> 
+      This page presents a quick overview of robot arms control schemes, from traditionnal point-to-point position controls, to force and impedance control in the context of collaborative robots.
+    </p>
+  </div>
+
+  <div class="w3-row-padding">
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Video lectures (In French)
+     </h2>
+
+    <div class="w3-col l6 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+          <p> Une série de capsules vidéos associés est disponible au lien à droite:
+          </p>
+      </div>
+    </div>
+
+    <div class="w3-col l6 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <iframe style="width:100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-container w3-padding-16">
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Introduction
+    </h2>
+
+    <p> 
+      Blablablba
+    </p>
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Modeling
+    </h2>
+
+    Most robot arm control schemes use a kinematic and/or a dynamic model of the arm. Here this section presents an overview of the different types of model that controllers will leverage and the nomenclature. 
+
+    <h3> Kinematics</h3>
+
+    <p> 
+      Forward kinematic:
+      
+      \begin{align}
+      r = f( q )
+      \end{align}
+      
+    </p> 
+
+    <h3> Differential kinematic </h3>
+
+    \begin{align}
+      \dot{r} = J(q) \dot{q}  \quad \text{with} \quad J(q) = \frac{\partial f}{\partial q}
+      \end{align}
+
+    <h3>Dynamics</h3>
+
+    <p> 
+      \begin{align}
+          H(q) \ddot{q} + C(q,\dot{q})\dot{q} + d(q,\dot{q}) + g(q) = B(q) \tau + J(q)^T f_e
+      \end{align}
+    </p>
+    
+    
+
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
+  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
+  LinkedIn.com/in/alx87grd </a>  </p>
+</footer>
+
+</body>
+</html>
