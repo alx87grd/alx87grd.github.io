@@ -78,14 +78,20 @@
     </h2>
 
     <p> 
-      Blablablba
+      Controlling the motion of robotic arms is often basically answering the question: <b>What current should be sent to the electric motors so that the tool the robot is holding follow a desired $(x,y,z)$ trajectory? </b> 
+
+      A robotic task is often described as imposing either a position, an orientation or a force, with a tool attached at the tip of a multi-body mechanical system. 
+    </p>
+
+    <p> 
+      Because the motion a robotic arm is caracterized my coupled highly non-linear equations, many classical controls tools (such as transfer functions) cannot be leveraged. This is why specific techniques and tools, presented in these note, were developped for robot arm control.
     </p>
 
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
       Modeling
     </h2>
 
-    Most robot arm control schemes use a kinematic and/or a dynamic model of the arm. Here this section presents an overview of the different types of model that controllers will leverage and the nomenclature. 
+    Most robot arm control schemes use a kinematic and/or a dynamic model of the arm. Here this section presents an overview and the nomenclature for the different types of model that control schemes leverage. 
 
     <h3> Kinematics</h3>
 
@@ -94,6 +100,10 @@
       
       \begin{align}
       r = f( q )
+      \end{align}
+
+      \begin{align}
+      r \in \Re^m \quad q \in \Re^n
       \end{align}
       
     </p> 
