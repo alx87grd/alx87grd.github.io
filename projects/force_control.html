@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Multi-modal hydrostatic actuators for robotics </title>
+<title> Controllers for high-performance force control </title>
 <meta charset="UTF-8">
 <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,72 +32,62 @@
 
   <div class="w3-container w3-padding-16" >
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-      Multi-modal hydrostatic actuators for robotics
+      Controllers for high-performance force control
      </h1>
      <p>
-      Wearable robots are limited by their actuators performances because they must bear the weight of their own power system and energy source. Our research explores the idea of leveraging hybrid modes to meet multiple operating points with a lightweight and efficient system by using hydraulic valves to dynamically reconfigure the connections of a hydrostatic actuator.
+      Controlling the interaction force with the environment is critical for many robotics application, in particular when a human user interact with a robot. This project developped and evaluated controllers for high-precision control of the output force, for system using MR-hydrostatic actuators built in the lab. Multiple control scheme were developped, evaluated experimentally and compared. 
     </p>
   </div>
 
   <div class="w3-row-padding">
 
-    <div class="w3-col l4 m6 w3-margin-bottom">
+    <div class="w3-col l6 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <iframe style="width:100%"  height="250" src="https://www.youtube.com/embed/kcl44VtfPZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="w3-display-topleft w3-black w3-padding">
+          Open-loop controller
+        </div>
+        <img src="../IMG/force_control_open_loop.png" alt="p1" style="width:100%"  height="250">
       </div>
     </div>
 
-    <div class="w3-col l4 m6 w3-margin-bottom">
+    <div class="w3-col l6 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">
-          Concept for a wearable robot
+          PID controller
         </div>
-        <img src="../IMG/hydrostatic.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+        <img src="../IMG/force_control_pid.png" alt="p1" style="width:100%"  height="250">
       </div>
     </div>
 
-    <div class="w3-col l4 m6 w3-margin-bottom">
+    <div class="w3-col l6 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">
-          Prototype bimodal leg
+          State-feedback controller
         </div>
-        <img src="../IMG/bi_modal_leg.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+        <img src="../IMG/force_control_ss.png" alt="p1" style="width:100%"  height="250">
       </div>
     </div>
 
   </div>
 
-
   <div class="w3-container w3-padding-16" >
      <p>
-      
+      <b>Technical challenges:</b> Actuator design, control scheme, impedance control.
+     </p>
+     <p>
+      <b>UdeS Team:</b> Jeff Denis (MS), Prof. Alexandre Girard and Prof. Jean-Sébastien Plante
      </p>
 
-     <div class="w3-container w3-padding-16" >
-      <p>
-       <b>Technical challenges:</b> Actuator design, mechatronics, hybrid systems, fluid mechanics. 
-      </p>
-      <p>
-        <b>UdeS Team:</b> Jeff Denis (PhD student), Alex Lecavalier (MS student) and Prof. Alexandre Girard
-      </p>
- 
-     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-       Scientific articles:
-     </h3>
- 
-     <ul class="w3-ul">
-      <li>Article: <a href="https://arxiv.org/abs/2207.02619"> Multimodal Hydrostatic Actuators for Wearable Robots: A Preliminary Assessment of Mass-Saving and Energy-Efficiency Opportunities </a></li>
-      <li>Article: <a href="https://arxiv.org/abs/2210.05765"> A Bimodal Hydrostatic Actuator for Robotic Legs with Compliant Fast Motion and High Lifting ForceA Bimodal Hydrostatic Actuator for Robotic Legs with Compliant Fast Motion and High Lifting Force </a></li>
-     </ul>
- 
-     </div>  
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+      Scientific articles:
+    </h3>
 
+    <ul class="w3-ul">
+      <!-- <li>Video:<a href="https://youtu.be/yhB-XCkH5u0"> Video</a> </li> -->
+      <li> <a href="https://ieeexplore.ieee.org/document/9369880"> Low-level force-control of MR-hydrostatic actuators  </a></li>
+    </ul>
 
-
-</div>
-
-
-
+    </div>
 
 
 </div>
