@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GMC714 - Robotique: modélisation et commande</title>
+<meta charset="UTF-8">
+<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+    <!-- Float links to the right. Hide them on small screens 
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Button 1</a>
+    </div>
+  -->
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>GMC714</b></span> <span class="w3-hide-small w3-text-light-grey">Robotique</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <div class="w3-container w3-padding-16" id="preface">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Robotique: modélisation et commande
+     </h1>
+     <p> 
+      Nouveau cours à option offert à l'hiver 2022
+    </p>
+  </div>
+
+  <div class="w3-row-padding">
+  
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          Génération de trajectoire optimales pour bras robotiques articulés
+        </div>
+        <img src="../IMG/double_pendulum_swing_up.gif" style="width:100%; height:250px; object-fit: cover">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          Synthétiser des loi de commande pour véhicules
+        </div>
+        <img src="../IMG/rocket.gif" style="width:100%; height:250px; object-fit: cover">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          Planifier des trajectoires
+        </div>
+        <img src="../IMG/compressed_gif/drone.gif" style="width:100%; height:250px; object-fit: cover">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          Synthétiser des loi de commande optimales
+        </div>
+        <img src="../IMG/active_suspension.gif" style="width:100%; height:250px; object-fit: cover">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-container w3-padding-16">
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Cible de formation
+    </h2>
+
+    <p> 
+      Modéliser et analyser le mouvement des robots en utilisant les outils mathématiques adaptés. Choisir un type de modèle et une méthode de commande adapté à un problème de contrôle du mouvement. Mettre en œuvre des algorithmes de commande et de planification de trajectoires pour divers types de systèmes robotiques.
+    </p>
+
+
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Contenu Détaillé
+    </h2>
+
+    <table class="w3-table w3-border">
+      <tr>
+        <th>Éléments</th>
+        <th>Semaines</th>
+      </tr>
+
+      <tr>
+        <td>
+          <h3> Chapitre 1 - Introduction à la robotique </h3> 
+          <ul >
+            <li> Tour d’horizon des défis en robotique</li>
+            <li> Type de modèle (cinématique vs. dynamique)</li>
+            <li> Équation dynamique commune (F=ma pour robots)</li>
+          </ul>
+        </td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>
+          <h3> Chapitre 2 - Bras robotiques articulés </h3> 
+          <ul >
+            <li>Modélisation et analyse géométrique (matrice Jacobienne) </li>
+            <li>Modélisation (méthode de Lagrange) et analyse dynamique </li>
+            <li>Analyse cinématique (espace de travail et singularités) et dynamique (matrice d’inertie, bilan énergétique et stabilité)</li>
+            <li>Dynamique et comportement des actionneurs</li>
+            <li>Commande en position, force, impédance et admittance</li>
+            <li>Stabilité avec la méthode de Lyapunov </li>
+            <li>Méthode du couple calculé, variante robuste et adaptative </li>
+          </ul>
+        </td>
+        <td>2 à 5</td>
+      </tr>
+      <tr>
+        <td>
+          <h3> Chapitre 3 -  Véhicules (drones, robots mobiles et véhicules autonomes)</h3> 
+          <ul >
+            <li>Modèles dynamiques simplifiés (2D, bicyclette, quart de véhicule, courbe d’adhérence des roues, etc.) </li>
+            <li>Navigation et planification de trajectoires </li>
+            <li>Méthodes numériques de commande et de planification (programmation dynamique, apprentissage par renforcement, algorithmes de recherche et algorithmes d’optimisation) </li>
+            <li>Architectures de commande et stabilisation d’une trajectoire en boucle fermée </li>
+          </ul>
+        </td>
+        <td>6 à 9</td>
+      </tr>
+      <tr>
+        <td>
+          <h3> Chapitre 4 - Tour d’horizon des méthodes avancées en robotique </h3> 
+          <ul >
+            <li>Présentations sur les derniers avancements dans le domaine</li>
+            <li>Études de cas et exemples (robots marcheurs, manipulation, drones, véhicules autonomes, exosquelettes, etc.) </li>
+          </ul>
+        </td>
+        <td>10 à 12</td>
+      </tr>
+      <tr>
+        <td>
+          <h3> Projet de session </h3> 
+          <ul >
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+          </ul>
+        </td>
+        <td>13</td>
+      </tr>
+    </table>
+
+   
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Objectifs spécifiques
+    </h2>
+
+    <h3> À la fin de cette activité pédagogique, l’étudiante ou l’étudiant sera capable de… </h3>
+
+    <ul class="w3-ul w3-border">
+      <li> <h3>Modéliser et analyser le mouvement des robots en utilisant les outils mathématiques adaptés:</h3></li>
+      <li>Développer un modèle cinématique d’un robot articulé; </li>
+      <li> Analyser les caractéristiques géométriques d’un robot (singularités, espace de travail);</li>
+      <li> Utiliser la méthode de Lagrange pour synthétiser les équations dynamiques d’un robot;</li>
+      <li> Analyser les caractéristiques d’un système dynamique non-linéaire d’ordre deux (matrice d’inertie, force conservatives, forces dissipatives, points fixes et stabilité);</li>
+      <li>Analyser la stabilité d’un système robotisé asservis; </li>
+      <li> Développer et utiliser des modèles dynamiques simples de drones et de véhicules.</li>
+      <li> <h3>Choisir un type de modèle et une méthode de commande adapté à un problème de contrôle du mouvement: </h3></li>
+        <li> Comparer les avantages et inconvénients des méthodes de commande modernes ;</li>
+        <li> Choisir un type de modèle adapté au contexte pour analyser le mouvement d’un robot;</li>
+        <li> Choisir une loi de commande adaptée à l’objectif pour robotiser une tâche de manipulation;</li>
+        <li> Déterminer le type d’algorithme le plus adapté pour planifier des trajectoires pour un véhicule;</li>
+        <li> Déterminer quand il est pertinent et utile d’utiliser une méthode de commande avancée.</li>
+      <li> <h3>Mettre en œuvre des algorithmes de commande et de planification de trajectoires pour divers types de systèmes robotiques:</h3></li>
+      <li> Utiliser les grandes familles de lois de commande pour les robots articulés (position, force et impédance);</li>
+      <li> Traduire un objectif de performance en une fonction de coût à minimiser;</li>
+      <li> Formuler un problème de planification de trajectoire comme une optimisation mathématique;</li>
+      <li> Utiliser des approches numériques pour chercher ou optimiser une trajectoire pour un robot;</li>
+      <li> Écrire un programme informatique qui met en œuvre une loi de commande;</li>
+      <li> Évaluer la performance d’une loi de commande dans un environnement de simulation.</li>
+    </ul>
+
+    
+
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
+  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
+  LinkedIn.com/in/alx87grd </a>  </p>
+</footer>
+
+</body>
+</html>
