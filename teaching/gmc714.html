@@ -63,12 +63,17 @@
           La science du mouvement
         </h3>
         <p> 
-          Ce cours présente les outils mathématiques pour analyser le mouvement et synthétiser des algorithmes pour le contrôler
+          Ce cours présente les outils mathématiques pour analyser le mouvement et synthétiser des algorithmes pour le contrôler, des méthodes classiques basées sur un modèle jusqu'à l'apprentissage par renforcement.
         </p>
 
         <h3>
           Bras articulés, véhicules autonomes, drones, etc.
         </h3>
+
+        <p> 
+          Le cours présente des modèles cinématiques et dynamiques courament utilisé pour developper des loi de commandes et planifier des trajectoires pour les principaux types de systèmes robotiques.
+        </p>
+
       </div>
     </div>
 
@@ -89,7 +94,7 @@
         <div class="w3-display-topleft w3-black w3-padding">
           Génération de trajectoire optimales pour bras robotiques articulés
         </div>
-        <img src="../IMG/double_pendulum_swing_up.gif" style="width:100%; height:250px; object-fit: cover">
+        <img src="../IMG/compressed_gif/double_pendulum_swing_up.gif" style="width:100%; height:250px; object-fit: cover">
       </div>
     </div>
 
@@ -98,7 +103,7 @@
         <div class="w3-display-topleft w3-black w3-padding">
           Synthétiser des loi de commande pour véhicules
         </div>
-        <img src="../IMG/rocket.gif" style="width:100%; height:250px; object-fit: cover">
+        <img src="../IMG/compressed_gif/rocket.gif" style="width:100%; height:250px; object-fit: cover">
       </div>
     </div>
 
@@ -116,7 +121,7 @@
         <div class="w3-display-topleft w3-black w3-padding">
           Synthétiser des loi de commande optimales
         </div>
-        <img src="../IMG/active_suspension.gif" style="width:100%; height:250px; object-fit: cover">
+        <img src="../IMG/compressed_gif/active_suspension.gif" style="width:100%; height:250px; object-fit: cover">
       </div>
     </div>
 
@@ -125,11 +130,19 @@
   <div class="w3-container w3-padding-16">
 
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
-      Cible de formation
+      Cibles de formation
     </h2>
 
+    <h4>À la fin de ce cours vous serez en mesure de:</h4>
+
     <p> 
-      Modéliser et analyser le mouvement des robots en utilisant les outils mathématiques adaptés. Choisir un type de modèle et une méthode de commande adapté à un problème de contrôle du mouvement. Mettre en œuvre des algorithmes de commande et de planification de trajectoires pour divers types de systèmes robotiques.
+      Modéliser et analyser le mouvement des robots en utilisant les outils mathématiques adaptés. 
+    </p>
+    <p> 
+      Choisir un type de modèle et une méthode de commande adapté à un problème de contrôle du mouvement. 
+    </p>
+    <p> 
+      Mettre en œuvre des algorithmes de commande et de planification de trajectoires pour divers types de systèmes robotiques.
     </p>
 
 
@@ -140,24 +153,32 @@
 
     <table class="w3-table w3-border">
       <tr>
-        <th>Éléments</th>
         <th>Semaines</th>
+        <th>Sujets</th>
+        <th>Travaux</th>
       </tr>
 
       <tr>
+        <td>1</td>
         <td>
-          <h3> Chapitre 1 - Introduction à la robotique </h3> 
+          <h4> Chapitre 1 - Introduction à la robotique </h4> 
           <ul >
             <li> Tour d’horizon des défis en robotique</li>
             <li> Type de modèle (cinématique vs. dynamique)</li>
             <li> Équation dynamique commune (F=ma pour robots)</li>
           </ul>
         </td>
-        <td>1</td>
+        <td>
+          <ul >
+            <li> Devoirs #1</li>
+          </ul>
+        </td>
+        
       </tr>
       <tr>
+        <td>2 à 5</td>
         <td>
-          <h3> Chapitre 2 - Bras robotiques articulés </h3> 
+          <h4> Chapitre 2 - Bras robotiques articulés </h4> 
           <ul >
             <li>Modélisation et analyse géométrique (matrice Jacobienne) </li>
             <li>Modélisation (méthode de Lagrange) et analyse dynamique </li>
@@ -168,11 +189,19 @@
             <li>Méthode du couple calculé, variante robuste et adaptative </li>
           </ul>
         </td>
-        <td>2 à 5</td>
+        <td>
+          <ul >
+            <li> Devoirs #2</li>
+            <li> Devoirs #3</li>
+            <li> Devoirs #4</li>
+            <li> Devoirs #5</li>
+          </ul>
+        </td>
       </tr>
       <tr>
+        <td>6 à 9</td>
         <td>
-          <h3> Chapitre 3 -  Véhicules (drones, robots mobiles et véhicules autonomes)</h3> 
+          <h4> Chapitre 3 -  Véhicules (drones, robots mobiles et véhicules autonomes)</h4> 
           <ul >
             <li>Modèles dynamiques simplifiés (2D, bicyclette, quart de véhicule, courbe d’adhérence des roues, etc.) </li>
             <li>Navigation et planification de trajectoires </li>
@@ -180,33 +209,80 @@
             <li>Architectures de commande et stabilisation d’une trajectoire en boucle fermée </li>
           </ul>
         </td>
-        <td>6 à 9</td>
-      </tr>
-      <tr>
         <td>
-          <h3> Chapitre 4 - Tour d’horizon des méthodes avancées en robotique </h3> 
+          <ul >
+            <li> Devoirs #6</li>
+            <li> Devoirs #7</li>
+            <li> Devoirs #8</li>
+            <li> Examen</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>10 à 13</td>
+        <td>
+          <h4> Chapitre 4 - Tour d’horizon des méthodes avancées en robotique </h4> 
           <ul >
             <li>Présentations sur les derniers avancements dans le domaine</li>
             <li>Études de cas et exemples (robots marcheurs, manipulation, drones, véhicules autonomes, exosquelettes, etc.) </li>
           </ul>
         </td>
-        <td>10 à 12</td>
-      </tr>
-      <tr>
         <td>
-          <h3> Projet de session </h3> 
+          <h4> Projet de session  </h4> 
           <ul >
-            <li> </li>
-            <li> </li>
-            <li> </li>
-            <li> </li>
-            <li> </li>
-            <li> </li>
+            <li>Un projet au choix de l'étudiant impliquant des notions du cours. </li>
+            <li>L’évaluation du projet consistera en une présentation finale devant la classe </li>
           </ul>
         </td>
-        <td>13</td>
       </tr>
     </table>
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Déroulement du cours
+    </h2>
+
+    <h4> Périodes de formation (3hr/semaines) : </h4> 
+      <p>Les périodes de formation seront principalement des leçons magistrales et des démonstrations en classe dirigée par l’enseignant.
+
+    <h4> Travaux pratiques (2hr/semaines): </h4> 
+      <p>Les travaux pratiques consisteront en des séances en classe d’exercices dirigés soit théoriques (papier-crayon) soit informatique (basé sur un site web interactif) ainsi que des périodes de consultations pour les devoirs ou le projet.</p>
+
+    <h4> Étude personnelle : </h4> 
+      <p>Des lectures et l’écoute de vidéos seront suggérées à chaque semaine pour complémenter les leçons magistrales.</p>
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Modalités d'évaluation
+    </h2>
+
+    <h4>  Devoirs: </h4>
+   
+    <ul >
+      <li>Pour les 8 premières semaines du cours il y aura des devoirs hebdomadaires.    </li>
+      <li>Seul les 5 meilleurs seront considérés dans la note, les étudiants peuvent donc choisir de travailler et remettre seulement 5 devoirs.     </li>
+      <li> Les étudiants qui auraient déjà suivi le cours GRO640 devront choisir 5 devoirs parmi 6 devoirs, deux seront exclus car redondant avec le cours.   </li>
+      <li> Les devoirs consisteront en un mixte d’exercices analytiques (papier crayon) et numériques (à faire à l’ordinateur).   </li>
+      <li> L’évaluation des devoirs sera faite de façon globale avec une échelle descriptive de cinq niveaux.   </li>
+      <li> Une rétroaction détaillée sur les devoirs sera faite sur demande.   </li>
+      <li> Les devoirs seront à remettre au début du cours de la semaine qui suit la diffusion du devoir (les dates exactes seront communiquées à chaque semaine).   </li>
+    </ul>
+
+    <h4>  Examen: </h4>
+   
+    <ul >
+      <li> Il y aura un examen théorique de 3h à la semaine 9 du cours.  </li>
+      <li> Une feuille de note manuscrite personnelle recto-verso sera permise durant les examens.   </li>
+    </ul>
+
+    <h4>  Projet: </h4>
+   
+    <ul >
+      <li> Un projet individuel au choix des étudiant sera l’activité principale du dernier mois du cours.  </li>
+      <li> Le projet devra impliquer des notions de modélisation et/ou commande reliées aux sujets abordés dans le cours.  </li>
+      <li> La définition du projet sera validée par l’enseignant en cours de session.  </li>
+      <li> Les attentes sont des résultats théorique ou numérique (simulations).  </li>
+      <li> L’évaluation du projet consistera en une présentation finale devant la classe.  </li>
+    </ul>
 
    
   <!--
