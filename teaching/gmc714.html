@@ -27,6 +27,11 @@
       <a href="index.html" class="w3-bar-item w3-button">Button 1</a>
     </div>
   -->
+    <div class="w3-right w3-hide-small">
+      <a href="#intro" class="w3-bar-item w3-button"> Intro </a>
+      <a href="#dap" class="w3-bar-item w3-button"> DAP </a>
+      <a href="#guide" class="w3-bar-item w3-button"> Guide </a>
+    </div>
   </div>
 </div>
 
@@ -41,7 +46,7 @@
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
-  <div class="w3-container w3-padding-16" id="preface">
+  <div class="w3-container w3-padding-16" id="intro">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
       Robotique: modélisation et commande
      </h1>
@@ -72,7 +77,7 @@
         </h3>
         <p> 
           Le cours se donnera le vendredi de 9h à 12h au P2-1002. Veuillez me contacter directement (alex.girard@usherbrooke.ca) pour vous inscrire. La page guide pour l'hiver 2023 est ici: 
-          <a href="https://www.alexandregirard.com/teaching/GMC714/guide.html" ><b>GMC714_Guide_H23</b> </a>
+          <a href="#guide" ><b>GMC714_Guide_H23</b> </a>
         </p>
 
       </div>
@@ -132,12 +137,21 @@
   </div>
 
   <div class="w3-row-padding">
+
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="dap"> 
+      Dossier d'activité pédagogique
+    </h1>
+
+  </div>
+
+  <div class="w3-row-padding">
   
-    <div class="w3-col l6 m6 s12 w3-margin-bottom">
+    <div class="w3-col l6 m6 s12 w3-margin-bottom" >
       <div class="w3-display-container">
-        <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
           Cibles de formation
-        </h2>
+        </h3>
     
         <h4>À la fin de ce cours vous serez en mesure de:</h4>
   
@@ -174,9 +188,9 @@
 
   <div class="w3-container w3-padding-16">
 
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
       Contenu Détaillé
-    </h2>
+    </h3>
 
     <table class="w3-table w3-border">
       <tr>
@@ -265,9 +279,9 @@
       </tr>
     </table>
 
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
       Déroulement du cours
-    </h2>
+    </h3>
 
     <h4> Périodes de formation (3hr/semaines) : </h4> 
       <p>Les périodes de formation seront principalement des leçons magistrales et des démonstrations en classe dirigée par l’enseignant.
@@ -278,9 +292,9 @@
     <h4> Étude personnelle : </h4> 
       <p>Des lectures et l’écoute de vidéos seront suggérées à chaque semaine pour complémenter les leçons magistrales.</p>
 
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
       Modalités d'évaluation
-    </h2>
+    </h3>
 
     <h4>  Devoirs: </h4>
    
@@ -342,6 +356,248 @@
       <li> Évaluer la performance d’une loi de commande dans un environnement de simulation.</li>
     </ul>
   -->
+
+  <div class="w3-container w3-padding-16" id="guide">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Guide du cours
+     </h1>
+     <p> 
+      Cette page présente les liens vers le matériel et les livrables semaines par semaines:
+    </p>
+
+
+    <table class="w3-table w3-border">
+      <tr>
+        <th>Cours</th>
+        <th>Matériel</th>
+        <th>Travaux</th>
+      </tr>
+
+      <tr>
+        <td>
+          <h4>1</h4>
+        </td>
+        <td>
+          <h4> Introduction </h4>
+
+          <ul >
+            <li>Introduction à la modélisation des bras robots: Chapitre 1 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+            <li>Types de modèles: <a href="https://youtu.be/D_HLuoPrD4w">
+               (vidéo)
+            </a> </li>
+            <li> Familles d'équations différentielles : <a href="https://youtu.be/2ifsprEkJYU">
+               (vidéo)
+            </a> </li>
+            <li> Équation des robots manipulateurs: <a href="https://youtu.be/G4FvIV4GE4Q">
+               (vidéo)
+            </a> </li>
+            <li>Introduction à commande des robots: Chapitre 7 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+
+        </td>
+        <td>
+          <a href="https://colab.research.google.com/drive/183p93qiatzJJJ6QXXZo47k0ZBcMiq5Ub?usp=sharing">
+            <h4> Devoir #1 </h4>
+          </a>
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          <h4>2</h4>
+        </td>
+        <td>
+          <h4>Bras articulés: cinématique</h4>
+
+          Révision ou rattrapage:
+
+          <ul >
+            <li>Les robots manipulateurs: Chapitre 2 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+            <li>Cinématique: Chapitre 3 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+            <li>Cinématique différentielle: Chapitre 4 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+
+          </ul>
+
+          
+        </td>
+        <td>
+          <h4>Devoir #2</h4>
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          <h4>3</h4>
+        </td>
+        <td>
+          <h4>Bras articulés: dynamique</h4>
+          <ul >
+            <li>Statique: Chapitre 5 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+            <li>Dynamique: Chapitre 6 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+        </td>
+        <td>
+          Devoir #3
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          4
+        </td>
+        <td>
+          Bras articulés: commande 1
+
+          <ul >
+            <li>Commande quasi-statique: Chapitre 8 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+        </td>
+        <td>
+          Devoir #4
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Bras articulés: commande 2
+
+          <ul >
+            <li>Commande dynamique: Chapitre 9 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+
+        </td>
+        <td>
+          Devoir #5
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          6
+        </td>
+        <td>
+          Véhicules: modélisation
+        </td>
+        <td>
+          Devoir #6
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          7
+        </td>
+        <td>
+          Véhicules: planification 1
+        </td>
+        <td>
+          Devoir #7
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          8
+        </td>
+        <td>
+          Véhicules: planification 2
+        </td>
+        <td>
+          Devoir #8
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          9
+        </td>
+        <td>
+          État de l'art: manipulation
+        </td>
+        <td>
+          Examen
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          10
+        </td>
+        <td>
+          État de l'art: voitures autonomes
+        </td>
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          11
+        </td>
+        <td>
+          État de l'art: robots marcheurs
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          12
+        </td>
+        <td>
+          Présentation des projets de session
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          13
+        </td>
+        <td>
+          Présentation des projets de session
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      
+
+
+    
+    </table>
+  </div>
     
 
 
