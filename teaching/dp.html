@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dynamic programming, optimal control and reinforcement learning</title>
+<title>Apprentissage par renforcement et commande optimale</title>
 <meta charset="UTF-8">
 <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,7 @@
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="800">
   <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>GR08XX</b></span> <span class="w3-hide-small w3-text-light-grey"> Apprentissage et commande </span></h1>
   </div>
 </header>
 
@@ -42,40 +42,74 @@
 <div class="w3-content w3-padding" style="max-width:1564px">
 
   <div class="w3-container w3-padding-16" id="preface">
+
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
       Apprentissage par renforcement et commande optimale
-     </h1>
-     <p> Le but du cours est de faire le lien entre le domaine des asservissements (ex. choix
-      des forces dans les actionneurs d’un robot) et les algorithmes de décision basé sur l’IA (ex :
-      choix de la pièce à déplacer lors d’une partie d’échec). Spoiler : Ce sont des problèmes
-      similaires qu’on peut attaquer avec le même genre d’algorithme! Le cours présentera les
-      outils pour vous permettre de de traduire un problème de décisions en temps réel sous la
-      représentation mathématique adapté pour synthétiser et optimiser un algorithme de
-      contrôle, avec des applications dans plusieurs domaines de la robotique à la finance.
-    </p>
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-col l6 m6 s6 w3-margin-bottom">
+    </h1>
+    
+    <div class="w3-col l6 m12 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          Coût à venir
-        </div>
-        <img src="../IMG/cost2go_animation.gif" style="width:100%; height:250px; object-fit: cover">
+
+        <h3>
+          Pourquoi ce cours?
+        </h3>
+        <p> 
+          <ul>
+            <li>Comprendre les fondements de l’apprentissage par renforcement et la commande optimale</li>
+            <li>Faire les liens avec la science des asservissements;</li>
+            <li>Apprendre à utiliser des algorithmes pour synthétiser des politiques optimales</li>
+          </ul>
+        </p>
+
+        <h5>
+          <em>Du choix des forces dans un robot jusqu'au choix de la pièce à déplacer dans un jeu d'échec.</em>
+        </h5>
+
+        <h3>
+          Quoi?
+        </h3>
+
+        <p> 
+          <ul>
+            <li>Principe d’optimalité: Équations de Bellman, fonction coût/récompense, contraintes, etc.
+            </li>
+            <li>Modèle d’évolution: Équations différentielles, Chaînes de Markov, Échantillonnage.
+            </li>
+            <li>Techniques de solution: Programmation dynamique, LQR, Apprentissage par Renforcement.
+            </li>
+          </ul>
+        </p>
+
+        <h3>
+          Quand et où?
+        </h3>
+        <p> 
+          UdeS Automne 2024, Horaire et locaux à venir!
+        </p>
+
       </div>
     </div>
 
     <div class="w3-col l6 m6 w3-margin-bottom">
+      
+
+      <h3> 
+        Une approche unifiée pour la science de la prise de decision en temps réel.
+      </h3>
+    
+      <p> 
+        Le but du cours est de faire le lien entre le domaine des asservissements et les algorithmes de décision basé sur l’IA. Le cours présentera les outils pour vous permettre de de traduire un problème de décisions en temps réel sous la représentation mathématique adapté pour synthétiser et optimiser une politique de décision, avec des applications dans plusieurs domaines de la robotique à la finance.
+      </p>
+
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">
-          Politique optimale
+          Vidéo de présentation du cours
         </div>
-        <img src="../IMG/policy_animation.gif" style="width:100%; height:250px; object-fit: cover">
+          <iframe style="width:100%" height="400"  src="https://www.youtube.com/embed/tbuEGkAQ1Lk?si=Uc6Y41mjVdl_umwZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </div>
-    </div>
 
-  </div>
+    </div>
 
   <div class="w3-row-padding">
 
@@ -268,6 +302,28 @@
 
       où $g$ est un coût cumulatif sur la trajectoire du système, $h$ est un coût terminal et $t_f$ est un horizon de temps. La forme cumulative de la fonction coût est centrale pour utiliser le principe de la programmation dynamique, mais ce n'est pas vraiment restrictif car pratiquement tout les objectifs peuvent être formulés comme la minimisation d'une fonction de coût avec cette forme. Lorsque que notre agent prend les meilleurs décisions possible en fonction de l'objectif on dira que sa loi de commande est optimale au sens qu'elle minimise la fonction de coût. 
     </p>
+
+    <div class="w3-row-padding">
+
+      <div class="w3-col l6 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            Coût à venir
+          </div>
+          <img src="../IMG/cost2go_animation.gif" style="width:100%; height:250px; object-fit: cover">
+        </div>
+      </div>
+  
+      <div class="w3-col l6 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            Politique optimale
+          </div>
+          <img src="../IMG/policy_animation.gif" style="width:100%; height:250px; object-fit: cover">
+        </div>
+      </div>
+  
+    </div>
     
     <h3>Minimiser un coût ou maximiser une récompense?</h3>
     
@@ -276,6 +332,8 @@
       On peut alternativement formuler l'objectif comme le problème de maximiser une récompense. Les deux approches sont équivalentes et interchangeables. Typiquement le domaine de la commande optimale utilise la formulation de minimiser un coût, qui est souvent relié à l'erreur par rapport à une trajectoire cible. Alternativement, le domaine de l'apprentissage par renforcement préfère optimiser une récompense, qui est souvent par exemple le pointage dans un jeux pour lequel une IA est développé.
 
     </p>
+
+    
 
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">  
     Exemples de contextes 
