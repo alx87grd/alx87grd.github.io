@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Apprentissage par renforcement et commande optimale</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="https://www.alexandregirard.com" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+    <div class="w3-right w3-hide-small">
+      <a href="#intro" class="w3-bar-item w3-button">Intro</a>
+      <a href="#DAP" class="w3-bar-item w3-button">DAP</a>
+      <a href="guide.html" class="w3-bar-item w3-button">Guide</a>
+      <a href="notes.html" class="w3-bar-item w3-button">Notes</a>
+      <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL"
+        class="w3-bar-item w3-button">Vidéos</a>
+    </div>
+  </div>
+</div>
+
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="IMG/bg3.jpg" alt="sky" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>GMC860</b></span> <span
+        class="w3-hide-small w3-text-light-grey"> </span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1500px">
+
+  <div class="w3-container w3-padding-16" id="preface">
+
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+      Apprentissage par renforcement et commande optimale
+    </h1>
+
+    <div class="w3-col l6 m12 w3-margin-bottom">
+      <div class="w3-display-container">
+
+        <h3>
+          Pourquoi ce cours?
+        </h3>
+        <p>
+        <ul>
+          <li>Comprendre les fondements de l’apprentissage par renforcement et la commande optimale</li>
+          <li>Faire les liens avec la science des asservissements;</li>
+          <li>Apprendre à utiliser des algorithmes pour synthétiser des politiques optimales</li>
+        </ul>
+        </p>
+
+        <h5>
+          <em>Du choix des forces dans un robot jusqu'au choix de la pièce à déplacer dans un jeu d'échec.</em>
+        </h5>
+
+        <h3>
+          Quoi?
+        </h3>
+
+        <p>
+        <ul>
+          <li>Principe d’optimalité: Équations de Bellman, fonction coût/récompense, contraintes, etc.
+          </li>
+          <li>Modèle d’évolution: Équations différentielles, Chaînes de Markov, Échantillonnage.
+          </li>
+          <li>Techniques de solution: Programmation dynamique, LQR, Apprentissage par Renforcement.
+          </li>
+        </ul>
+        </p>
+
+        <h3>
+          Quand et où?
+        </h3>
+        <p>
+          Cours à option à l'université de sherbrooke : <a
+            href="https://www.usherbrooke.ca/admission/fiches-cours/GRO860/apprentissage-par-renforcement-et-commande-optimale/"><b>GRO860</b>
+          </a>. La version automne 2024 sera les lundi 13h-16h en salle à déterminer.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="w3-col l6 m12 w3-margin-bottom">
+
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          Vidéo de présentation du cours
+        </div>
+        <iframe style="width:100%" height="400" src="https://www.youtube.com/embed/tbuEGkAQ1Lk?si=Uc6Y41mjVdl_umwZ"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="w3-container w3-padding-16" id="Materiel">
+
+    <!-- Teaching material-->
+    <div class="w3-container" id="material">
+      <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> Matériel </h2>
+    </div>
+
+    <div class="w3-row-padding">
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="guide.html"> Guide </a>
+          </div>
+          <img src="IMG/base.png" style="width:100%; height:250px;">
+        </div>
+      </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="notes.html">
+              Notes </a>
+          </div>
+          <img src="IMG/cost2go.png" style="width:100%; height:250px;">
+        </div>
+      </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL"> Vidéos
+            </a>
+          </div>
+          <iframe style="width:100%" height="245"
+            src="https://www.youtube.com/embed/videoseries?si=xedyohe1Hk242pnu&amp;list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="w3-container w3-padding-16" id="intro">
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+      Introduction
+    </h2>
+
+    <h3>
+      Une approche unifiée pour la science de la prise de decision en temps réel.
+    </h3>
+
+    <p>
+      Le but du cours est de faire le lien entre le domaine des asservissements et les algorithmes de décision basé
+      sur l’IA. Le cours présentera les outils pour vous permettre de de traduire un problème de décisions en temps
+      réel sous la représentation mathématique adapté pour synthétiser et optimiser une politique de décision, avec
+      des applications dans plusieurs domaines de la robotique à la finance.
+    </p>
+
+    <p>
+      Ce cours présente les approches pour prendre des décisions intelligentes sous un cadre théorique unifié basé sur
+      le principe de la programmation dynamique. Il vise d'abord a établir les liens entre les approches issues du
+      domaine de l'ingénierie (la science des asservissements et la commande optimale) et les approches issues des
+      sciences informatiques (recherche opérationnelle et l'apprentissage par renforcement) qui ont en fait les même
+      bases mathématiques. Il vise principalement à donner à un lecteur issue du domaine de l'ingénierie les bases
+      pour comprendre et utiliser les approches numériques issues des sciences informatiques, comme l'apprentissage
+      par renforcement, qui permettent de calculer des politiques décisionnelles optimales.
+    </p>
+
+    <p>Plusieurs problèmes en apparence très différents, sont en fait des problèmes qu'on peut analyser et résoudre
+      avec les mêmes outils mathématiques</p>
+
+    <div class="w3-display-container">
+      <img src="IMG/dp_app.png" style="width:100%; height:280px; object-fit: cover">
+    </div>
+
+  </div>
+
+  <div class="w3-container w3-padding-16" id="DAP">
+
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+      Contenu détaillé du cours
+    </h3>
+
+    <table class="w3-table w3-border">
+      <tr>
+        <th>Semaines</th>
+        <th>Sujets</th>
+        <th>Travaux</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>
+          <h4> Introduction </h4>
+          <ul>
+            <li> Programmation dynamique </li>
+            <li> Applications et exemples (contrôle, navigation, finance, game AI, etc.) </li>
+          </ul>
+        </td>
+
+      </tr>
+      <tr>
+        <td>2 à 8</td>
+        <td>
+          <h4> Principe d’optimalité </h4>
+          <ul>
+            <li>Fonction de coût, contraintes et objectifs</li>
+            <li>Équations de Bellman</li>
+            <li>Équation HJB</li>
+            <li>Solution analytique pour les systèmes linéaires avec un coût quadratique (LQR)</li>
+            <li>Formulation MiniMax pour le contrôle robuste</li>
+            <li>Formulation Probabiliste</li>
+          </ul>
+        </td>
+        <td>Devoirs papier/crayon + devoirs de code (Python)</td>
+      </tr>
+      <tr>
+        <td>2 à 8</td>
+        <td>
+          <h4> Modélisation </h4>
+          <ul>
+            <li>États discrets vs états continus</li>
+            <li>Temps discret vs temps continus</li>
+            <li>Évolution déterministe vs évolution stochastique</li>
+            <li>Modèle d’état; Équation différentielles; Équation de différences; Chaînes de Markov;</li>
+            <li>Graphiques de transitions;</li>
+          </ul>
+        </td>
+        <td>Devoirs papier/crayon + devoirs de code (Python)</td>
+      </tr>
+
+      <tr>
+        <td>2 à 8</td>
+        <td>
+          <h4> Méthode de synthèse / apprentissage </h4>
+          <ul>
+            <li>Méthodes hors-ligne</li>
+            <ul>
+              <li>Itération de valeur (value iteration)</li>
+              <li>Itération de loi de commande (policy iteration)</li>
+            </ul>
+            <li>Apprentissage par renforcement </li>
+            <ul>
+              <li>Différence temporelle</li>
+              <li>Q-Learning</li>
+              <li>Policy gradient</li>
+            </ul>
+          </ul>
+        </td>
+        <td>Devoirs papier/crayon + devoirs de code (Python)</td>
+      </tr>
+
+      <tr>
+        <td>8 à 12</td>
+        <td>
+          <h4> Méthodes avancées </h4>
+          <ul>
+            <li>Approximation de fonctions</li>
+            <li>Deep-reinforcement learning</li>
+          </ul>
+        </td>
+        <td>
+          <h4> Projet de session </h4>
+          <ul>
+            <li>Un projet au choix de l'étudiant impliquant des notions du cours. </li>
+            <li>L’évaluation du projet consistera en une présentation finale devant la classe </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
+      UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
+      LinkedIn.com/in/alx87grd </a> </p>
+</footer>
+
+</body>
+
+</html>
