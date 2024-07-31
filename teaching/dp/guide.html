@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Apprentissage par renforcement et commande optimale</title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
+  <title>Apprentissage par renforcement et commande optimale</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
   </script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -32,7 +33,8 @@
       <a href="gro860.html#DAP" class="w3-bar-item w3-button">DAP</a>
       <a href="guide.html" class="w3-bar-item w3-button">Guide</a>
       <a href="notes.html" class="w3-bar-item w3-button">Notes</a>
-      <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL" class="w3-bar-item w3-button">Vidéos</a>
+      <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL"
+        class="w3-bar-item w3-button">Vidéos</a>
     </div>
   </div>
 </div>
@@ -41,28 +43,33 @@
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <img class="w3-image" src="IMG/bg3.jpg" alt="sky" width="1500" height="800">
   <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>GMC860</b></span> <span class="w3-hide-small w3-text-light-grey">Guide</span></h1>
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>GMC860</b></span> <span
+        class="w3-hide-small w3-text-light-grey">Guide</span></h1>
   </div>
 </header>
 
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
+
   <div class="w3-container w3-padding-16" id="guide">
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
       Guide du cours
-     </h1>
-     <p> 
+    </h1>
+    <p>
       Cette section présente les liens vers le matériel et les livrables semaines par semaines:
     </p>
 
 
     <table class="w3-table w3-border">
       <tr>
-        <th>Cours</th>
+        <th>Semaine</th>
         <th>Matériel</th>
-        <th>Travaux</th>
+        <th>Exercises</th>
+        <th>Livrables</th>
       </tr>
+
+      <!-- Semaine  -->
 
       <tr>
         <td>
@@ -73,55 +80,643 @@
         </td>
         <td>
           <h4> Introduction </h4>
+          <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p>
 
-          <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> 
 
-          <p>Lectures:</p> À venir!
+          <ul>
 
-          <p>Tutoriel:</p> À venir!
+            <li>
+              Introduction:
+              <a href="notes.html">
+                Notes
+              </a> et
+              <a href="https://youtu.be/D_HLuoPrD4w">
+                vidéo
+              </a>
+            </li>
 
-          <p>Matériel complémentaires:</p> À venir!
-          <!-- <ul >
-            <li>Introduction à la modélisation des bras robots: Chapitre 1 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
-              Notes de cours
-            </a></li>
-            <li>Types de modèles: <a href="https://youtu.be/D_HLuoPrD4w">
-               (vidéo)
-            </a> </li>
-            <li> Familles d'équations différentielles : <a href="https://youtu.be/2ifsprEkJYU">
-               (vidéo)
-            </a> </li>
-            <li> Équation des robots manipulateurs: <a href="https://youtu.be/G4FvIV4GE4Q">
-               (vidéo)
-            </a> </li>
-            <li>Introduction à commande des robots: Chapitre 7 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
-              Notes de cours
-            </a></li>
-          </ul> -->
+            <li>
+              Principe d'optimalité:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et  -->
+              <!-- <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+            <li>
+              Programmation dynamique exacte:
+              <a href="notes.html">
+                Notes
+              </a> et
+              <!-- <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+
+          </ul>
 
         </td>
         <td>
-          <!-- <a href="https://colab.research.google.com/drive/183p93qiatzJJJ6QXXZo47k0ZBcMiq5Ub?usp=sharing">
-            <h4> Devoir #1 </h4>
-          </a> -->
+          <ol type="1">
+            <li> Apprendre à voler </li>
+            <li> Formulation d'un fonction de coût </li>
+            <li> Polique de cuisson d'une dinde</li>
+          </ol>
+        </td>
+
+        <td>
           À venir!
         </td>
-        
+
       </tr>
 
-    
+      <!-- Semaine  -->
+
+
+
+      <tr>
+        <td>
+          <h4>2</h4>
+
+          3 sept
+
+        </td>
+        <td>
+          <h4> Programmation dynamique sur un graphe </h4>
+          <p> Graphe, évolution probabiliste, chaînes de Markov</p>
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>3</h4>
+
+          9 sept
+
+        </td>
+        <td>
+          <h4> Équation de Bellman</h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>4</h4>
+
+          16 sept
+
+        </td>
+        <td>
+          <h4> Algorithmes I </h4>
+          <p>Itération de valeurs, itération de politiques, etc.</p>
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>5</h4>
+
+          23 sept (AM!)
+
+        </td>
+        <td>
+          <h4> Algorithmes II </h4>
+          <p> Apprentissage automatique</p>
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>6</h4>
+
+          30 sept
+
+        </td>
+        <td>
+          <h4> À venir! </h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>7</h4>
+
+          7 octobre
+
+        </td>
+        <td>
+          <h4> À venir! </h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>8</h4>
+
+          28 octobre
+
+        </td>
+        <td>
+          <h4> À venir! </h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>9</h4>
+
+          4 Nov
+
+        </td>
+        <td>
+          <h4> À venir! </h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>10</h4>
+
+          11 Novembre
+
+        </td>
+        <td>
+          <h4> À venir! </h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>11</h4>
+
+          18 Novembre
+
+        </td>
+        <td>
+          <h4> À venir! </h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>12</h4>
+
+          25 Novembre
+
+        </td>
+        <td>
+          <h4> À venir! </h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <h4>13</h4>
+
+          2 Décembre
+
+        </td>
+        <td>
+          <h4> À venir! </h4>
+          <!-- <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p> -->
+
+
+          <ul>
+
+            <li>
+              À venir!:
+              <!-- <a href="notes.html">
+                Notes
+             </a> et 
+              <a href="https://youtu.be/D_HLuoPrD4w">
+               vidéo
+            </a>  -->
+            </li>
+
+          </ul>
+
+        </td>
+        <td>
+          <ol type="1">
+            <li> À venir! </li>
+            <li> À venir! </li>
+            <li> À venir!</li>
+          </ol>
+        </td>
+
+        <td>
+          À venir!
+        </td>
+
+      </tr>
+
+
     </table>
   </div>
 
 
 </div>
 
+
+<div class="w3-container w3-padding-16" id="Ressources">
+
+  <!-- Teaching material-->
+  <div class="w3-container" id="material">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> Ressources </h2>
+  </div>
+
+  <div class="w3-row-padding">
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="notes.html">
+            Notes (Alex) </a>
+        </div>
+        <img src="IMG/cost2go.png" style="width:100%; height:250px;">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL"> Vidéos
+            (Alex)
+          </a>
+        </div>
+        <iframe style="width:100%" height="245"
+          src="https://www.youtube.com/embed/videoseries?si=xedyohe1Hk242pnu&amp;list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="https://youtube.com/playlist?list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-&si=171OJVeTeX3pNnVU"> Vidéos
+            de David Silver
+          </a>
+        </div>
+        <iframe style="width:100%" height="245"
+          src="https://www.youtube.com/embed/videoseries?si=171OJVeTeX3pNnVU&amp;list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="http://athenasc.com/dpbook.html">
+            Livre de Dimitri P. Bertsekas </a>
+        </div>
+        <img src="IMG/bertsekas.jpg" style="width:200px; height:250px;">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <a href="http://incompleteideas.net/book/the-book-2nd.html">
+            Livre de Sutton et Barto </a>
+        </div>
+        <img src="IMG/sutton.jpg" style="width:200px; height:250px;">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
   <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-  LinkedIn.com/in/alx87grd </a>  </p>
+      UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
+      LinkedIn.com/in/alx87grd </a> </p>
 </footer>
 
 </body>
+
 </html>
