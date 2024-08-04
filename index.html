@@ -1,495 +1,542 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Alex Robotics</title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Alex Robotics</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
+
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="teaching/dp.html" class="w3-bar-item w3-button">GRO860</a>
-      <a href="teaching/gmc714.html" class="w3-bar-item w3-button">GMC714</a>
-      <a href="teaching.html" class="w3-bar-item w3-button">Material</a>
-      <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
-      <a href="students.html" class="w3-bar-item w3-button">Students</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="teaching/dp.html" class="w3-bar-item w3-button">GRO860</a>
+        <a href="teaching/gmc714.html" class="w3-bar-item w3-button">GMC714</a>
+        <a href="teaching.html" class="w3-bar-item w3-button">Material</a>
+        <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
+        <a href="students.html" class="w3-bar-item w3-button">Students</a>
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="IMG/bg3.jpg" alt="sky" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image" src="IMG/bg3.jpg" alt="sky" width="1500" height="800">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span
+          class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
+    </div>
+  </header>
 
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+  <!-- Page content -->
+  <div class="w3-content w3-padding" style="max-width:1564px">
 
-  <!-- Intro
+    <!-- Intro
   <div class="w3-container">
     <p>This page is under construction! please see <a href="https://alexandregirard.ca"> www.alexandregirard.ca </a> for my complete portfolio
     </p>
   </div> -->
 
-  <!-- Teaching material-->
-  <div class="w3-container" id="material">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Learning material</h2>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="teaching/dp.html"> Reinforcement learning and optimal control</a>
-        </div>
-        <iframe style="width:100%" height="245" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+    <!-- Teaching material-->
+    <div class="w3-container" id="material">
+      <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Learning material </h2>
     </div>
 
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="https://github.com/SherbyRobotics/pyro"> Pyro: a python toolbox for robotics. </a>
-        </div>
-        <img src="IMG/compressed_gif/cartpole_swing_up.gif" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
+    <div class="w3-row-padding">
 
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="https://www.youtube.com/c/AlexandreGirard87"> Robotics videos (modeling and controls) </a>
-        </div>
-        <iframe style="width:100%" height="245" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="PDF/Notes_Robotique_UdeS.pdf">
-          Notes de cours (PDF) sur la Robotique </a>
-        </div>
-        <img src="IMG/base.png" style="width:100%; height:250px;">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container w3-padding-32">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="teaching.html">
-            ... see all material here.
-          </a>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="teaching/dp/PDF/DP_Notes.pdf">
+              Commande optimale et apprentissage par renforcement (Notes de cours) </a>
+          </div>
+          <img src="teaching/dp/IMG/cost2go.png" style="width:100%; height:250px;">
         </div>
       </div>
 
-  </div>
-
-  <!-- Project Section -->
-  <div class="w3-container" id="portfolio">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Research Portfolio</h2>
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/dimensionlesspolicies.html">
-            Dimensionless Policies
-          </a>
-        </div>
-        <img src="IMG/dimensionlesspolicies.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/arjo_alliance.html">
-          Smart patient transfer devices
-          </a>
-        </div>
-        <img src="IMG/arjo2.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/physic_ai.html">
-            Physics-based AI
-          </a>
-        </div>
-        <img src="IMG/vi.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/arjo_control.html">
-          Control laws for a motorized patient lift
-          </a>
-        </div>
-        <img src="IMG/arjo_control.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/snowcontrol.html">
-            Control laws for autonomous cars in winter conditions
-          </a>
-        </div>
-        <img src="IMG/xmax.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/variabletransmission.html">
-            Multi-modal hydrostatic actuators 
-          </a>
-        </div>
-        <img src="IMG/hydrostatic.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/nadile.html">
-            Automatic landing controllers for inspection drones
-          </a>
-        </div>
-        <img src="IMG/nadile.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/srl_arm.html">
-            Lightweight wearable robotic arms
-          </a>
-        </div>
-        <img src="IMG/srl_arm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/srl_leg.html">
-            A supernumerary Robotic Leg
-          </a>
-        </div>
-        <iframe style="width:100%" height="250" src="https://www.youtube.com/embed/b7qlB9nanGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/force_control.html">
-            Controllers for high-performance force control
-          </a>
-        </div>
-        <img src="IMG/force_control_ss.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/haptic_rendering.html">
-            Actuators for high-performance haptic rendering
-          </a>
-        </div>
-        <iframe style="width:100%" height="245" src="https://www.youtube.com/embed/vlbI-mE2Kks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/ankle_exo.html">
-            A multifunctional ankle exoskeleton to assist walking, jumping, and landing
-          </a>
-        </div>
-        <img src="IMG/ankle_exo.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/udesracecar.html">
-            UdeS racecar autonomous platform
-          </a>
-        </div>
-        <img src="IMG/udesracecar.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/tmotorarm.html">
-            Open-Source 2 DoF arm
-          </a>
-        </div>
-        <img src="IMG/tmotorarm1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/dsdm.html">
-            Custom lighweight robotic arm
-          </a>
-        </div>
-        <img src="IMG/dsdm_arm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/dsdm.html">
-            Variable transmission actuators for robotics
-          </a>
-        </div>
-        <img src="IMG/dsdm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/climbing_robot.html">
-            Manufacturing climbing robots
-          </a>
-        </div>
-        <img src="IMG/climbing1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/planningmit.html">
-            Motion Planning Algorithms for Robotic Arms
-          </a>
-        </div>
-        <img src="IMG/rrt.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/segway.html">
-            Using arms in the balancing dynamics
-          </a>
-        </div>
-        <img src="IMG/segway_concept.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/optimalcontrolmit.html">
-            Optimal control policies using dynamic programming
-          </a>
-        </div>
-        <img src="IMG/opti2.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/binary.html">
-            Control laws for binary soft robots
-          </a>
-        </div>
-        <img src="IMG/binary1.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/softsensor.html">
-            Soft polymer 2 DoF sensor
-          </a>
-        </div>
-        <img src="IMG/softsensor.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/kuka_impedance.html">
-            Impedance Controller for Cooperating Industrial Robots
-          </a>
-        </div>
-        <img src="IMG/kuka1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/phoebus.html">
-            Two-speed robotized transmission for an electric car
-          </a>
-        </div>
-        <img src="IMG/phoebus.webp" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/fuelpowered.html">
-            Fuel-Powered Air-Muscle Actuator
-          </a>
-        </div>
-        <img src="IMG/fuel.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container w3-padding-32">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects.html">
-            ... see complete list here.
-          </a>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL"> Commande
+              optimale et apprentissage par renforcement (Vidéos)
+            </a>
+          </div>
+          <iframe style="width:100%" height="245"
+            src="https://www.youtube.com/embed/videoseries?si=xedyohe1Hk242pnu&amp;list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
       </div>
-    </div>
 
-  </div>
-
-  <!-- Clients -->
-  <div class="w3-container w3-padding">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> Research partners and clients </h3>
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-col l1 m2 s6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/arjo.png" alt="logo" style="width:100%">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="https://github.com/SherbyRobotics/pyro"> Pyro: a python toolbox for robotics </a>
+          </div>
+          <img src="IMG/compressed_gif/cartpole_swing_up.gif" style="width:100%; height:250px; object-fit: cover">
+        </div>
       </div>
-    </div>
 
-    <div class="w3-col l1 m2 s6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/brp.png" alt="logo" style="width:70%">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="https://www.youtube.com/c/AlexandreGirard87"> Robotique: cinématique, dynamique et commande
+              (Vidéos) </a>
+          </div>
+          <iframe style="width:100%" height="245"
+            src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
       </div>
-    </div>
 
-    <div class="w3-col l1 m2 s6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/hydro.png" alt="logo" style="width:100%">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="PDF/Notes_Robotique_UdeS.pdf">
+              Robotique: cinématique, dynamique et commande (Notes de cours)</a>
+          </div>
+          <img src="IMG/base.png" style="width:100%; height:250px;">
+        </div>
       </div>
-    </div>
 
-    <div class="w3-col l1 m2 s6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/exo.png" alt="logo" style="width:100%">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="teaching.html#colab">
+              Tutoriels interactifs (Colab)</a>
+          </div>
+          <img src="IMG/colab.png" style="width:100%; height:250px;">
+        </div>
       </div>
-    </div>
 
-    <div class="w3-col l1 m2 s6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/ge.png" alt="logo" style="width:100%">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container w3-padding-32">
+          <div class="w3-display-topleft w3-black w3-padding">
+            <a href="teaching.html">
+              ... see all material here.
+            </a>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <div class="w3-col l1 m2 s6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/michelin.png" alt="logo" style="width:100%">
+      <!-- Project Section -->
+      <div class="w3-container" id="portfolio">
+        <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Research Portfolio</h2>
       </div>
-    </div>
 
-    <div class="w3-col l1 m2 s6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/kinova.png" alt="logo" style="width:100%">
+      <div class="w3-row-padding">
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/dimensionlesspolicies.html">
+                Dimensionless Policies
+              </a>
+            </div>
+            <img src="IMG/dimensionlesspolicies.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/arjo_alliance.html">
+                Smart patient transfer devices
+              </a>
+            </div>
+            <img src="IMG/arjo2.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/physic_ai.html">
+                Physics-based AI
+              </a>
+            </div>
+            <img src="IMG/vi.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/arjo_control.html">
+                Control laws for a motorized patient lift
+              </a>
+            </div>
+            <img src="IMG/arjo_control.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/snowcontrol.html">
+                Control laws for autonomous cars in winter conditions
+              </a>
+            </div>
+            <img src="IMG/xmax.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/variabletransmission.html">
+                Multi-modal hydrostatic actuators
+              </a>
+            </div>
+            <img src="IMG/hydrostatic.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/nadile.html">
+                Automatic landing controllers for inspection drones
+              </a>
+            </div>
+            <img src="IMG/nadile.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/srl_arm.html">
+                Lightweight wearable robotic arms
+              </a>
+            </div>
+            <img src="IMG/srl_arm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/srl_leg.html">
+                A supernumerary Robotic Leg
+              </a>
+            </div>
+            <iframe style="width:100%" height="250" src="https://www.youtube.com/embed/b7qlB9nanGs"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/force_control.html">
+                Controllers for high-performance force control
+              </a>
+            </div>
+            <img src="IMG/force_control_ss.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/haptic_rendering.html">
+                Actuators for high-performance haptic rendering
+              </a>
+            </div>
+            <iframe style="width:100%" height="245" src="https://www.youtube.com/embed/vlbI-mE2Kks"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/ankle_exo.html">
+                A multifunctional ankle exoskeleton to assist walking, jumping, and landing
+              </a>
+            </div>
+            <img src="IMG/ankle_exo.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/udesracecar.html">
+                UdeS racecar autonomous platform
+              </a>
+            </div>
+            <img src="IMG/udesracecar.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/tmotorarm.html">
+                Open-Source 2 DoF arm
+              </a>
+            </div>
+            <img src="IMG/tmotorarm1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/dsdm.html">
+                Custom lighweight robotic arm
+              </a>
+            </div>
+            <img src="IMG/dsdm_arm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/dsdm.html">
+                Variable transmission actuators for robotics
+              </a>
+            </div>
+            <img src="IMG/dsdm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/climbing_robot.html">
+                Manufacturing climbing robots
+              </a>
+            </div>
+            <img src="IMG/climbing1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/planningmit.html">
+                Motion Planning Algorithms for Robotic Arms
+              </a>
+            </div>
+            <img src="IMG/rrt.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/segway.html">
+                Using arms in the balancing dynamics
+              </a>
+            </div>
+            <img src="IMG/segway_concept.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/optimalcontrolmit.html">
+                Optimal control policies using dynamic programming
+              </a>
+            </div>
+            <img src="IMG/opti2.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/binary.html">
+                Control laws for binary soft robots
+              </a>
+            </div>
+            <img src="IMG/binary1.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/softsensor.html">
+                Soft polymer 2 DoF sensor
+              </a>
+            </div>
+            <img src="IMG/softsensor.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/kuka_impedance.html">
+                Impedance Controller for Cooperating Industrial Robots
+              </a>
+            </div>
+            <img src="IMG/kuka1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/phoebus.html">
+                Two-speed robotized transmission for an electric car
+              </a>
+            </div>
+            <img src="IMG/phoebus.webp" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects/fuelpowered.html">
+                Fuel-Powered Air-Muscle Actuator
+              </a>
+            </div>
+            <img src="IMG/fuel.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container w3-padding-32">
+            <div class="w3-display-topleft w3-black w3-padding">
+              <a href="projects.html">
+                ... see complete list here.
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <div class="w3-col l1 m2 s6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/boeing.png" alt="logo" style="width:100%">
+      <!-- Clients -->
+      <div class="w3-container w3-padding">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> Research partners and clients </h3>
       </div>
-    </div>
 
-  </div>
+      <div class="w3-row-padding">
 
+        <div class="w3-col l1 m2 s6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/arjo.png" alt="logo" style="width:100%">
+          </div>
+        </div>
 
+        <div class="w3-col l1 m2 s6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/brp.png" alt="logo" style="width:70%">
+          </div>
+        </div>
 
-  <!-- About Section -->
-  <div class="w3-container" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+        <div class="w3-col l1 m2 s6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/hydro.png" alt="logo" style="width:100%">
+          </div>
+        </div>
 
-  </div>
+        <div class="w3-col l1 m2 s6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/exo.png" alt="logo" style="width:100%">
+          </div>
+        </div>
 
-  <div class="w3-row-padding">
+        <div class="w3-col l1 m2 s6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/ge.png" alt="logo" style="width:100%">
+          </div>
+        </div>
 
-    <div class="w3-col l9 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <p> Greetings! I am Alexandre Girard a roboticist and Professor at Université de Sherbrooke, Qc, Canada.  I am especially interested in the science of controlling how things move, from mechanical design up to control laws and algorithms: robots, mechanisms, actuators, sensors, vehicles, etc. Feel free to contact me if your are interested in robotics research projects!</p>
-        
-        <p> If you are a student looking for a thesis project and/or position in my laboratory: see <a href="/students.html">this page</a>, if you are looking for a university partner to develop new technologies and/or solve hard motion control problems, please contact me.</p>
+        <div class="w3-col l1 m2 s6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/michelin.png" alt="logo" style="width:100%">
+          </div>
+        </div>
+
+        <div class="w3-col l1 m2 s6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/kinova.png" alt="logo" style="width:100%">
+          </div>
+        </div>
+
+        <div class="w3-col l1 m2 s6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/boeing.png" alt="logo" style="width:100%">
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <img src="LOGO/udes.png" alt="logo" style="width:100%">
+
+
+      <!-- About Section -->
+      <div class="w3-container" id="about">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+
       </div>
+
+      <div class="w3-row-padding">
+
+        <div class="w3-col l9 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <p> Greetings! I am Alexandre Girard a roboticist and Professor at Université de Sherbrooke, Qc, Canada. I
+              am especially interested in the science of controlling how things move, from mechanical design up to
+              control laws and algorithms: robots, mechanisms, actuators, sensors, vehicles, etc. Feel free to contact
+              me if your are interested in robotics research projects!</p>
+
+            <p> If you are a student looking for a thesis project and/or position in my laboratory: see <a
+                href="/students.html">this page</a>, if you are looking for a university partner to develop new
+              technologies and/or solve hard motion control problems, please contact me.</p>
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="LOGO/udes.png" alt="logo" style="width:100%">
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+      <!-- End page content -->
     </div>
 
-  </div>
 
-
-
-
-
-
-
-
-<!-- End page content -->
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-  LinkedIn.com/in/alx87grd </a>  </p>
-</footer>
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
+          UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
+          LinkedIn.com/in/alx87grd </a> </p>
+    </footer>
 
 </body>
+
 </html>
