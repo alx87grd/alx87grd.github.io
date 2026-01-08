@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GMC714 - Robotique: modélisation et commande</title>
+<meta charset="UTF-8">
+<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="https://www.alexandregirard.com" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+    <!-- Float links to the right. Hide them on small screens 
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Button 1</a>
+    </div>
+  -->
+    <div class="w3-right w3-hide-small">
+      <a href="gmc714.html#intro" class="w3-bar-item w3-button"> Intro </a>
+      <a href="gmc714.html#dap" class="w3-bar-item w3-button"> DAP </a>
+      <a href="guide.html#guide" class="w3-bar-item w3-button"> Guide </a>
+      <a href="../../PDF/Notes_Robotique_UdeS.pdf" class="w3-bar-item w3-button">Notes</a>
+      <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5&si=e9VPuXrtrfOCG4xR"
+        class="w3-bar-item w3-button">Vidéos</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>GMC714</b></span> <span class="w3-hide-small w3-text-light-grey">Robotique</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <div class="w3-container w3-padding-16" id="intro">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Robotique: modélisation et commande
+     </h1>
+  </div>
+
+  <div class="w3-container w3-padding-16" id="guide">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"> 
+      Guide du cours
+     </h1>
+     <p> 
+      Cette page présente les liens vers le matériel et les livrables semaines par semaines:
+    </p>
+
+
+    <table class="w3-table w3-border">
+      <tr>
+        <th>Cours</th>
+        <th>Matériel</th>
+        <th>Travaux</th>
+      </tr>
+
+      <tr>
+        <td>
+          <h4>1</h4>
+
+          10 Jan
+
+        </td>
+        <td>
+          <h4> Introduction </h4>
+
+          <p>Espace des phase d'un système, types de modèles, tour d'horizon des défis de commande en robotique.</p> 
+
+          <p>Matériel complémentaires:</p>
+          <ul >
+            <li>Introduction à la modélisation des bras robots: Chapitre 1 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+            <li>Types de modèles: <a href="https://youtu.be/D_HLuoPrD4w">
+               (vidéo)
+            </a> </li>
+            <li> Familles d'équations différentielles : <a href="https://youtu.be/2ifsprEkJYU">
+               (vidéo)
+            </a> </li>
+            <li> Équation des robots manipulateurs: <a href="https://youtu.be/G4FvIV4GE4Q">
+               (vidéo)
+            </a> </li>
+            <li>Introduction à commande des robots: Chapitre 7 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+
+        </td>
+        <td>
+          <a href="https://www.alexandregirard.com/PDF/GMC714_Devoir1_CommandeEspacePhase.pdf">
+            <h4> Devoir #1 </h4>
+          </a>
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          <h4>2</h4>
+
+          17 Jan
+        </td>
+        <td>
+          <h4>Bras articulés: cinématique</h4>
+
+          <p>Notation vectorielle, Cinématique en 3D, Cinématique différentielle d'un robot manipulateur.</p> 
+
+          <p>Matériel complémentaires:</p>
+
+          <ul >
+            <li>Les robots manipulateurs: Chapitre 2 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+            <li>Cinématique: Chapitre 3 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+            <li>Cinématique différentielle: Chapitre 4 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+
+          </ul>
+          
+        </td>
+        <td>
+        <a href="https://www.alexandregirard.com/PDF/GMC714_Devoir2_cinematique.pdf">
+          <h4> Devoir #2 </h4> </a>
+        </td>
+        
+        
+        
+      </tr>
+
+      <tr>
+        <td>
+          <h4>3</h4>
+          24 Jan
+        </td>
+        <td>
+          <h4>Bras articulés: dynamique</h4>
+
+          <p> Statique, Équation des manipulateurs, méthode de Lagrange. </p> 
+
+          <p>Matériel complémentaires:</p>
+
+          <ul >
+            <li>Statique: Chapitre 5 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+            <li>Dynamique: Chapitre 6 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+        </td>
+          <td>
+        <a href="https://www.alexandregirard.com/PDF/GMC714_Devoir3_dynamique.pdf">
+          <h4> Devoir #3 </h4> </a>
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          <h4>4</h4>
+          31 Jan
+        </td>
+        <td>
+         <h4> Bras articulés: dynamique II </h4>
+
+          <p> Analyse de stabilité et comportement des actionneurs. </p> 
+
+          <p>Matériel complémentaires:</p>
+
+          <ul >
+            <li>Dynamique: Chapitre 6 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+        </td>
+        <td>
+          Pause de devoir!
+          </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          <h4>5</h4>
+          7 Fév
+        </td>
+        <td>
+         <h4> Bras articulés: commande 1 </h4>
+
+          <p>Commande en position et impédance d'un robot manipulateur. </p> 
+
+          <p>Matériel complémentaires:</p>
+
+          <ul >
+            <li>Commande quasi-statique: Chapitre 8 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+        </td>
+        <td>
+          <a href="https://www.alexandregirard.com/PDF/GMC714_Devoir4_staticcontrol.pdf">
+            <h4> Devoir #4 </h4> </a>
+        </td>
+
+      <tr>
+        <td>
+          <h4>6</h4>
+          14 Fév
+        </td>
+        <td>
+         <h4> Capsule </h4>
+
+          <p>À venir </p> 
+
+        </td>
+        <td>
+          <a href="https://www.alexandregirard.com/PDF/GMC714_Devoir5_dynamiccontrol.pdf">
+            <h4> Devoir #5 </h4> </a>
+        </td>
+        
+      </tr>
+
+
+      
+        
+      </tr>
+
+      <tr>
+        <td>
+          <h4>7</h4>
+          21 Fév
+        </td>
+        <td>
+        <h4> Bras articulés: commande 2 </h4>
+
+          <p>Méthode du couple calculé, commande robuste et commande adaptative. </p> 
+
+          <p>Matériel complémentaires:</p>
+
+          <ul >
+            <li>Commande dynamique: Chapitre 9 dans  <a href="https://www.alexandregirard.com/PDF/Notes_Robotique_UdeS.pdf">
+              Notes de cours
+            </a></li>
+          </ul>
+
+        </td>
+        <td>
+          <a href="https://www.alexandregirard.com/PDF/GMC714_Devoir6_vehicules.pdf">
+            <h4> Devoir #6 </h4> </a>
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td>
+          <h4>8</h4>
+          28 Fév
+        </td>
+        <td>
+        <h4> Véhicules: modélisation </h4>
+          <p> Modèle bicylclette statique et dynamique, comportement des pneus et courbe d'adhérence, modèle de suspension.  </p> 
+          <ul >
+            <li>Section 3 dans article au lien suivant:  <a href="https://arxiv.org/pdf/1604.07446.pdf">
+              A Survey of Motion Planning and Control Techniques for Self-driving Urban Vehicles
+            </a></li>
+          </ul>
+          <h4> Véhicules: planification  </h4>
+          <p> Fonction coût, chemin le plus court, etc. </p>
+          <p> Optimisation de trajectoire, algorithmes de recherche, etc. </p>
+          <ul >
+            <li>Section 4 dans article au lien suivant:  <a href="https://arxiv.org/pdf/1604.07446.pdf">
+              A Survey of Motion Planning and Control Techniques for Self-driving Urban Vehicles
+            </a></li>
+          </ul>
+        </td>
+        <td>
+          <a href="https://www.alexandregirard.com/PDF/GMC714_Devoir7_project.pdf">
+            <h4> Devoir #7 </h4> </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h4>9</h4>
+          14 Mars
+        </td>
+        <td>
+          <h4> Examen </h4>
+          <p>  </p>
+        </td>
+        <td>
+         Examen
+      </tr>
+
+      <tr>
+        <td>
+          <h4>10</h4>
+          21 Mars
+        </td>
+        <td>
+          <h4>Rencontres individuelles pour le projet </h4>
+        </td>
+        <!-- <td>
+          <h4> Véhicules: planification  </h4>
+          <p> Fonction coût, chemin le plus court, etc. </p>
+          <p> Optimisation de trajectoire, algorithmes de recherche, etc. </p>
+          <ul >
+            <li>Section 4 dans article au lien suivant:  <a href="https://arxiv.org/pdf/1604.07446.pdf">
+              A Survey of Motion Planning and Control Techniques for Self-driving Urban Vehicles
+            </a></li>
+          </ul>
+        </td> -->
+        <td>
+          <a href="https://www.alexandregirard.com/PDF/GMC714_Devoir8_trajectory.pdf">
+            <h4> Devoir #8 </h4> </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h4>11</h4>
+          28 Mars
+        </td>
+        <td>
+          <h4>État de l'art: TBD</h4>
+        </td>
+        <td>
+          Projet
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h4>12</h4>
+          4 Avril
+        </td>
+        <td>
+          <h4>Présentation des projets </h4>
+        </td>
+        <td>
+          Projet
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
+  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
+  LinkedIn.com/in/alx87grd </a>  </p>
+</footer>
+
+</body>
+</html>
