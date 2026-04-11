@@ -56,9 +56,9 @@
             <div class="card-img-wrapper">
               <a href="#colab"><img src="img/colab.png" alt="Casadi"></a>
             </div>
-            <div class="card-title"><a href="#colab">CasADi Optimization Templates</a></div>
+            <div class="card-title"><a href="#colab">Colab Inte ractive Tutorials</a></div>
             <div class="card-content">
-              <p>Trajectory optimization examples for complex robotic tasks.</p>
+              <p>Run robotics code directly in your browser with zero setup.</p>
             </div>
           </div>
         </div>
@@ -111,19 +111,31 @@
     <section class="section" id="colab">
       <div class="container container-narrow">
         <h2>Colab Interactive Tutorials</h2>
-        <p class="text-muted">Run robotics code directly in your browser with zero setup:</p>
+        <p class="text-muted" style="margin-bottom: var(--spacing-md);">Run robotics code directly in your browser with zero setup. These tutorials use the <a href="#software">Pyro toolbox</a> for simulations.</p>
         
+        <h3 class="mt-4">The Pyro Toolbox:</h3>
+        <ul class="resource-list">
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/18eEL-n-dv9JZz732nFCMtqMThDcfD2Pr">Pyro Tutorial no1: Basic functionality</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1ILfRpL1zgiQZBOxwtbbpe0nl2znvzdWl">Pyro Tutorial no2: Custom dynamic classes</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1mog1HAFN2NFEdw6sPudzW2OaTk_li0Vx">Pyro Tutorial no3: Closed-loop systems</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1OILAhXRxM1r5PEB1BWaYtbR147Ff3gr1">Pyro Tutorial no4: Manipulator robot class</a></li>
+        </ul>
+
         <h3 class="mt-4">Optimal Control:</h3>
         <ul class="resource-list">
-          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1wXmlIqNGC2LrJkmyj56Y109b5ZDHVboq">Optimal control overview</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1wXmlIqNGC2LrJkmyj56Y109b5ZDHVboq">Optimal control overview (Pendulum Swing-up)</a></li>
           <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1mcExyc25P_0im4iU_wVEFnkzgw4UTVaq">LQR vs. Dynamic Programming</a></li>
-          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1yq2GHAkvO6fTF2W-tRbACDBa9_scec2k">Trajectory optimization</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1yq2GHAkvO6fTF2W-tRbACDBa9_scec2k">Trajectory optimization (Direct Collocation)</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1vC1sja-aP9SIBskjB-W_5s7WFMaam-ji">Optimal swing-up with custom cost functions</a></li>
         </ul>
 
         <h3 class="mt-4">Robot Arm Control:</h3>
         <ul class="resource-list">
-          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1qaCNY2ohQIbC6dV2ZW4KY6FDM9NhJzH2">2 DoF PID Control</a></li>
-          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1M3O_nD8iLbRSvZzyUpBn0Mo8KUclrG26">Kinematic Controllers</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1qaCNY2ohQIbC6dV2ZW4KY6FDM9NhJzH2">2 DoF robot controlled with a PID</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1bnJ9v5kHRFFhnNOZx-_Kcht2l5sTOHxr">2 DoF robot: Custom controller template</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1M3O_nD8iLbRSvZzyUpBn0Mo8KUclrG26">2 DoF robot: Kinematic controllers</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1EM3hNEwz2aiBqx9GDHoM7QGuPF-Afv1Q">2 DoF robot: Impedance controllers</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/16ACenFOLOHVNeReqJTbkATAB3281iVbp">5 DoF robot: Redundant manipulator control</a></li>
         </ul>
       </div>
     </section>
@@ -131,17 +143,22 @@
     <!-- University Courses -->
     <section class="section section-bg" id="courses">
        <div class="container container-narrow">
-         <h2>University Courses (UdeS)</h2>
-         <p>Access the private material and syllabus for my active courses at Université de Sherbrooke:</p>
-         <div class="grid mt-4">
-            <a href="courses/gro860/" class="btn-action" style="background: white; border: 1px solid var(--color-border); text-align: left;">
-              <strong>GRO860</strong><br>
-              <span class="text-muted" style="font-size:0.9rem;">Apprentissage par renforcement...</span>
-            </a>
-            <a href="courses/gmc714/" class="btn-action" style="background: white; border: 1px solid var(--color-border); text-align: left;">
-              <strong>GMC714</strong><br>
-              <span class="text-muted" style="font-size:0.9rem;">Robotique : modélisation et commande</span>
-            </a>
+         <h2 class="text-center">University Courses (UdeS)</h2>
+         <p class="text-center">Access the private material and syllabus for my active courses at Université de Sherbrooke:</p>
+         
+         <div class="grid mt-4" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+            <div class="card">
+              <div class="card-img-wrapper" style="height:200px;">
+                <a href="courses/gro860/"><img src="img/courses/gro860/cost2go_animation-2.gif" alt="Optimal Control" style="height: 100%; object-fit: cover;"></a>
+              </div>
+              <div class="card-title"><a href="courses/gro860/">GRO860: Optimal Control & RL</a></div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height:200px;">
+                <a href="courses/gmc714/"><img src="img/compressed_gif/double_pendulum_swing_up.gif" alt="GMC714" style="height: 100%; object-fit: cover;"></a>
+              </div>
+              <div class="card-title"><a href="courses/gmc714/">GMC714: Robotics: Modeling & Control</a></div>
+            </div>
          </div>
        </div>
     </section>
@@ -159,6 +176,9 @@
 <!-- CSS utility for lists if needed -->
 <style>
   .resource-list { list-style: none; padding: 0; }
-  .resource-list li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding: 10px; background: white; border-radius: 8px; box-shadow: var(--shadow-sm); }
+  .resource-list li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 12px; background: white; border-radius: 8px; border: 1px solid var(--color-border); transition: transform 0.2s, box-shadow 0.2s; }
+  .resource-list li:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .resource-list a { font-weight: 600; color: var(--color-text-main); }
+  .resource-list a:hover { color: var(--color-primary); text-decoration: none; }
 </style>
 </html>
