@@ -113,7 +113,7 @@ header_template_top = """<!DOCTYPE html>
   </main>
   <footer class="footer">
     <div class="container">
-      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a> | <a href="https://www.linkedin.com/in/alx87grd">LinkedIn.com/in/alx87grd</a></p>
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
     </div>
   </footer>
 </body>

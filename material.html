@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Teaching & Resources - Alex Robotics</title>
+  <title>Resources & Open Material - Alex Robotics</title>
   <meta charset="UTF-8">
   <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,294 +18,132 @@
         <span></span><span></span><span></span>
       </label>
       <ul class="nav-menu">
-        <li class="nav-item"><a href="courses/gro860/">GRO860</a></li>
-        <li class="nav-item"><a href="courses/gmc714/">GMC714</a></li>
-        <li class="nav-item"><a href="#material">Material</a></li>
-        <li class="nav-item"><a href="#colab">Colab</a></li>
-        <li class="nav-item"><a href="#classes">Classes</a></li>
+        <li class="nav-item"><a href="projects.html">Research</a></li>
+        <li class="nav-item"><a href="material.html" class="active">Resources</a></li>
+        <li class="nav-item"><a href="students.html">Students</a></li>
+        <li class="nav-item"><a href="index.html#about">About</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Smaller Hero for Sub-Pages -->
+  <!-- Smaller Hero -->
   <header class="hero" id="home" style="height: 40vh; min-height: 300px;">
     <img class="hero-img" src="img/bg3.jpg" alt="sky">
     <div class="hero-content">
-      <h1 style="font-size: 3rem; margin-bottom: var(--spacing-sm);">Teaching & Material</h1>
-      <p>Course notes, colab notebooks, and video lectures</p>
+      <h1 style="font-size: 3rem; margin-bottom: var(--spacing-sm);">Resources & Open Material</h1>
+      <p>Toolboxes, video lectures, and interactive tutorials</p>
     </div>
   </header>
 
   <main>
-    <!-- Learning Material -->
-    <section class="section" id="material">
+
+    <!-- Software & Frameworks -->
+    <section class="section" id="software">
       <div class="container">
-        <h2>Learning Material</h2>
-        
-        <div class="grid mt-4">
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="pdf/GRO860_Notes.pdf" class="card-overlay-title">Commande optimale et RL (Notes)</a>
-              <img src="img/courses/gro860/cost2go_animation-2.gif" alt="Optimal Control" style="height: 100%; object-fit: cover;">
+        <h2>Software & Toolboxes</h2>
+        <div class="grid">
+          <div class="card" style="grid-column: span 2;">
+            <div class="card-img-wrapper" style="height:300px;">
+              <a href="https://github.com/SherbyRobotics/pyro"><img src="img/compressed_gif/cartpole_swing_up.gif" alt="Pyro" style="width:100%; height:100%; object-fit: cover;"></a>
             </div>
-          </div>
-          <div class="card resource-card">
-            <div class="card-img-wrapper">
-              <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL" class="card-overlay-title">Commande optimale et RL (Vidéos)</a>
-              <iframe height="100%" src="https://www.youtube.com/embed/videoseries?si=xedyohe1Hk242pnu&amp;list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu" frameborder="0" allowfullscreen></iframe>
+            <div class="card-title"><a href="https://github.com/SherbyRobotics/pyro">Pyro: The Python Toolbox for Robotics</a></div>
+            <div class="card-content">
+              <p>An open-source library bridging control theory and modern AI—features modeling, synthesis, and reinforcement learning simulation.</p>
+              <a href="https://github.com/SherbyRobotics/pyro" class="btn-action">View on GitHub &rarr;</a>
             </div>
           </div>
           <div class="card">
             <div class="card-img-wrapper">
-              <a href="https://github.com/SherbyRobotics/pyro" class="card-overlay-title">Pyro: python toolbox for robotics</a>
-              <img src="img/compressed_gif/cartpole_swing_up.gif" alt="Pyro">
+              <a href="#colab"><img src="img/colab.png" alt="Casadi"></a>
             </div>
-          </div>
-          <div class="card resource-card">
-            <div class="card-img-wrapper">
-              <a href="https://www.youtube.com/c/AlexandreGirard87" class="card-overlay-title">Robotique: cinématique et dynamique</a>
-              <iframe height="100%" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="pdf/Notes_Robotique_UdeS.pdf" class="card-overlay-title">Robotique (Notes de cours)</a>
-              <img src="img/base.png" alt="Robotique Notes">
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="#colab" class="card-overlay-title">Tutoriels interactifs (Colab)</a>
-              <img src="img/colab.png" alt="Colab">
-            </div>
-          </div>
-          <div class="card resource-card">
-            <div class="card-img-wrapper">
-              <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UvgL6nwWegHk2nZ7XtjneDu&si=uC8abyjJiSQg0stk" class="card-overlay-title">Systèmes asservis (Vidéos)</a>
-              <iframe height="100%" src="https://www.youtube.com/embed/OVvwTo3nwrI" frameborder="0" allowfullscreen></iframe>
+            <div class="card-title"><a href="#colab">CasADi Optimization Templates</a></div>
+            <div class="card-content">
+              <p>Trajectory optimization examples for complex robotic tasks.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Colab -->
-    <section class="section section-bg" id="colab">
-      <div class="container container-narrow">
-        <h2>Colab Tutorials</h2>
+    <!-- Learning Resources -->
+    <section class="section section-bg" id="educational">
+      <div class="container">
+        <h2>Open Educational Material</h2>
+        
+        <div class="grid">
+          <!-- Video Lectures -->
+          <div class="card resource-card">
+            <div class="card-img-wrapper">
+              <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu"><iframe height="100%" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu" frameborder="0" allowfullscreen></iframe></a>
+            </div>
+            <div class="card-title"><a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu">Optimal Control & RL (Video Series)</a></div>
+          </div>
+          
+          <div class="card resource-card">
+            <div class="card-img-wrapper">
+              <a href="https://www.youtube.com/c/AlexandreGirard87"><iframe height="100%" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5" frameborder="0" allowfullscreen></iframe></a>
+            </div>
+            <div class="card-title"><a href="https://www.youtube.com/c/AlexandreGirard87">Kinematics & Dynamics Lectures</a></div>
+          </div>
 
-        <h3 class="mt-4">Optimal Control:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1wXmlIqNGC2LrJkmyj56Y109b5ZDHVboq?usp=sharing" style="font-weight:600; font-size:1.1rem;">Optimal control overview</a>
-              <p style="margin:0; font-size:0.9rem;">This page introduce various optimal control algorithms for solving a pendulum swing-up task.</p>
+          <!-- Notes -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="pdf/Notes_Robotique_UdeS.pdf"><img src="img/base.png" alt="Notes"></a>
             </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1mcExyc25P_0im4iU_wVEFnkzgw4UTVaq?usp=sharing" style="font-weight:600; font-size:1.1rem;">LQR vs. Dynamic Programming</a>
-              <p style="margin:0; font-size:0.9rem;">Shows a quick demo of how DP can be used for finding global optimal control policy of non-linear systems.</p>
+            <div class="card-title"><a href="pdf/Notes_Robotique_UdeS.pdf">Robotic Modeling Notes (PDF)</a></div>
+            <div class="card-content">
+              <p>Lecture notes covering kinematics, dynamics, and motion control.</p>
             </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1yq2GHAkvO6fTF2W-tRbACDBa9_scec2k?usp=sharing" style="font-weight:600; font-size:1.1rem;">Trajectory optimization</a>
-              <p style="margin:0; font-size:0.9rem;">Example of planning an optimal trajectory for a cart-pole swing-up with the direct-collocation method.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1vC1sja-aP9SIBskjB-W_5s7WFMaam-ji?usp=sharing" style="font-weight:600; font-size:1.1rem;">Optimal swing-up with custom cost function</a>
-              <p style="margin:0; font-size:0.9rem;">Allows for quickly modifying the cost function to see how it influences the solution.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1kAKkDVw0yfEtEORQH-YhvGLtPPullCER?usp=sharing" style="font-weight:600; font-size:1.1rem;">Trajectory optimization with Casadi</a>
-              <p style="margin:0; font-size:0.9rem;">Interactive tutorial using casadi for trajectory optimization.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1KQDGznPu_VtTo6Y3ZTkf1Ahr0av2zpAp?usp=sharing" style="font-weight:600; font-size:1.1rem;">Minimum time optimal policy for a mass</a>
-              <p style="margin:0; font-size:0.9rem;">Interactive tutorial demonstrating using the value iteration algorithm.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1P2sjOo9T31-6rkTBHsK3ZFaGMntvBDzn?usp=sharing" style="font-weight:600; font-size:1.1rem;">Policy evaluation for a minimal time problem</a>
-              <p style="margin:0; font-size:0.9rem;">Interactive tutorial demonstrating using a numerical algorithm to evaluate a custom policy.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1-qslmY5MRogkf8YL9TRAH1R2xLgfrwNH?usp=sharing" style="font-weight:600; font-size:1.1rem;">LQR for finite vs infinite horizon</a>
-              <p style="margin:0; font-size:0.9rem;">Interactive tutorial demonstrating 2 variations of a LQR controller for the cartpole system.</p>
-            </div>
-          </li>
-        </ul>
+          </div>
 
-        <h3 class="mt-4">Robot arm control:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1qaCNY2ohQIbC6dV2ZW4KY6FDM9NhJzH2?usp=sharing" style="font-weight:600; font-size:1.1rem;">2 DoF robot controlled with a PID</a>
-              <p style="margin:0; font-size:0.9rem;">Play with the PID gains and animating the results.</p>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="pdf/GRO860_Notes.pdf"><img src="img/courses/gro860/cost2go_animation-2.gif" alt="Notes" style="height:100%; object-fit: cover;"></a>
             </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1bnJ9v5kHRFFhnNOZx-_Kcht2l5sTOHxr?usp=sharing" style="font-weight:600; font-size:1.1rem;">2 DoF robot controlled with a custom controller</a>
-              <p style="margin:0; font-size:0.9rem;">Template for implementing and testing controllers for a two-link planar manipulator.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1M3O_nD8iLbRSvZzyUpBn0Mo8KUclrG26?usp=sharing" style="font-weight:600; font-size:1.1rem;">2 DoF robot arm kinematic controllers</a>
-              <p style="margin:0; font-size:0.9rem;">Controlling the end-effector of a robot when its joint are controlled with velocity set-points.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1EM3hNEwz2aiBqx9GDHoM7QGuPF-Afv1Q?usp=sharing" style="font-weight:600; font-size:1.1rem;">2 DoF robot arm impedance controllers</a>
-              <p style="margin:0; font-size:0.9rem;">Concept of impedance control in both the joint-space (angles) and the task-space (x,y,z).</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/16ACenFOLOHVNeReqJTbkATAB3281iVbp?usp=sharing" style="font-weight:600; font-size:1.1rem;">5 DoF robot arm kinematic controllers</a>
-              <p style="margin:0; font-size:0.9rem;">Introduce to the control of redundant manipulators.</p>
-            </div>
-          </li>
-        </ul>
-
-        <h3 class="mt-4">Classical controls:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1kN1oxk51jFlR2E8bEl4dTkuee1NOw0Er?usp=sharing" style="font-weight:600; font-size:1.1rem;">PID on a 2nd order system</a>
-              <p style="margin:0; font-size:0.9rem;">Template for testing a PID controller on a two-mass-spring-damper system.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1t6BVw32Vn2AjcnWuQmmQLsCRnxQyoRgc?usp=sharing" style="font-weight:600; font-size:1.1rem;">Phase Plane Analysis</a>
-              <p style="margin:0; font-size:0.9rem;">Interactive tutorial on phase plane analysis for dynamical systems.</p>
-            </div>
-          </li>
-        </ul>
-
-        <h3 class="mt-4">Machine Learning:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/155fVMTIyqhHGznpHMpEP7pR6qvh-v9pH?usp=sharing" style="font-weight:600; font-size:1.1rem;">Diffusion in 2D</a>
-              <p style="margin:0; font-size:0.9rem;">Interactive tutorial on the base concept of diffusion.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/11JdsousMkCRhjhqX41hfPS2vAfP7R9Eo?usp=sharing" style="font-weight:600; font-size:1.1rem;">Diffusion policy</a>
-              <p style="margin:0; font-size:0.9rem;">Interactive tutorial on the base concept of diffusion policies.</p>
-            </div>
-          </li>
-        </ul>
-
-        <h3 class="mt-4">Dynamic:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/15RBFDTUYSq0dFLBRd0VKLxJxXOONSYJI?usp=sharing" style="font-weight:600; font-size:1.1rem;">Planar Plane Dynamics</a>
-              <p style="margin:0; font-size:0.9rem;">Introducing the planar plane class in pyro.</p>
-            </div>
-          </li>
-        </ul>
-
-        <h3 class="mt-4">Reinforcement learning:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1-EuRPiyf2GvOn8p_17jlvvEIE188WT1m?usp=sharing" style="font-weight:600; font-size:1.1rem;">Drone learning to fly with PPO</a>
-              <p style="margin:0; font-size:0.9rem;">Demonstrating learning a flight controller with the PPO algorithm.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1PwQXyqWxWhPN3HSQBBXVroTG0GWaRVRO?usp=sharing" style="font-weight:600; font-size:1.1rem;">Cost-to-go approximation</a>
-              <p style="margin:0; font-size:0.9rem;">Function approximation for the optimal cost-to-go of a pendulum swing-up problem.</p>
-            </div>
-          </li>
-        </ul>
-
-        <h3 class="mt-4">Pyro toolbox:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/18eEL-n-dv9JZz732nFCMtqMThDcfD2Pr?usp=sharing" style="font-weight:600; font-size:1.1rem;">Pyro Tutorial no1</a>
-              <p style="margin:0; font-size:0.9rem;">The Dynamic System class and basic functionnality.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1ILfRpL1zgiQZBOxwtbbpe0nl2znvzdWl?usp=sharing" style="font-weight:600; font-size:1.1rem;">Pyro Tutorial no2</a>
-              <p style="margin:0; font-size:0.9rem;">Creating a custom dynamic class.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1mog1HAFN2NFEdw6sPudzW2OaTk_li0Vx?usp=sharing" style="font-weight:600; font-size:1.1rem;">Pyro Tutorial no3</a>
-              <p style="margin:0; font-size:0.9rem;">Closed-loop systems and the controller class.</p>
-            </div>
-          </li>
-          <li class="mb-2 p-2" style="background:white; border-radius:var(--border-radius); box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:var(--spacing-sm);">
-            <img src="img/colab.png" style="width:50px;">
-            <div>
-              <a href="https://colab.research.google.com/drive/1OILAhXRxM1r5PEB1BWaYtbR147Ff3gr1?usp=sharing" style="font-weight:600; font-size:1.1rem;">Pyro Tutorial no4</a>
-              <p style="margin:0; font-size:0.9rem;">The manipulator robot class.</p>
-            </div>
-          </li>
-        </ul>
-
+            <div class="card-title"><a href="pdf/GRO860_Notes.pdf">Optimal Control Notes (PDF)</a></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- UdeS Classes -->
-    <section class="section" id="classes">
+    <!-- Colab Section -->
+    <section class="section" id="colab">
       <div class="container container-narrow">
-        <h2>UdeS Classes</h2>
-        <ul style="padding-left: 1.5rem;">
-          <li>Robot kinematic :&nbsp;<a href="https://www.usherbrooke.ca/admission/fiches-cours/GRO203/">GRO203</a></li>
-          <li>Linear algebra :&nbsp; <a href="https://www.usherbrooke.ca/admission/fiches-cours/gro211/algebre-lineaire-pour-la-robotique/">GRO211</a></li>
-          <li>Controls :&nbsp;<a href="https://www.usherbrooke.ca/admission/fiches-cours/GRO501">GRO501</a></li>
-          <li>Robot differential kinematic and quasi-static controls: <a href="https://www.usherbrooke.ca/admission/fiches-cours/gro640/cinematique-differentielle-des-robots-manipulateurs/">GRO640</a></li>
-          <li>Robotic : Modeling and Controls - <a href="courses/gmc714/">GMC714</a></li>
-          <li>Optimal control and reinforcement learning:&nbsp;<a href="courses/gro860/">GRO860</a></li>
+        <h2>Colab Interactive Tutorials</h2>
+        <p class="text-muted">Run robotics code directly in your browser with zero setup:</p>
+        
+        <h3 class="mt-4">Optimal Control:</h3>
+        <ul class="resource-list">
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1wXmlIqNGC2LrJkmyj56Y109b5ZDHVboq">Optimal control overview</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1mcExyc25P_0im4iU_wVEFnkzgw4UTVaq">LQR vs. Dynamic Programming</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1yq2GHAkvO6fTF2W-tRbACDBa9_scec2k">Trajectory optimization</a></li>
+        </ul>
+
+        <h3 class="mt-4">Robot Arm Control:</h3>
+        <ul class="resource-list">
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1qaCNY2ohQIbC6dV2ZW4KY6FDM9NhJzH2">2 DoF PID Control</a></li>
+          <li><img src="img/colab.png" width="30"> <a href="https://colab.research.google.com/drive/1M3O_nD8iLbRSvZzyUpBn0Mo8KUclrG26">Kinematic Controllers</a></li>
         </ul>
       </div>
+    </section>
+
+    <!-- University Courses -->
+    <section class="section section-bg" id="courses">
+       <div class="container container-narrow">
+         <h2>University Courses (UdeS)</h2>
+         <p>Access the private material and syllabus for my active courses at Université de Sherbrooke:</p>
+         <div class="grid mt-4">
+            <a href="courses/gro860/" class="btn-action" style="background: white; border: 1px solid var(--color-border); text-align: left;">
+              <strong>GRO860</strong><br>
+              <span class="text-muted" style="font-size:0.9rem;">Apprentissage par renforcement...</span>
+            </a>
+            <a href="courses/gmc714/" class="btn-action" style="background: white; border: 1px solid var(--color-border); text-align: left;">
+              <strong>GMC714</strong><br>
+              <span class="text-muted" style="font-size:0.9rem;">Robotique : modélisation et commande</span>
+            </a>
+         </div>
+       </div>
     </section>
 
   </main>
@@ -313,9 +151,14 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a> | <a href="https://www.linkedin.com/in/alx87grd">LinkedIn.com/in/alx87grd</a></p>
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca</p>
     </div>
   </footer>
 
 </body>
+<!-- CSS utility for lists if needed -->
+<style>
+  .resource-list { list-style: none; padding: 0; }
+  .resource-list li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding: 10px; background: white; border-radius: 8px; box-shadow: var(--shadow-sm); }
+</style>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Alex Robotics</title>
+  <title>Alex Robotics | Alexandre Girard</title>
   <meta charset="UTF-8">
   <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,10 +18,8 @@
         <span></span><span></span><span></span>
       </label>
       <ul class="nav-menu">
-        <li class="nav-item"><a href="courses/gro860/">GRO860</a></li>
-        <li class="nav-item"><a href="courses/gmc714/">GMC714</a></li>
-        <li class="nav-item"><a href="material.html">Material</a></li>
-        <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a href="projects.html">Research</a></li>
+        <li class="nav-item"><a href="material.html">Resources</a></li>
         <li class="nav-item"><a href="students.html">Students</a></li>
         <li class="nav-item"><a href="#about">About</a></li>
       </ul>
@@ -33,292 +31,124 @@
     <img class="hero-img" src="img/bg3.jpg" alt="sky">
     <div class="hero-content">
       <h1>Alex Robotics</h1>
-      <p>Research, Coding, Prototypes, Classes, Software</p>
+      <p>Robotics | Autonomous Vehicles | Mechatronics | Control & AI</p>
     </div>
   </header>
 
   <main>
-    <!-- Teaching Material Section -->
-    <section class="section" id="material">
+    
+    <!-- Research Highlights -->
+    <section class="section" id="highlights">
       <div class="container">
-        <h2>Learning material</h2>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:var(--spacing-md);">
+          <h2>Research Highlights</h2>
+          <a href="projects.html" class="text-primary" style="font-weight:600;">View all projects &rarr;</a>
+        </div>
         
-        <div class="grid">
-          
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
           <div class="card">
             <div class="card-img-wrapper">
-              <a href="pdf/GRO860_Notes.pdf" class="card-overlay-title">Commande optimale et apprentissage par renforcement (Notes)</a>
-              <img src="img/courses/gro860/cost2go_animation-2.gif" alt="DP Notes" style="height: 100%; object-fit: cover;">
+              <a href="projects/estimationpowerlines.html"><img src="img/powerlines.png" alt="UAV Power Lines"></a>
             </div>
+            <div class="card-title"><a href="projects/estimationpowerlines.html">UAV Power Line Inspection</a></div>
           </div>
-
-          <div class="card resource-card">
-            <div class="card-img-wrapper">
-              <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL" class="card-overlay-title">Commande optimale (Vidéos)</a>
-              <iframe height="200" src="https://www.youtube.com/embed/videoseries?si=xedyohe1Hk242pnu&amp;list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-
           <div class="card">
             <div class="card-img-wrapper">
-              <a href="https://github.com/SherbyRobotics/pyro" class="card-overlay-title">Pyro: python robotics toolbox</a>
-              <img src="img/compressed_gif/cartpole_swing_up.gif" alt="Pyro">
+              <a href="projects/dimensionlesspolicies.html"><img src="img/dimensionlesspolicies.png" alt="Dimensionless Policies"></a>
             </div>
+            <div class="card-title"><a href="projects/dimensionlesspolicies.html">Dimensionless Control Policies</a></div>
           </div>
-
-          <div class="card resource-card">
-            <div class="card-img-wrapper">
-              <a href="https://www.youtube.com/c/AlexandreGirard87" class="card-overlay-title">Robotique: cinématique et dynamique (Vidéos)</a>
-              <iframe height="200" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-
           <div class="card">
             <div class="card-img-wrapper">
-              <a href="pdf/Notes_Robotique_UdeS.pdf" class="card-overlay-title">Robotique (Notes de cours)</a>
-              <img src="img/base.png" alt="Robotique Notes">
+              <a href="projects/snowcontrol.html"><img src="img/xmax.png" alt="Adverse Weather"></a>
             </div>
+            <div class="card-title"><a href="projects/snowcontrol.html">Adverse Weather Navigation</a></div>
           </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="material.html#colab" class="card-overlay-title">Tutoriels interactifs (Colab)</a>
-              <img src="img/colab.png" alt="Colab">
-            </div>
-          </div>
-
-          <div class="card" style="background:#0f172a; display:flex; align-items:center; justify-content:center;">
-              <a href="material.html" style="color:white; font-weight:bold; font-size:1.2rem;">... see all material here</a>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- Research Portfolio Section -->
-    <section class="section section-bg" id="portfolio">
+    <!-- Resources Highlights -->
+    <section class="section section-bg" id="resources">
       <div class="container">
-        <h2>Research Portfolio</h2>
-        <div class="grid">
-          
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:var(--spacing-md);">
+           <h2>Tools & Open Resources</h2>
+           <a href="material.html" class="text-primary" style="font-weight:600;">View all resources &rarr;</a>
+        </div>
+        
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
           <div class="card">
             <div class="card-img-wrapper">
-              <a href="projects/estimationpowerlines.html" class="card-overlay-title">Power Lines Estimation</a>
-              <img src="img/powerlines.png" alt="Power Lines">
+              <a href="https://github.com/SherbyRobotics/pyro"><img src="img/compressed_gif/cartpole_swing_up.gif" alt="Pyro"></a>
             </div>
+            <div class="card-title"><a href="https://github.com/SherbyRobotics/pyro">Pyro: Python Robotics Toolbox</a></div>
           </div>
-
           <div class="card">
             <div class="card-img-wrapper">
-              <a href="projects/dimensionlesspolicies.html" class="card-overlay-title">Dimensionless Policies</a>
-              <img src="img/dimensionlesspolicies.png" alt="Dimensionless Policies">
+              <a href="pdf/Notes_Robotique_UdeS.pdf"><img src="img/base.png" alt="Robotics Notes"></a>
             </div>
+            <div class="card-title"><a href="pdf/Notes_Robotique_UdeS.pdf">Robotic Modeling Notes (PDF)</a></div>
           </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/arjo_alliance.html" class="card-overlay-title">Smart patient transfer devices</a>
-              <img src="img/arjo2.jpg" alt="Arjo">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/physic_ai.html" class="card-overlay-title">Physics-based AI</a>
-              <img src="img/vi.png" alt="Physics AI">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/arjo_control.html" class="card-overlay-title">Control laws for a motorized lift</a>
-              <img src="img/arjo_control.png" alt="Arjo Control">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/snowcontrol.html" class="card-overlay-title">Control laws for autonomous cars</a>
-              <img src="img/xmax.png" alt="Snow Control">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/variabletransmission.html" class="card-overlay-title">Multi-modal hydrostatic actuators</a>
-              <img src="img/hydrostatic.png" alt="Hydrostatic">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/nadile.html" class="card-overlay-title">Landing controllers for drones</a>
-              <img src="img/nadile.jpg" alt="Drones">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/srl_arm.html" class="card-overlay-title">Lightweight wearable robotic arms</a>
-              <img src="img/srl_arm.jpg" alt="Wearable Arms">
-            </div>
-          </div>
-
           <div class="card resource-card">
             <div class="card-img-wrapper">
-              <a href="projects/srl_leg.html" class="card-overlay-title">A supernumerary Robotic Leg</a>
-              <iframe height="200" src="https://www.youtube.com/embed/b7qlB9nanGs" frameborder="0" allowfullscreen></iframe>
+              <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu"><iframe height="100%" src="https://www.youtube.com/embed/videoseries?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu" frameborder="0" allowfullscreen></iframe></a>
             </div>
+            <div class="card-title"><a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu">Optimal Control (Video Series)</a></div>
           </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/force_control.html" class="card-overlay-title">High-performance force control</a>
-              <img src="img/force_control_ss.png" alt="Force Control">
-            </div>
-          </div>
-
-          <div class="card resource-card">
-            <div class="card-img-wrapper">
-              <a href="projects/haptic_rendering.html" class="card-overlay-title">High-performance haptic rendering</a>
-              <iframe height="200" src="https://www.youtube.com/embed/vlbI-mE2Kks" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/ankle_exo.html" class="card-overlay-title">A multifunctional ankle exoskeleton</a>
-              <img src="img/ankle_exo.png" alt="Ankle Exo">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/udesracecar.html" class="card-overlay-title">UdeS racecar autonomous platform</a>
-              <img src="img/udesracecar.jpg" alt="Racecar">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/tmotorarm.html" class="card-overlay-title">Open-Source 2 DoF arm</a>
-              <img src="img/tmotorarm1.jpg" alt="2 DoF Arm">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/dsdm.html" class="card-overlay-title">Custom lightweight robotic arm</a>
-              <img src="img/dsdm_arm.jpg" alt="DSDM Arm">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/dsdm.html" class="card-overlay-title">Variable transmission actuators</a>
-              <img src="img/dsdm.jpg" alt="DSDM Actuators">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/climbing_robot.html" class="card-overlay-title">Manufacturing climbing robots</a>
-              <img src="img/climbing1.jpg" alt="Climbing Robot">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/planningmit.html" class="card-overlay-title">Motion Planning Algorithms</a>
-              <img src="img/rrt.png" alt="RRT">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/segway.html" class="card-overlay-title">Arms in the balancing dynamics</a>
-              <img src="img/segway_concept.png" alt="Segway">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/optimalcontrolmit.html" class="card-overlay-title">Dynamic programming policies</a>
-              <img src="img/opti2.png" alt="Optimal Control">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/binary.html" class="card-overlay-title">Control laws for binary soft robots</a>
-              <img src="img/binary1.png" alt="Binary Robots">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/softsensor.html" class="card-overlay-title">Soft polymer 2 DoF sensor</a>
-              <img src="img/softsensor.jpg" alt="Soft Sensor">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/kuka_impedance.html" class="card-overlay-title">Impedance Controller for Kuka</a>
-              <img src="img/kuka1.jpg" alt="Kuka Impedance">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/phoebus.html" class="card-overlay-title">Two-speed robotized transmission</a>
-              <img src="img/phoebus.webp" alt="Phoebus">
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img-wrapper">
-              <a href="projects/fuelpowered.html" class="card-overlay-title">Fuel-Powered Air-Muscle Actuator</a>
-              <img src="img/fuel.jpg" alt="Fuel Powered Element">
-            </div>
-          </div>
-
-          <div class="card" style="background:#0f172a; display:flex; align-items:center; justify-content:center;">
-              <a href="projects.html" style="color:white; font-weight:bold; font-size:1.2rem;">... see complete list here</a>
-          </div>
-          
         </div>
       </div>
     </section>
 
-    <!-- Partners / Grants / Client Section -->
-    <section class="section">
-      <div class="container container-narrow text-center">
-        <h2>Grants, Partners and Clients</h2>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; align-items:center; margin-top:2rem;">
-          <img src="logo/arjo.png" alt="arjo logo" style="max-width:120px; height:auto; opacity:0.8; transition:0.3s; filter:grayscale(100%);" onmouseover="this.style.filter='none';this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.8';">
-          <img src="logo/brp.png" alt="brp logo" style="max-width:80px; height:auto; opacity:0.8; transition:0.3s; filter:grayscale(100%);" onmouseover="this.style.filter='none';this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.8';">
-          <img src="logo/hydro.png" alt="hydro logo" style="max-width:120px; height:auto; opacity:0.8; transition:0.3s; filter:grayscale(100%);" onmouseover="this.style.filter='none';this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.8';">
-          <img src="logo/exo.png" alt="exo logo" style="max-width:120px; height:auto; opacity:0.8; transition:0.3s; filter:grayscale(100%);" onmouseover="this.style.filter='none';this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.8';">
-          <img src="logo/ge.png" alt="ge logo" style="max-width:120px; height:auto; opacity:0.8; transition:0.3s; filter:grayscale(100%);" onmouseover="this.style.filter='none';this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.8';">
-          <img src="logo/michelin.png" alt="michelin logo" style="max-width:120px; height:auto; opacity:0.8; transition:0.3s; filter:grayscale(100%);" onmouseover="this.style.filter='none';this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.8';">
-          <img src="logo/kinova.png" alt="kinova logo" style="max-width:120px; height:auto; opacity:0.8; transition:0.3s; filter:grayscale(100%);" onmouseover="this.style.filter='none';this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.8';">
-          <img src="logo/boeing.png" alt="boeing logo" style="max-width:120px; height:auto; opacity:0.8; transition:0.3s; filter:grayscale(100%);" onmouseover="this.style.filter='none';this.style.opacity='1';" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.8';">
+    <!-- University Courses -->
+    <section class="section" id="courses">
+       <div class="container">
+         <h2>University Courses</h2>
+         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+            <div class="card">
+              <div class="card-img-wrapper" style="height:200px;">
+                <a href="courses/gro860/"><img src="img/courses/gro860/cost2go_animation-2.gif" alt="Optimal Control" style="height: 100%; object-fit: cover;"></a>
+              </div>
+              <div class="card-title"><a href="courses/gro860/">GRO860: Optimal Control & RL</a></div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height:200px;">
+                <a href="courses/gmc714/"><img src="img/compressed_gif/double_pendulum_swing_up.gif" alt="GMC714" style="height: 100%; object-fit: cover;"></a>
+              </div>
+              <div class="card-title"><a href="courses/gmc714/">GMC714: Robotics: Modeling & Control</a></div>
+            </div>
+         </div>
+       </div>
+    </section>
+
+    <!-- Lab CTA -->
+    <section class="section section-bg" id="join">
+      <div class="container text-center">
+        <div class="card" style="padding: var(--spacing-lg); background: linear-gradient(135deg, var(--color-primary), #1d4ed8); color: white;">
+          <h2 style="color: white; margin-bottom: var(--spacing-sm);">Interested in Joining the Team?</h2>
+          <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto var(--spacing-md);">I am currently seeking motivated graduate students and post-docs to work on mechatronics and control projects.</p>
+          <a href="students.html" class="btn-action" style="background: white; color: var(--color-primary); padding: 1rem 2rem; display: inline-block;">Learn how to apply</a>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section section-bg" id="about">
-      <div class="container container-narrow">
-        <h2>About</h2>
-        <div style="display:flex; flex-wrap:wrap; gap:2rem; align-items: flex-start; justify-content:space-between;">
-          <div style="flex:1; min-width:300px;">
-            <p> Greetings! I am Alexandre Girard a roboticist and Professor at Université de Sherbrooke, Qc, Canada. I am especially interested in the science of controlling how things move, from mechanical design up to control laws and algorithms: robots, mechanisms, actuators, sensors, vehicles, etc. Feel free to contact me if your are interested in robotics research projects!</p>
-            <p> If you are a student looking for a thesis project and/or position in my laboratory: see <a href="students.html">this page</a>. If you are looking for a university partner to develop new technologies and/or solve hard motion control problems, please contact me.</p>
-          </div>
-          <div style="flex-basis: 25%;">
-            <img src="logo/udes.png" alt="UdeS logo" style="width:100%; max-width:200px; display:block; margin:auto;">
+    <!-- Profile Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="card profile-card" style="padding: var(--spacing-lg); background: var(--color-bg-off); border: none; box-shadow: var(--shadow-md);">
+          <div style="display:flex; flex-wrap:wrap; gap:2rem; align-items: center;">
+            <div style="flex:0 0 150px; text-align: center;">
+              <img src="logo/udes.png" alt="UdeS logo" style="width:100%; max-width:120px; filter: grayscale(100%) opacity(0.7);">
+            </div>
+            <div style="flex:1; min-width:300px;">
+              <h3 style="margin-bottom: var(--spacing-xs);">Alexandre Girard, eng. PhD</h3>
+              <p class="text-muted" style="margin-bottom: var(--spacing-sm);">Professor of Robotics, Université de Sherbrooke</p>
+              <p style="margin-bottom: var(--spacing-md);">My research focus is at the intersection of mechanical design and control theory. I develop high-performance robotic systems, from patients lifts to autonomous vehicles, using physics-based AI and advanced mechatronics.</p>
+              <div style="display: flex; gap: var(--spacing-md);">
+                <a href="mailto:alex.girard@usherbrooke.ca" class="text-primary" style="font-weight:600;">📧 Email</a>
+                <a href="https://scholar.google.com/citations?user=1qdSFXQAAAAJ" class="text-primary" style="font-weight:600;">🎓 Google Scholar</a>
+                <a href="https://github.com/alx87grd" class="text-primary" style="font-weight:600;">💻 GitHub</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -326,10 +156,9 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a> | <a href="https://www.linkedin.com/in/alx87grd">LinkedIn.com/in/alx87grd</a></p>
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
     </div>
   </footer>
 
