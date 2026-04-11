@@ -1,161 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Students</title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Students & Opportunities - Alex Robotics</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#On-going" class="w3-bar-item w3-button">Projects</a>
-      <a href="#info" class="w3-bar-item w3-button">Info</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#On-going">Projects</a></li>
+        <li class="nav-item"><a href="#info">Info</a></li>
+      </ul>
     </div>
-  </div>
-</div>
+  </nav>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="IMG/bg3.jpg" alt="sky" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <div class="w3-container" id="On-going">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> On-going projects at UdeS </h2>
-    <p> Please contact me if you are a prospective graduate student interested in working on those topics:</p>
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-col l2 m3 s12 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/scope.html">
-            Scope (advanced driving assistance)
-          </a>
-        </div>
-        <img src="IMG/maverick.jpeg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
+  <!-- Smaller Hero for Sub-Pages -->
+  <header class="hero" id="home" style="height: 40vh; min-height: 300px;">
+    <img class="hero-img" src="img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1 style="font-size: 3rem; margin-bottom: var(--spacing-sm);">Prospective Students</h1>
+      <p>Join the team and conduct cutting-edge robotics research</p>
     </div>
+  </header>
 
-    <div class="w3-col l2 m3 s12 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/physic_ai.html">
-            Physics-based AI
-          </a>
-        </div>
-        <img src="IMG/vi.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
+  <main>
+    <section class="section" id="On-going">
+      <div class="container">
+        <h2>On-going projects at UdeS</h2>
+        <p>Please contact me if you are a prospective graduate student interested in working on those topics:</p>
 
-    <div class="w3-col l2 m3 s12 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/arjo_alliance.html">
-            Collaborative robotics for mobility in healthcare settings
-          </a>
-        </div>
-        <img src="IMG/arjo_team.jpeg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-
-      <div class="w3-col l2 m3 s12 w3-margin-bottom">
-        <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">
-            <a href="projects/nadile.html">
-              Advanced drone controllers for autonomous electric line inspection
-            </a>
+        <div class="grid mt-4">
+          
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/scope.html" class="card-overlay-title">Scope (advanced driving assistance)</a>
+              <img src="img/maverick.jpeg" alt="Scope">
+            </div>
           </div>
-          <img src="IMG/nadile.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-        </div>
-      </div>
-
-      <div class="w3-col l2 m3 s12 w3-margin-bottom">
-        <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">
-            <a href="projects/variabletransmission.html">
-              Wearable robotics
-            </a>
+          
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/physic_ai.html" class="card-overlay-title">Physics-based AI</a>
+              <img src="img/vi.png" alt="Physics AI">
+            </div>
           </div>
-          <img src="IMG/hydrostatic.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+          
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/arjo_alliance.html" class="card-overlay-title">Collaborative robotics for mobility</a>
+              <img src="img/arjo_team.jpeg" alt="Arjo">
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/nadile.html" class="card-overlay-title">Drone controllers for line inspection</a>
+              <img src="img/nadile.jpg" alt="Drone Controllers">
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/variabletransmission.html" class="card-overlay-title">Wearable robotics</a>
+              <img src="img/hydrostatic.png" alt="Wearable Robotics">
+            </div>
+          </div>
+
         </div>
       </div>
-  
-      <!-- <div class="w3-container w3-padding-32" id="portfolio">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">2020</h3>
-      </div> -->
-  
-      
+    </section>
 
-  </div>
-
-
-
-  <div class="w3-container" id="info">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> Information for Prospective students </h2>
-    <p> 
-      Please contact me (alex.girard@usherbrooke.ca) if you are interested in research projects in the field of robotics! Many positions will be available fo MScA students, PhD students and post-doc. I am currently recruiting for:  <a href="projects.html" >on-going projects</a>
-    </p>
-    <p>
-      Students working with me will join a dynamic team within the Createk group. The Createk group and the IntroLab laboratory share an open office space on the 3rd floor of the 3IT, and the student will have the chance to interact with experts in machine design, electronics and computer science. They will integrate a “maker” community and will be able to perfect their skills in mechatronics and robotics.
-    </p>
-    <h4> Createk – <a href="https://www.createk.co ">www.createk.co </a></h4>
-    <p>
-      Createk is a group of professors leading research projects in the development of advanced technologies (robotics, actuators and vehicles). The team consists of multiples professors, research professionals, technician and graduate students.
-    </p>
-    <h4> 3IT – <a href="https://www.usherbrooke.ca/3it/english/"> www.usherbrooke.ca/3it/english/ </a></h4>
-    <p>
-      The 3IT is an institute that aims to accelerate innovation by eliminating boundaries in research areas. The 3IT is made up of researchers from several faculties and companies, which makes it a unique place for technological innovation. The institute is equipped with mechanical and electrical prototyping machines, as well as instrumented test rooms.
-    </p>
-    <h4> Université de Sherbrooke – <a href="https://www.usherbrooke.ca">www.usherbrooke.ca </a></h4>
-    <p>
-      The Université de Sherbrooke stands out with its practical learning methods, promising themes propelling its research units, a strong strategy of innovation, partnership and entrepreneurship, green campuses and an incomparable quality of life between rivers, forests and mountains. So many reasons that make it one of the most appreciated universities in Canada by its students.
-    </p>
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-col l6 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-          <iframe style="width:100%" height="400" src="https://www.youtube.com/embed/0yBu2eNH6xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="section section-bg" id="info">
+      <div class="container container-narrow">
+        <h2>Information for Prospective Students</h2>
+        <p>Please contact me (<a href="mailto:alex.girard@usherbrooke.ca">alex.girard@usherbrooke.ca</a>) if you are interested in research projects in the field of robotics! Many positions will be available for MScA students, PhD students, and post-docs. I am currently recruiting for: <a href="projects.html#on-going">on-going projects</a>.</p>
+        <p>Students working with me will join a dynamic team within the Createk group. The Createk group and the IntroLab laboratory share an open office space on the 3rd floor of the 3IT, and the student will have the chance to interact with experts in machine design, electronics and computer science. They will integrate a “maker” community and will be able to perfect their skills in mechatronics and robotics.</p>
+        
+        <h3 class="mt-4">Createk – <a href="https://www.createk.co">www.createk.co</a></h3>
+        <p>Createk is a group of professors leading research projects in the development of advanced technologies (robotics, actuators and vehicles). The team consists of multiples professors, research professionals, technicians, and graduate students.</p>
+        
+        <h3 class="mt-4">3IT – <a href="https://www.usherbrooke.ca/3it/english/">www.usherbrooke.ca/3it</a></h3>
+        <p>The 3IT is an institute that aims to accelerate innovation by eliminating boundaries in research areas. The 3IT is made up of researchers from several faculties and companies, which makes it a unique place for technological innovation. The institute is equipped with mechanical and electrical prototyping machines, as well as instrumented test rooms.</p>
+        
+        <h3 class="mt-4">Université de Sherbrooke – <a href="https://www.usherbrooke.ca">www.usherbrooke.ca</a></h3>
+        <p>The Université de Sherbrooke stands out with its practical learning methods, promising themes propelling its research units, a strong strategy of innovation, partnership and entrepreneurship, green campuses and an incomparable quality of life between rivers, forests and mountains. So many reasons that make it one of the most appreciated universities in Canada by its students.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="w3-col l6 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="https://www.usherbrooke.ca/admission/"> Université de Sherbrooke</a>
+    <section class="section">
+      <div class="container container-narrow">
+        <div style="display:flex; flex-wrap:wrap; gap:var(--spacing-md); align-items:center;">
+          <div style="flex:1; min-width:300px; height:250px;">
+            <iframe style="width:100%; height:100%; border-radius:var(--border-radius);" src="https://www.youtube.com/embed/0yBu2eNH6xs" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div style="flex:1; min-width:300px; height:250px; position:relative;">
+            <div style="position:absolute; top:0; left:0; background:rgba(0,0,0,0.7); color:white; padding:10px; font-weight:600;"><a href="https://www.usherbrooke.ca/admission/" style="color:white;">Université de Sherbrooke</a></div>
+            <img src="img/udes_campus.jpg" alt="UdeS Campus" style="width:100%; height:100%; object-fit:cover; border-radius:var(--border-radius);">
+          </div>
         </div>
-        <img src="IMG/udes_campus.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
       </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a> | <a href="https://www.linkedin.com/in/alx87grd">LinkedIn.com/in/alx87grd</a></p>
     </div>
-
-  </div>
-
-<!-- End page content -->
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-  LinkedIn.com/in/alx87grd </a>  </p>
-</footer>
+  </footer>
 
 </body>
 </html>
