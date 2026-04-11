@@ -328,6 +328,23 @@ ul, ol {
   transform: scale(1.05);
 }
 
+/* Responsive 16:9 YouTube (and similar) inside resource cards */
+.card-img-wrapper.card-img-wrapper--video-embed {
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: none;
+}
+
+.card-img-wrapper.card-img-wrapper--video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
 .card-title {
   padding: var(--spacing-sm);
   background: white;
@@ -338,6 +355,10 @@ ul, ol {
   justify-content: center;
   text-align: center;
   height: 60px; /* Fixed height for title area for grid alignment */
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.3;
 }
 
 .card-title a {
