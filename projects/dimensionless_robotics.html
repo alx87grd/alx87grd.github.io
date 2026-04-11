@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Generalizing Robotic Control - Alex Robotics</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../courses/gro860/">GRO860</a></li>
+        <li class="nav-item"><a href="../courses/gmc714/">GMC714</a></li>
+        <li class="nav-item"><a href="../material.html">Material</a></li>
+        <li class="nav-item"><a href="../projects.html">Portfolio</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Smaller Hero for Projects -->
+  <header class="hero" id="home" style="height: 35vh; min-height: 250px;">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1 style="font-size: 2.5rem; margin-bottom: 0;">Generalizing Robotic Control with Dimensionless Policies</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        
+        <!-- Main Content Pane -->
+        <div class="project-main">
+          
+          <div style="margin-bottom: var(--spacing-md);">
+            <h2>Abstract</h2>
+            <p>
+              Learning-based policies in robotics currently suffer from a lack of generalization, requiring costly retraining for new robots, environments, or tasks. This research program addresses this bottleneck by introducing a novel paradigm based on <strong>dimensional analysis</strong> and the <strong>Buckingham &Pi; Theorem</strong>.
+            </p>
+            <p>
+              The program focuses on developing inherently scalable <strong>dimensionless policies</strong> and similarity metrics to identify 'regimes of behavior' where control policies can be transferred between different robotic systems (e.g., from an autonomous ATV to a truck) without performance loss. This work aims to move beyond single-use black-box solutions toward universal representations of motion control skills.
+            </p>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-md);">
+            <h3>Program Objectives</h3>
+            <ul>
+              <li><strong>Robustness of Transfers for Quasi-Similar Systems:</strong> Quantifying how much robot parameters can vary while still permitting effective policy transfer without retraining.</li>
+              <li><strong>Transfer Quality Prediction Tools:</strong> Developing similarity metrics and dimensionality reduction schemes to predict transfer success for high-dimensional systems (e.g., humanoids).</li>
+              <li><strong>Shared Learning for Heterogeneous Robots:</strong> Enabling a fleet of diverse robots to collectively learn from pooled physical experiences based on shared regimes of behavior.</li>
+            </ul>
+          </div>
+          
+          <div style="margin-bottom: var(--spacing-md);">
+            <h3>Related Publications</h3>
+            <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
+              <a href="dimensionlesspolicies.html" class="btn-action">📄 <strong>Foundational Work:</strong> A. Girard, "Dimensionless Policies based on the Buckingham &Pi; Theorem," Mathematics, 2024.</a>
+              <a href="https://doi.org/10.3390/electronics13112041" class="btn-action">📄 <strong>Research Article:</strong> W. Therrien, O. Lecompte, and A. Girard, "Using the Buckingham &Pi; Theorem for Multi-System Transfer Learning," Electronics, 2024.</a>
+              <a href="https://arxiv.org/abs/2510.08768" class="btn-action">📄 <strong>Francisco's Work (arXiv):</strong> F. Pascoa, I. Lalonde, and A. Girard, "Zero-Shot Policy Transfer in Reinforcement Learning using Buckingham's Pi Theorem," 2025.</a>
+            </div>
+          </div>
+
+          <h3 style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-sm);">Project Media</h3>
+          <div class="grid">
+            
+            <div class="card">
+              <div class="card-img-wrapper">
+                <div class="card-overlay-title">Concept Overview</div>
+                <img src="../img/dg2026_main.png" alt="Dimensionless Transfer">
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img-wrapper">
+                <div class="card-overlay-title">Research Roadmap</div>
+                <img src="../img/dg2026_research.png" alt="Research Roadmap">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sticky Sidebar Metadata -->
+        <div class="project-sidebar">
+          <h3>Project Details</h3>
+          
+          <div class="project-meta-item">
+            <div class="project-meta-label">Funding</div>
+            <div class="project-meta-value">NSERC Discovery Grant (2026-2031)</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Team</div>
+            <div class="project-meta-value">Prof. Alexandre Girard (PI)</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Status</div>
+            <div class="project-meta-value">Active Research Program</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Keywords</div>
+            <div class="project-meta-value">Dimensional Analysis, Transfer Learning, Policy Generalization, Buckingham &Pi; Theorem, Autonomous Systems.</div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
