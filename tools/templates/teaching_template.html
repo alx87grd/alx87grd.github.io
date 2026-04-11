@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>COURSE_CODE - COURSE_TITLE</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../../index.html">Home</a></li>
+        <li class="nav-item"><a href="../../material.html">Teaching</a></li>
+        <li class="nav-item"><a href="../../projects.html">Portfolio</a></li>
+        <li class="nav-item"><a href="../../index.html#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero" style="height: 35vh; min-height: 250px;">
+    <img class="hero-img" src="../../img/bg3.jpg" alt="hero background">
+    <div class="hero-content">
+      <h1 style="font-size: 2.5rem; margin-bottom: 0;">COURSE_CODE</h1>
+      <p style="font-size: 1.2rem; opacity: 0.9;">FULL_COURSE_TITLE_HERE</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        
+        <!-- Main Content Column -->
+        <div class="project-main">
+          
+          <!-- Section 1: Preface (Marketing Teaser + Video) -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+              <div>
+                <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Préface</h2>
+                <p><strong>Marketing Teaser:</strong> Punchy description for prospective students.</p>
+                <blockquote style="border-left: 4px solid var(--color-primary); padding-left: var(--spacing-sm); font-style: italic; margin: var(--spacing-sm) 0;">
+                  "A powerful course tagline or quote goes here."
+                </blockquote>
+              </div>
+              <div class="card resource-card" style="margin-top: var(--spacing-md);">
+                <div class="card-img-wrapper">
+                  <div class="card-overlay-title">Vidéo de présentation</div>
+                  <iframe style="width:100%" height="250" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Media Grid -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h3>Aperçu visuel</h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+              <div class="card card-content" style="background: var(--color-bg-off); padding:0;">
+                <div class="card-img-wrapper" style="height: 150px;">
+                  <div class="card-overlay-title">Visual Highlight 1</div>
+                  <img src="../../img/compressed_gif/rocket.gif" style="width:100%; height:100%; object-fit: cover">
+                </div>
+              </div>
+              <div class="card card-content" style="background: var(--color-bg-off); padding:0;">
+                <div class="card-img-wrapper" style="height: 150px;">
+                  <div class="card-overlay-title">Visual Highlight 2</div>
+                  <img src="../../img/compressed_gif/drone.gif" style="width:100%; height:100%; object-fit: cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Introduction -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Introduction</h2>
+            <p>Detailed narrative background about the course themes and philosophy.</p>
+          </div>
+
+          <!-- Section 4: Cibles de formation -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h3>Cibles de formation</h3>
+            <p>À la fin de ce cours, vous serez en mesure de :</p>
+            <ul>
+              <li>Learning Objective 1</li>
+              <li>Learning Objective 2</li>
+            </ul>
+          </div>
+
+          <!-- Section 5: Déroulement du cours et Évaluation -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Déroulement du cours et Évaluation</h2>
+            
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
+              <div>
+                <h4>Déroulement</h4>
+                <p>Information on lectures, labs, and study hours.</p>
+              </div>
+              <div>
+                <h4>Évaluation</h4>
+                <p>Summary of grading: Homeworks, Exams, and Projects.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 6: The Weekly Guide -->
+          <div style="margin-top: var(--spacing-lg);">
+            <h2 id="guide">Guide du cours</h2>
+            <table class="syllabus-table">
+              <thead>
+                <tr>
+                  <th>Semaine</th>
+                  <th>Sujet & Matériel</th>
+                  <th>Exercices</th>
+                  <th>Livrables</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="syllabus-week"><h4>1</h4></td>
+                  <td><h4>Chapter Title</h4><p>Description.</p></td>
+                  <td>-</td>
+                  <td>Devoir #1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- Sidebar Column -->
+        <div class="project-sidebar">
+          <h3>Ressources</h3>
+          <div class="action-links-row" style="flex-direction: column; align-items: stretch;">
+            <a href="#" class="btn-action">📄 <strong>Notes:</strong> Version PDF complète</a>
+            <a href="#guide" class="btn-action">📅 <strong>Guide:</strong> Sauter vers l'horaire</a>
+            <a href="#" class="btn-action">▶️ <strong>Vidéos:</strong> Playlist de leçons</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a> | <a href="https://www.linkedin.com/in/alx87grd">LinkedIn.com/in/alx87grd</a></p>
+    </div>
+  </footer>
+</body>
+</html>

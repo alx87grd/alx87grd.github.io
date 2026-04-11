@@ -469,3 +469,111 @@ ul, ol {
   height: auto;
   white-space: normal;
 }
+
+/* ==========================================================================
+   Teaching & Syllabus
+   ========================================================================== */
+.syllabus-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--spacing-md) 0;
+  font-size: 0.95rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.syllabus-table th {
+  background: var(--color-bg-off);
+  color: var(--color-text-main);
+  text-align: left;
+  padding: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-border);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.syllabus-table td {
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  background: white;
+}
+
+.syllabus-table tr:last-child td {
+  border-bottom: none;
+}
+
+.syllabus-week {
+  font-weight: 700;
+  color: var(--color-primary);
+  width: 120px;
+}
+
+.syllabus-topic h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+}
+
+.syllabus-topic p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.syllabus-resources ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.logistics-card {
+  background: var(--color-bg-off);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.logistics-card h3 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+}
+
+.logistics-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  gap: var(--spacing-sm);
+}
+
+.logistics-label {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.logistics-value {
+  text-align: right;
+  color: var(--color-text-main);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-due { background: rgba(231, 76, 60, 0.1); color: #e74c3c; }
+.badge-done { background: rgba(46, 204, 113, 0.1); color: #2ecc71; }

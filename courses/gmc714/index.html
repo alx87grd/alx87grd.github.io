@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GMC714 - Robotique : modélisation et commande</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../../index.html">Home</a></li>
+        <li class="nav-item"><a href="../../material.html">Teaching</a></li>
+        <li class="nav-item"><a href="../../projects.html">Portfolio</a></li>
+        <li class="nav-item"><a href="../../index.html#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero" style="height: 35vh; min-height: 250px;">
+    <img class="hero-img" src="../../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1 style="font-size: 2.5rem; margin-bottom: 0;">GMC714</h1>
+      <p style="font-size: 1.2rem; opacity: 0.9;">Robotique : modélisation et commande</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        
+        <!-- Main Content Column -->
+        <div class="project-main">
+          
+          <!-- Section 1: Preface (Marketing Teaser + Video) -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+              <div>
+                <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Préface</h2>
+                <h3>La science du mouvement</h3>
+                <p>Ce cours présente les outils mathématiques pour analyser le mouvement et synthétiser des algorithmes pour le contrôler, des méthodes classiques basées sur un modèle jusqu'à l'apprentissage par renforcement.</p>
+                <p>Le cours présente des modèles cinématiques et dynamiques couramment utilisés pour développer des lois de commande et planifier des trajectoires pour les principaux types de systèmes robotiques.</p>
+              </div>
+              <div class="card resource-card" style="margin-top: var(--spacing-md);">
+                <div class="card-img-wrapper">
+                  <div class="card-overlay-title">Vidéo de présentation du cours</div>
+                  <iframe style="width:100%" height="250" src="https://www.youtube.com/embed/CrYrXTBjg5Y" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Media Grid -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h3>Aperçu visuel</h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+              <div class="card card-content" style="background: var(--color-bg-off); padding:0;">
+                <div class="card-img-wrapper" style="height: 180px;">
+                  <div class="card-overlay-title">Dynamique de bras robotiques articulés</div>
+                  <img src="../../img/compressed_gif/double_pendulum_swing_up.gif" style="width:100%; height:100%; object-fit: cover">
+                </div>
+              </div>
+              <div class="card card-content" style="background: var(--color-bg-off); padding:0;">
+                <div class="card-img-wrapper" style="height: 180px;">
+                  <div class="card-overlay-title">Loi de commande pour véhicules</div>
+                  <img src="../../img/compressed_gif/rocket.gif" style="width:100%; height:100%; object-fit: cover">
+                </div>
+              </div>
+              <div class="card card-content" style="background: var(--color-bg-off); padding:0;">
+                <div class="card-img-wrapper" style="height: 180px;">
+                  <div class="card-overlay-title">Planification de trajectoires</div>
+                  <img src="../../img/compressed_gif/drone.gif" style="width:100%; height:100%; object-fit: cover">
+                </div>
+              </div>
+              <div class="card card-content" style="background: var(--color-bg-off); padding:0;">
+                <div class="card-img-wrapper" style="height: 180px;">
+                  <div class="card-overlay-title">Synthétiser des politiques optimales</div>
+                  <img src="../../img/compressed_gif/active_suspension.gif" style="width:100%; height:100%; object-fit: cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Introduction -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Introduction</h2>
+            <p>Le but du cours est de présenter les outils mathématiques pour modéliser, analyser et contrôler le mouvement des systèmes robotiques. Des manipulateurs industriels aux véhicules autonomes, nous explorons comment la physique du mouvement dicte les algorithmes de décision.</p>
+          </div>
+
+          <!-- Section 4: Cibles de formation -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h3>Cibles de formation</h3>
+            <h4>À la fin de ce cours vous serez en mesure de:</h4>
+            <ul>
+              <li>Modéliser et analyser le mouvement des robots en utilisant les outils mathématiques adaptés.</li>
+              <li>Choisir un type de modèle et une méthode de commande adapté à un problème de contrôle du mouvement.</li>
+              <li>Mettre en œuvre des algorithmes de commande et de planification de trajectoires pour divers types de systèmes robotiques.</li>
+            </ul>
+          </div>
+
+          <!-- Section 5: Déroulement du cours et Évaluation -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Déroulement du cours et Évaluation</h2>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
+              <div>
+                <h4>Déroulement</h4>
+                <p><strong>Périodes de formation (3h/sem) :</strong> Leçons magistrales et démonstrations en classe.</p>
+                <p><strong>Travaux pratiques (2h/sem) :</strong> Exercices dirigés théoriques ou informatiques et consultation pour les projets.</p>
+                <p><strong>Étude personnelle :</strong> Lectures et vidéos suggérées chaque semaine.</p>
+              </div>
+              <div>
+                <h4>Évaluation</h4>
+                <p><strong>Devoirs :</strong> 8 devoirs hebdomadaires (analytiques et numériques). Seul les 5 meilleurs comptent.</p>
+                <p><strong>Examen :</strong> Évaluation théorique de 3h à la semaine 9 (feuille de note permise).</p>
+                <p><strong>Projet :</strong> Projet individuel de modélisation/commande avec présentation finale.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 6: The Weekly Guide -->
+          <div style="margin-top: var(--spacing-lg);">
+            <h2 id="guide">Guide du cours</h2>
+            <p class="text-muted">Cette section présente les liens vers le matériel et les livrables semaines par semaines:</p>
+            <table class="syllabus-table" style="margin-top: var(--spacing-sm);">
+              <thead>
+                <tr>
+                  <th>Semaine</th>
+                  <th>Sujet & Matériel</th>
+                  <th>Exercices</th>
+                  <th>Livrables</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="syllabus-week"><h4>1</h4> 9 Jan</td>
+                  <td>
+                    <h4>Introduction</h4>
+                    <p>Espace des phase d'un système, types de modèles, défis de commande.</p>
+                    <ul>
+                      <li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitre 1 & 7</a></li>
+                      <li><a href="https://youtu.be/D_HLuoPrD4w">Vidéo : Modèles</a></li>
+                    </ul>
+                  </td>
+                  <td>-</td>
+                  <td><a href="../../pdf/GMC714_Devoir1_CommandeEspacePhase.pdf">Devoir #1</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>2</h4> 16 Jan</td>
+                  <td>
+                    <h4>Bras articulés: cinématique</h4>
+                    <ul>
+                      <li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitres 2, 3, 4</a></li>
+                    </ul>
+                  </td>
+                  <td>-</td>
+                  <td><a href="../../pdf/GMC714_Devoir2_cinematique.pdf">Devoir #2</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>3</h4> 23 Jan</td>
+                  <td>
+                    <h4>Bras articulés: dynamique</h4>
+                    <ul><li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitres 5, 6</a></li></ul>
+                  </td>
+                  <td>-</td>
+                  <td><a href="../../pdf/GMC714_Devoir3_dynamique.pdf">Devoir #3</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>5</h4> 30 Jan</td>
+                  <td>
+                    <h4>Bras articulés: commande 1</h4>
+                    <ul><li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitres 7, 8</a></li></ul>
+                  </td>
+                  <td>-</td>
+                  <td><a href="../../pdf/GMC714_Devoir4_staticcontrol.pdf">Devoir #4</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>6</h4> 6 Fév</td>
+                  <td>
+                    <h4>Bras articulés: commande 2</h4>
+                    <ul><li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitres 9, 20</a></li></ul>
+                  </td>
+                  <td>-</td>
+                  <td><a href="../../pdf/GMC714_Devoir5_dynamiccontrol.pdf">Devoir #5</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>6 bis</h4> 13 Fév</td>
+                  <td>
+                    <h4>Véhicules: modélisation</h4>
+                    <ul><li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitre 11</a></li></ul>
+                  </td>
+                  <td>-</td>
+                  <td><a href="../../pdf/GMC714_Devoir6_vehicules.pdf">Devoir #6</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>7</h4> 20 Fév</td>
+                  <td>
+                    <h4>Véhicules: planification</h4>
+                    <ul><li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitres 13, 16, 21</a></li></ul>
+                  </td>
+                  <td>-</td>
+                  <td><a href="../../pdf/GMC714_Devoir8_trajectory.pdf">Devoir #7</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>8</h4> 27 Fév</td>
+                  <td><h4>À venir!</h4></td>
+                  <td>-</td>
+                  <td><a href="../../pdf/GMC714_Devoir7_project.pdf">Devoir #8</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>9</h4> 13 Mars</td>
+                  <td><h4>Examen Théorique</h4></td>
+                  <td>-</td>
+                  <td>Examen</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>10-13</h4></td>
+                  <td><h4>État de l'art & Projets</h4></td>
+                  <td>-</td>
+                  <td>Projet de session</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- Sidebar Column -->
+        <div class="project-sidebar">
+          <h3>Ressources</h3>
+          <div class="action-links-row" style="flex-direction: column; align-items: stretch;">
+            <a href="../../pdf/Notes_Robotique_UdeS.pdf" class="btn-action">📄 <strong>Notes:</strong> Version PDF complète</a>
+            <a href="#guide" class="btn-action">📅 <strong>Guide:</strong> Sauter vers l'horaire</a>
+            <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UvwN11jNfpLfaVU0FxTtCi5&si=e9VPuXrtrfOCG4xR" class="btn-action">▶️ <strong>Vidéos:</strong> Playlist de leçons</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a> | <a href="https://www.linkedin.com/in/alx87grd">LinkedIn.com/in/alx87grd</a></p>
+    </div>
+  </footer>
+</body>
+</html>
