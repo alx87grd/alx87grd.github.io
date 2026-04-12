@@ -1,2 +1,9 @@
 # OS Files #
 .DS_Store
+Thumbs.db
+
+# Editor / local #
+.vscode/
+*.swp
+*.swo
+*~
