@@ -48,7 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (el.parentElement && (
             el.parentElement.classList.contains('grid') || 
             el.parentElement.classList.contains('action-links-row') ||
-            el.parentElement.classList.contains('hero-content')
+            el.parentElement.classList.contains('hero-content') ||
+            el.parentElement.classList.contains('content-card') ||
+            el.parentElement.classList.contains('card') ||
+            el.parentElement.classList.contains('project-sidebar') ||
+            el.parentElement.classList.contains('project-main')
         )) {
             parents.add(el.parentElement);
         } else {
