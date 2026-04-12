@@ -616,9 +616,10 @@ ul, ol {
   border-spacing: 0;
   margin: var(--spacing-md) 0;
   font-size: 0.95rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
+  border: none;
+  border-radius: var(--border-radius-lg);
   overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 .syllabus-table th {
