@@ -47,11 +47,10 @@
         <!-- Main Content Column -->
         <div class="project-main">
           
-          <!-- Section 1: Preface (Marketing Teaser + Video) -->
-          <div style="margin-bottom: var(--spacing-lg);">
+          <div class="content-card">
+            <h2>Préface</h2>
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
               <div>
-                <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Préface</h2>
                 <p><strong>Marketing Teaser:</strong> Punchy description for prospective students.</p>
                 <blockquote style="border-left: 4px solid var(--color-primary); padding-left: var(--spacing-sm); font-style: italic; margin: var(--spacing-sm) 0;">
                   "A powerful course tagline or quote goes here."
@@ -67,32 +66,30 @@
           </div>
 
           <!-- Section 2: Media Grid -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <h3>Aperçu visuel</h3>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
-              <div class="card card-content" style="background: var(--color-bg-off); padding:0;">
-                <div class="card-img-wrapper" style="height: 150px;">
-                  <div class="card-overlay-title">Visual Highlight 1</div>
-                  <img src="../../img/compressed_gif/rocket.gif" style="width:100%; height:100%; object-fit: cover">
-                </div>
+          <h3 class="section-title">Aperçu visuel</h3>
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 150px;">
+                <img src="../../img/compressed_gif/rocket.gif" style="width:100%; height:100%; object-fit: cover">
               </div>
-              <div class="card card-content" style="background: var(--color-bg-off); padding:0;">
-                <div class="card-img-wrapper" style="height: 150px;">
-                  <div class="card-overlay-title">Visual Highlight 2</div>
-                  <img src="../../img/compressed_gif/drone.gif" style="width:100%; height:100%; object-fit: cover">
-                </div>
+              <div class="card-title">Visual Highlight 1</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 150px;">
+                <img src="../../img/compressed_gif/drone.gif" style="width:100%; height:100%; object-fit: cover">
               </div>
+              <div class="card-title">Visual Highlight 2</div>
             </div>
           </div>
 
           <!-- Section 3: Introduction -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Introduction</h2>
+          <div class="content-card">
+            <h2>Introduction</h2>
             <p>Detailed narrative background about the course themes and philosophy.</p>
           </div>
 
           <!-- Section 4: Cibles de formation -->
-          <div style="margin-bottom: var(--spacing-lg);">
+          <div class="content-card">
             <h3>Cibles de formation</h3>
             <p>À la fin de ce cours, vous serez en mesure de :</p>
             <ul>
@@ -102,8 +99,8 @@
           </div>
 
           <!-- Section 5: Déroulement du cours et Évaluation -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Déroulement du cours et Évaluation</h2>
+          <div class="content-card">
+            <h2>Déroulement du cours et Évaluation</h2>
             
             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
               <div>
@@ -118,7 +115,7 @@
           </div>
 
           <!-- Section 6: The Weekly Guide -->
-          <div style="margin-top: var(--spacing-lg);">
+          <div class="content-card">
             <h2 id="guide">Guide du cours</h2>
             <table class="syllabus-table">
               <thead>
@@ -161,5 +158,6 @@
       <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
     </div>
   </footer>
+  <script src="../../js/animations.js"></script>
 </body>
 </html>
