@@ -1,19 +1,20 @@
 /**
  * Scroll Reveal Animations
- * Triggered by IntersectionObserver with staggering support
+ * Two patterns:
+ *  1. .content-card — reveals as a single block
+ *  2. .section-title + .grid > .card — title first, then cards stagger
+ * Plus: hero content, footer, standalone cards in grids
  */
 document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
-        threshold: [0.1, 0.5], // Multiple thresholds to catch fast scrolls
+        threshold: [0.1, 0.5],
         rootMargin: '0px 0px -50px 0px' 
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // SAFETY: If the element is already well into the view (e.g. fast scroll),
-                // we clear the delay to avoid "missing" content.
-                // EXCLUSION: We don't apply this for the hero content to preserve its staggered entry.
+                // Skip delay clearing for hero content (preserve stagger)
                 const isHeroContent = entry.target.closest('.hero-content');
                 if (!isHeroContent && (entry.intersectionRatio > 0.4 || entry.boundingClientRect.top < window.innerHeight * 0.7)) {
                     entry.target.style.transitionDelay = '0s';
@@ -25,58 +26,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // 1. Define selectors for different types of elements
-    const revealSelectors = [
-        '.card',
-        '.profile-card',
-        'section h2',
-        '.hero-content h1',
-        '.hero-content p',
-        '.footer .container',
-        '.logistics-card',
-        '.syllabus-table'
-    ];
-
-    // 2. Apply reveal class and observer
-    const revealElements = document.querySelectorAll(revealSelectors.join(','));
-    
-    // 3. Implement staggering for children of grid containers or lists
-    const parents = new Set();
-    revealElements.forEach(el => {
+    // Helper: add reveal class and observe with optional delay
+    function revealElement(el, delay) {
         el.classList.add('reveal');
-        // Group by parent if it's a grid, a hero content area, or a list row
-        if (el.parentElement && (
-            el.parentElement.classList.contains('grid') || 
-            el.parentElement.classList.contains('action-links-row') ||
-            el.parentElement.classList.contains('hero-content') ||
-            el.parentElement.classList.contains('content-card') ||
-            el.parentElement.classList.contains('card') ||
-            el.parentElement.classList.contains('project-sidebar') ||
-            el.parentElement.classList.contains('project-main')
-        )) {
-            parents.add(el.parentElement);
-        } else {
-            observer.observe(el);
+        if (delay !== undefined) {
+            el.style.transitionDelay = `${delay}s`;
         }
+        observer.observe(el);
+    }
+
+    // ── Pattern 1: Content cards — animate as one block ──
+    document.querySelectorAll('.content-card').forEach(card => {
+        revealElement(card);
     });
 
-    // 4. Batch observe parents or direct children with staggering
-    parents.forEach(parent => {
-        const isHero = parent.classList.contains('hero-content');
-        const children = parent.querySelectorAll('.reveal');
-        children.forEach((child, index) => {
-            // Standard delay of 200ms, but longer (600ms) for the hero title/subtitle
-            const step = isHero ? 0.6 : 0.2;
-            const delay = (index % 6) * step; 
-            child.style.transitionDelay = `${delay}s`;
-            observer.observe(child);
+    // ── Pattern 2: Section titles + grid cards ──
+    // Section titles animate independently  
+    document.querySelectorAll('.section-title').forEach(title => {
+        revealElement(title);
+    });
+
+    // Grid cards stagger within their parent grid
+    document.querySelectorAll('.grid').forEach(grid => {
+        const cards = grid.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+            revealElement(card, index * 0.15);
         });
     });
 
-    // Observe any remaining elements that weren't part of a known group
-    revealElements.forEach(el => {
-        if (!el.classList.contains('revealed')) {
-            observer.observe(el);
+    // ── Hero content — title then subtitle ──
+    document.querySelectorAll('.hero-content h1').forEach(el => revealElement(el, 0));
+    document.querySelectorAll('.hero-content p').forEach(el => revealElement(el, 0.6));
+
+    // ── Standalone elements ──
+    document.querySelectorAll('.profile-card').forEach(el => revealElement(el));
+    document.querySelectorAll('.logistics-card').forEach(el => revealElement(el));
+    document.querySelectorAll('.syllabus-table').forEach(el => revealElement(el));
+    document.querySelectorAll('.footer .container').forEach(el => revealElement(el));
+
+    // ── Section h2 headers not inside content-cards (e.g. on index/projects pages) ──
+    document.querySelectorAll('section h2').forEach(el => {
+        // Skip if already inside a content-card (it will animate with the card)
+        if (!el.closest('.content-card') && !el.classList.contains('reveal')) {
+            revealElement(el);
         }
     });
 });

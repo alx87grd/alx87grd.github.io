@@ -39,9 +39,9 @@
         <!-- Main Content Column -->
         <div class="project-main">
           
-          <!-- Section 1: Preface (Marketing Teaser + Video) -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Préface</h2>
+          <!-- Section 1: Preface -->
+          <div class="content-card">
+            <h2>Préface</h2>
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start; gap: var(--spacing-lg);">
               <div style="flex: 1.2;">
                 <h3>La science du mouvement</h3>
@@ -60,44 +60,42 @@
           </div>
 
           <!-- Section 2: Media Grid -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <h3>Aperçu visuel</h3>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
-              <div class="card">
-                <div class="card-img-wrapper" style="height: 180px;">
-                  <img src="../../img/compressed_gif/double_pendulum_swing_up.gif" style="width:100%; height:100%; object-fit: cover" alt="Dynamique">
-                </div>
-                <div class="card-title">Dynamique de bras articulés</div>
+          <h3 class="section-title">Aperçu visuel</h3>
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../../img/compressed_gif/double_pendulum_swing_up.gif" style="width:100%; height:100%; object-fit: cover" alt="Dynamique">
               </div>
-              <div class="card">
-                <div class="card-img-wrapper" style="height: 180px;">
-                  <img src="../../img/compressed_gif/rocket.gif" style="width:100%; height:100%; object-fit: cover" alt="Commande">
-                </div>
-                <div class="card-title">Loi de commande pour véhicules</div>
+              <div class="card-title">Dynamique de bras articulés</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../../img/compressed_gif/rocket.gif" style="width:100%; height:100%; object-fit: cover" alt="Commande">
               </div>
-              <div class="card">
-                <div class="card-img-wrapper" style="height: 180px;">
-                  <img src="../../img/compressed_gif/drone.gif" style="width:100%; height:100%; object-fit: cover" alt="Planification">
-                </div>
-                <div class="card-title">Planification de trajectoires</div>
+              <div class="card-title">Loi de commande pour véhicules</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../../img/compressed_gif/drone.gif" style="width:100%; height:100%; object-fit: cover" alt="Planification">
               </div>
-              <div class="card">
-                <div class="card-img-wrapper" style="height: 180px;">
-                  <img src="../../img/compressed_gif/active_suspension.gif" style="width:100%; height:100%; object-fit: cover" alt="Optimale">
-                </div>
-                <div class="card-title">Synthèse de politiques optimales</div>
+              <div class="card-title">Planification de trajectoires</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../../img/compressed_gif/active_suspension.gif" style="width:100%; height:100%; object-fit: cover" alt="Optimale">
               </div>
+              <div class="card-title">Synthèse de politiques optimales</div>
             </div>
           </div>
 
           <!-- Section 3: Introduction -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Introduction</h2>
+          <div class="content-card" style="margin-top: var(--spacing-lg);">
+            <h2>Introduction</h2>
             <p>Le but du cours est de présenter les outils mathématiques pour modéliser, analyser et contrôler le mouvement des systèmes robotiques. Des manipulateurs industriels aux véhicules autonomes, nous explorons comment la physique du mouvement dicte les algorithmes de décision.</p>
           </div>
 
           <!-- Section 4: Cibles de formation -->
-          <div style="margin-bottom: var(--spacing-lg);">
+          <div class="content-card">
             <h3>Cibles de formation</h3>
             <h4>À la fin de ce cours vous serez en mesure de:</h4>
             <ul>
@@ -108,8 +106,8 @@
           </div>
 
           <!-- Section 5: Déroulement du cours et Évaluation -->
-          <div style="margin-bottom: var(--spacing-lg);">
-            <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Déroulement du cours et Évaluation</h2>
+          <div class="content-card">
+            <h2>Déroulement du cours et Évaluation</h2>
             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
               <div>
                 <h4>Déroulement</h4>
@@ -127,14 +125,14 @@
           </div>
 
           <!-- Section 6: The Weekly Guide -->
-          <div style="margin-top: var(--spacing-lg);">
+          <div class="content-card">
             <h2 id="guide">Guide du cours</h2>
             <p class="text-muted">Cette section présente les liens vers le matériel et les livrables semaines par semaines:</p>
             <table class="syllabus-table" style="margin-top: var(--spacing-sm);">
               <thead>
                 <tr>
                   <th>Semaine</th>
-                  <th>Sujet & Matériel</th>
+                  <th>Sujet &amp; Matériel</th>
                   <th>Exercices</th>
                   <th>Livrables</th>
                 </tr>
@@ -146,7 +144,7 @@
                     <h4>Introduction</h4>
                     <p>Espace des phase d'un système, types de modèles, défis de commande.</p>
                     <ul>
-                      <li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitre 1 & 7</a></li>
+                      <li><a href="../../pdf/Notes_Robotique_UdeS.pdf">Chapitre 1 &amp; 7</a></li>
                       <li><a href="https://youtu.be/D_HLuoPrD4w">Vidéo : Modèles</a></li>
                     </ul>
                   </td>
@@ -223,7 +221,7 @@
                 </tr>
                 <tr>
                   <td class="syllabus-week"><h4>10-13</h4></td>
-                  <td><h4>État de l'art & Projets</h4></td>
+                  <td><h4>État de l'art &amp; Projets</h4></td>
                   <td>-</td>
                   <td>Projet de session</td>
                 </tr>

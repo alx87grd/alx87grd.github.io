@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem; margin-top: var(--spacing-lg); }
+h2 { font-size: 2rem; margin-top: var(--spacing-lg); }
 h3 { font-size: 1.5rem; }
 
 p, ul, ol {
@@ -163,6 +163,38 @@ ul, ol {
 
 .section-bg {
   background: linear-gradient(180deg, var(--color-bg-off) 0%, var(--color-bg-main) 100%);
+}
+
+/* ==========================================================================
+   Content Cards — Universal content container (Apple-inspired)
+   ========================================================================== */
+.content-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.content-card h2 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.content-card h3 {
+  margin-top: 0;
+}
+
+.content-card > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Title — Standalone heading that animates before a grid */
+.section-title {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
 }
 
 /* ==========================================================================
@@ -692,9 +724,9 @@ ul, ol {
 /* 1. We define the initial state of elements to be revealed */
 .reveal {
   opacity: 0;
-  transform: translateY(30px) scale(0.98);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
-              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-delay: 0s; /* Will be overridden by JS for staggering */
   will-change: opacity, transform;
 }
@@ -702,7 +734,7 @@ ul, ol {
 /* 2. State when the element becomes visible */
 .reveal.revealed {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
 /* 3. Handling accessibility: if user prefers reduced motion, show immediately */
