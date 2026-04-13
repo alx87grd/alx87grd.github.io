@@ -1,12 +1,24 @@
 /**
- * Scroll: IntersectionObserver + .reveal / .revealed.
- * Load: first main section (no .project-container) uses one timeout + stagger; hero text is CSS-only.
+ * Scroll + first-screen load animations for <main> (and a few globals).
+ *
+ * CONTRACT (see also agent.md → “Page load & scroll animations”):
+ *   1) revealElement(el, staggerSec?) → adds class "reveal", stores data-reveal-stagger (seconds).
+ *   2a) If el is inside the FIRST <main> section AND that section has NO .project-container:
+ *       el goes to loadBatch → after FIRST_MAIN_DELAY_MS, add "revealed" + transition-delay
+ *       (no IntersectionObserver). Keeps section title + grid + flex rows in sync with hero end.
+ *   2b) Else: set transition-delay from stagger, IntersectionObserver → "revealed" on intersect.
+ *
+ * Hero (<header> .hero-content) is NOT handled here — pure CSS in style.css (heroImgReveal + heroTextReveal).
+ *
+ * Tuning: FIRST_MAIN_DELAY_MS (~1050) should stay slightly under .hero-img animation duration (1.2s).
  */
 document.addEventListener('DOMContentLoaded', () => {
+    /** ~align with css .hero-img heroImgReveal (1.2s); first main batch runs once after this */
     const FIRST_MAIN_DELAY_MS = 1050;
 
     const observerOptions = {
         threshold: [0, 0.1, 0.5],
+        /** Start reveal slightly before elements enter viewport (helps fast scroll on tall grids). */
         rootMargin: '0px 0px 180px 0px'
     };
 
@@ -19,12 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
+    /** Marks el for animation; wiring (load batch vs IO) happens after all registrations. */
     function revealElement(el, staggerSec = 0) {
         if (!el || el.classList.contains('reveal')) return;
         el.classList.add('reveal');
         el.dataset.revealStagger = String(staggerSec ?? 0);
     }
 
+    /** Index-style row: flex container, direct h2/h3.section-title, not grid/card. */
     function isFlexSectionHeaderRow(div) {
         if (!div?.parentElement?.classList.contains('container')) return false;
         if (div.classList.contains('grid') || div.classList.contains('content-card')) return false;
@@ -102,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElement(title);
     });
 
+    /* Grid stagger: multi-row uses row+col caps; single row uses index*step with cap (no huge delays). */
     const GRID_ROW_TOL_PX = 14;
     const GRID_SINGLE_ROW_STEP = 0.15;
     const GRID_SINGLE_ROW_CAP = 1.05;
@@ -193,6 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadBatch = [];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    /* One pass: first-section listing → timed batch; everything else → scroll observer. */
     document.querySelectorAll('.reveal').forEach((el) => {
         if (useFirstMainLoadBatch && firstMainSection.contains(el)) {
             loadBatch.push(el);
@@ -227,3 +243,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
