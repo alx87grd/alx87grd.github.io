@@ -861,9 +861,11 @@ ul, ol {
 */
 
 /*
- * First main section (no .project-container): match .reveal opacity before JS to avoid a
- * full-opacity flash. :not(.reveal) stops applying once JS adds .reveal. Titles that are
- * only inside a flex row (index) are omitted via .container > .section-title.
+ * Pre-JS hiding: match .reveal opacity before JS to avoid a full-opacity flash.
+ * :not(.reveal) stops applying once JS adds .reveal.
+ *
+ * Block A — Listing pages (no .project-container): titles, cards, grids, etc.
+ * Block B — Project/course pages (.project-container): content-cards + sidebar.
  */
 main > section:first-of-type:not(:has(.project-container)) :is(
   .container > .section-title:not(.reveal),
@@ -878,6 +880,16 @@ main > section:first-of-type:not(:has(.project-container)) :is(
   transform: translateY(24px);
 }
 
+.project-container :is(
+  .content-card:not(.reveal),
+  .project-sidebar:not(.reveal),
+  .project-main > div:not(.content-card):not(.reveal),
+  .project-main > .section-title:not(.reveal)
+) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   main > section:first-of-type:not(:has(.project-container)) :is(
     .container > .section-title:not(.reveal),
@@ -887,6 +899,16 @@ main > section:first-of-type:not(:has(.project-container)) :is(
     .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
     .container > div:has(> h2.section-title):not(.grid):not(.reveal),
     .container > div:has(> h3.section-title):not(.grid):not(.reveal)
+  ) {
+    opacity: 1;
+    transform: none;
+  }
+
+  .project-container :is(
+    .content-card:not(.reveal),
+    .project-sidebar:not(.reveal),
+    .project-main > div:not(.content-card):not(.reveal),
+    .project-main > .section-title:not(.reveal)
   ) {
     opacity: 1;
     transform: none;

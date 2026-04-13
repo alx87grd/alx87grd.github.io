@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('main .project-main > div').forEach((div) => {
         if (div.classList.contains('content-card')) return;
-        if (div.querySelector(':scope > .grid')) return;
+        if (div.querySelector(':scope > .grid > .card')) return;
         revealElement(div);
     });
 
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    ['.logistics-card', '.syllabus-table', '.footer .container'].forEach((sel) => {
+    ['.project-sidebar', '.logistics-card', '.syllabus-table', '.footer .container'].forEach((sel) => {
         document.querySelectorAll(sel).forEach((el) => revealElement(el));
     });
 
@@ -202,15 +202,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const firstMainSection = document.querySelector('main > section');
-    const useFirstMainLoadBatch =
+    const isListingPage =
         !!firstMainSection && !firstMainSection.querySelector('.project-container');
 
     const loadBatch = [];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const viewportBottom = window.innerHeight;
 
-    /* One pass: first-section listing → timed batch; everything else → scroll observer. */
+    /*
+     * One pass: decide timed batch vs scroll observer per element.
+     *   - Listing pages: all first-section elements → timed batch.
+     *   - Project/course pages: initially-in-viewport elements → timed batch.
+     *   - Everything else → IntersectionObserver (scroll-triggered).
+     */
     document.querySelectorAll('.reveal').forEach((el) => {
-        if (useFirstMainLoadBatch && firstMainSection.contains(el)) {
+        if (isListingPage && firstMainSection.contains(el)) {
+            loadBatch.push(el);
+            return;
+        }
+
+        if (!isListingPage && el.getBoundingClientRect().top < viewportBottom) {
             loadBatch.push(el);
             return;
         }
