@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+  REFERENCE: Research project page — lives in tools/ for preview; copy to projects/your-page.html.
+  Same relative paths from tools/ or projects/ (../css, ../img, ../js, ../logo).
+
+  FIELD MAP (delete this comment block after copying)
+  ───────────────────────────────────────────────────
+  <head><title>     Gallery label + " - Alex Robotics" (match projects.html card text)
+  hero <h1>        Same short title as <title> (no site suffix)
+  Abstract         Long-form summary; use <strong> for key terms
+  Extra body cards Optional: Contributions, Methods, etc. (h2 + paragraphs or lists)
+  Publications     One <a class="btn-action"> per line; prefix with emoji + <strong>Type:</strong>
+  Project Media    <h3 class="section-title"> then .grid of .card (+ optional .resource-card)
+  Sidebar          Only include rows you need. Partner: optional logo in ../logo/ + .project-meta-partner (see below).
+                   Other labels: Team | Date | Status | Funding | Preprint | Authors | Keywords
+  Omit entire cards/rows/sidebar blocks if not applicable.
+-->
+<html lang="en">
+<head>
+  <title>Example Research Project (Template) - Alex Robotics</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero: keep height/min-height in sync with other project pages -->
+  <header class="hero" id="home" style="height: 35vh; min-height: 250px;">
+    <img class="hero-img" src="../img/bg3.jpg" alt="">
+    <div class="hero-content">
+      <h1 style="font-size: 2.5rem; margin-bottom: 0;">Example Research Project (Template)</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container project-container">
+
+        <div class="project-main">
+
+          <!-- Abstract: primary narrative (always first content-card) -->
+          <div class="content-card">
+            <h2>Abstract</h2>
+            <p>
+              This is <strong>placeholder prose</strong> so you can preview typography, spacing, and the
+              two-column layout before replacing copy. Summarize the problem, your approach, and the main
+              outcome in a few short paragraphs.
+            </p>
+            <p>
+              A second paragraph is common on longer projects: mention collaborators, deployment context,
+              or how this page relates to other lab work.
+            </p>
+          </div>
+
+          <!-- Optional: numbered contributions, bullet milestones, etc. -->
+          <div class="content-card">
+            <h2>Contributions (optional block)</h2>
+            <p>Use this pattern for preprints or when you want a scannable list of claims.</p>
+            <ul>
+              <li>First contribution: what is new compared to prior art.</li>
+              <li>Second contribution: theory, hardware, or experimental validation.</li>
+            </ul>
+            <ol>
+              <li>Ordered steps work the same way (rare on project pages).</li>
+            </ol>
+          </div>
+
+          <!-- Publications & resources: stack links vertically (matches live project pages) -->
+          <div class="content-card">
+            <h3>Publications &amp; Resources</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-top: 0;">
+              Replace <code>#</code> links; keep one resource per <code>&lt;a&gt;</code>. Prefix labels mirror existing pages.
+            </p>
+            <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
+              <a href="#" class="btn-action">📄 <strong>Article (IEEE):</strong> A. Author, "Paper Title," IEEE Transactions on Robotics, vol. 00, pp. 000&ndash;000, 20XX.</a>
+              <a href="#" class="btn-action">📄 <strong>Article (IEEE RA-L):</strong> A. Author, "Letter Title," IEEE Robotics and Automation Letters, vol. 0, no. 0, pp. 0000&ndash;0000, 20XX.</a>
+              <a href="#" class="btn-action">📄 <strong>Article (IEEE WHC):</strong> A. Author, "Conference Paper Title," in Proc. IEEE World Haptics Conference (WHC), 20XX.</a>
+              <a href="#" class="btn-action">📄 <strong>Article (arXiv):</strong> A. Author, "Preprint Title," arXiv:0000.00000, 20XX.</a>
+              <a href="#" class="btn-action">📄 <strong>Article (journal, DOI):</strong> A. Author, "Open Access Title," Journal Name, 20XX.</a>
+              <a href="#" class="btn-action">📄 <strong>Article (Journal):</strong> A. Author, "Journal Title," Journal Name, vol. 0, pp. 000, 20XX.</a>
+              <a href="#" class="btn-action">📄 <strong>Research Article:</strong> Same as arXiv/IEEE when you want a neutral label.</a>
+              <a href="#" class="btn-action">📄 <strong>Research Article (arXiv):</strong> Variant label used on umbrella theme pages.</a>
+              <a href="#" class="btn-action">🔗 <strong>Link:</strong> Institutional repository, lab project page, or misc. URL.</a>
+              <a href="#" class="btn-action">🔗 <strong>Official Product:</strong> Partner product or technology landing page.</a>
+              <a href="#" class="btn-action">📄 <strong>Thesis:</strong> Student thesis on Savoirs or university repository.</a>
+              <a href="#" class="btn-action">📰 <strong>News:</strong> University press article (short headline in link text).</a>
+              <a href="#" class="btn-action">🔗 <strong>News Article:</strong> Longer descriptive label for the same idea.</a>
+              <a href="#" class="btn-action">💻 <strong>Code (GitHub):</strong> Public repository for scripts, ROS packages, etc.</a>
+              <a href="#" class="btn-action">📓 <strong>Code (Colab):</strong> Notebook for reproducing figures or simulations.</a>
+              <a href="#" class="btn-action">🎬 <strong>Video Demo:</strong> YouTube Shorts or external demo reel.</a>
+              <a href="#" class="btn-action">📄 <strong>Foundational Work:</strong> Link to another project page on this site.</a>
+              <a href="#" class="btn-action">📄 <strong>Related Technology:</strong> Cross-link to a sibling technology page.</a>
+            </div>
+          </div>
+
+          <!-- Optional: BibTeX / plain citation (used in older scaffold; keep if helpful) -->
+          <div class="content-card">
+            <h3>Citation (optional)</h3>
+            <div class="citation-box">@article{template2026example,
+  title={Example Research Project (Template)},
+  author={Girard, Alexandre and Collaborator, A.},
+  journal={IEEE Robotics and Automation Letters},
+  year={2026}
+}</div>
+          </div>
+
+          <!-- Media: .resource-card = media-heavy tile (often iframe); plain .card = image galleries -->
+          <h3 class="section-title">Project Media</h3>
+          <div class="grid">
+
+            <div class="card resource-card">
+              <div class="card-img-wrapper">
+                <iframe
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen=""
+                  frameborder="0"
+                  height="100%"
+                  src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                  style="width:100%"
+                  title="YouTube video player"
+                  width="100%"></iframe>
+              </div>
+              <div class="card-title">Video embed (resource-card + iframe)</div>
+            </div>
+
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/placeholder_project.svg" alt="Placeholder diagram" style="width:100%; height:250px; object-fit: contain; background: var(--color-bg-off);">
+              </div>
+              <div class="card-title">SVG placeholder (object-fit: contain)</div>
+            </div>
+
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/bg2.jpeg" alt="Sample photo" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">Photo tile (fixed height + cover)</div>
+            </div>
+
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/bg3.jpg" alt="Full-width image without fixed height">
+              </div>
+              <div class="card-title">Image without inline height (natural aspect)</div>
+            </div>
+
+            <!-- Some pages use a bare card with only an image (no title) -->
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/bg2.jpeg" alt="Optional: card with no card-title below">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="project-sidebar">
+          <h3>Project Details</h3>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Partner</div>
+            <div class="project-meta-value project-meta-partner">
+              <div class="project-partner-logos">
+                <img class="project-partner-logo" src="../logo/arjo.png" width="120" height="36" alt="Partner name (replace src)">
+              </div>
+              <span class="project-partner-names">Optional caption (e.g. second partner with no logo file)</span>
+            </div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Team</div>
+            <div class="project-meta-value">A. Student (PhD), B. Student (MS), Prof. Example and Prof. Alexandre Girard</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Date</div>
+            <div class="project-meta-value">20XX (year or year range)</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Preprint</div>
+            <div class="project-meta-value">arXiv:0000.00000 (cs.RO), month YYYY</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Authors</div>
+            <div class="project-meta-value">When the sidebar should list paper authors instead of lab roster</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Status</div>
+            <div class="project-meta-value">Active research / Completed (preprint) / Commercialized product / etc.</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Funding</div>
+            <div class="project-meta-value">NSERC Alliance, FRQNT, Mitacs, internal chair, &hellip;</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Keywords</div>
+            <div class="project-meta-value">Control, mechatronics, field robot, human factors, &hellip;</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
+  </footer>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

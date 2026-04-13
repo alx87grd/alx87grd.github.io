@@ -536,6 +536,59 @@ ul, ol {
   color: var(--color-text-main);
 }
 
+/* Partner row: optional logo(s) + caption (project sidebar) */
+.project-meta-partner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.project-partner-logo-link {
+  display: block;
+  flex: 1 1 calc(50% - 0.375rem);
+  max-width: calc(50% - 0.375rem);
+  min-width: 0;
+  width: auto;
+  text-decoration: none;
+}
+
+.project-partner-logos > .project-partner-logo-link:only-of-type {
+  flex: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+.project-partner-logo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 88px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* Multiple imgs in one strip: each scales within its flex cell */
+.project-partner-logos .project-partner-logo:not(:only-child) {
+  flex: 1 1 calc(50% - 0.375rem);
+  width: auto;
+  max-width: calc(50% - 0.375rem);
+  min-width: 0;
+}
+
+.project-partner-names {
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
 .project-summary {
   font-size: 1.15rem;
   line-height: 1.6;

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--
+  REFERENCE: Course page — preview as tools/teaching_template.html (../css, ../img, ../js).
+  After copying to courses/SIGLE/index.html, use ../../ for those asset paths and nav links.
+
+  FIELD MAP (delete this comment block after copying)
+  ───────────────────────────────────────────────────
+  <head><title>     "SIGLE - Titre long du cours" (matches UdeS catalog style)
+  Optional:        meta description, canonical (see students.html for OG pattern)
+  MathJax:         Uncomment block in <head> if you use $...$ or \( \) in page body
+  hero <h1>       Course code only (e.g. GMC714)
+  hero <p>        Full course title (subtitle style)
+  Préface         .content-card; two-column .grid + .resource-card video OR bullet list + quote
+  Aperçu visuel   .section-title + .grid of .card + fixed-height .gif/.png
+  Introduction    Long narrative; optional <img> (see GRO860); may use .content-card or flush div
+  Cibles          Learning outcomes: <ul>; optional <h4> lead-in
+  Déroulement     Two columns: schedule vs grading (Devoirs, Examen, Projet, Labos…)
+  Logistics       Optional .logistics-card (defined in style.css; use for schedule at-a-glance)
+  Guide du cours  id="guide"; intro line with .text-muted; .syllabus-table (week | material | exercises | deliverables)
+  Sidebar         <h3>Ressources</h3> + .btn-action links (Notes PDF, #guide anchor, YouTube playlist, fiche UdeS, …)
+-->
+<html lang="en">
+<head>
+  <title>ABC123 - Titre complet du cours (exemple gabarit)</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Brève description du cours pour les moteurs de recherche (optionnel).">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Optional: math in HTML. Remove both scripts if the page has no LaTeX. -->
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" style="height: 35vh; min-height: 250px;">
+    <img class="hero-img" src="../img/bg3.jpg" alt="">
+    <div class="hero-content">
+      <h1 style="font-size: 2.5rem; margin-bottom: 0;">ABC123</h1>
+      <p style="font-size: 1.2rem; opacity: 0.9;">Titre complet du cours &mdash; remplacer par la fiche officielle</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container project-container">
+
+        <div class="project-main">
+
+          <!-- Préface: two-column layout (GMC714 / GRO860 pattern) -->
+          <div class="content-card">
+            <h2>Préface</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start; gap: var(--spacing-lg);">
+              <div style="flex: 1.2;">
+                <h3>Accroche et objectifs narrative</h3>
+                <p>
+                  Paragraphe d&rsquo;introduction : public cible, prérequis, et pourquoi le cours existe.
+                  Utiliser <strong>mots-clés</strong> pour les idées centrales.
+                </p>
+                <blockquote style="border-left: 4px solid var(--color-primary); padding-left: var(--spacing-sm); font-style: italic; margin: var(--spacing-sm) 0;">
+                  &laquo; Citation courte ou slogan du cours. &raquo;
+                </blockquote>
+                <p style="margin-bottom: 0;">
+                  Variante (GRO860) : liste à puces &laquo; Pourquoi ce cours? &raquo; + citation en <code>&lt;h5&gt;</code> italique borduré
+                  + lien vers la <a href="#">fiche UdeS du sigle</a>.
+                </p>
+              </div>
+              <div style="flex: 1; display: flex; justify-content: center;">
+                <div class="card resource-card" style="width: 100%; max-width: 480px; height: fit-content; align-self: start;">
+                  <div class="card-img-wrapper card-img-wrapper--video-embed">
+                    <iframe title="Vidéo de présentation du cours (exemple)"
+                      width="100%" height="100%" src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-title" style="height: auto; min-height: 50px; flex-grow: 0; padding: 1rem;">Vidéo de présentation du cours</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aperçu visuel: GIFs / images (compressed_gif/ ou img/courses/SIGLE/) -->
+          <h3 class="section-title">Aperçu visuel</h3>
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../img/compressed_gif/rocket.gif" alt="Exemple animation 1" style="width:100%; height:100%; object-fit: cover">
+              </div>
+              <div class="card-title">Légende tuile 1</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../img/compressed_gif/drone.gif" alt="Exemple animation 2" style="width:100%; height:100%; object-fit: cover">
+              </div>
+              <div class="card-title">Légende tuile 2</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../img/compressed_gif/double_pendulum_swing_up.gif" alt="Exemple animation 3" style="width:100%; height:100%; object-fit: cover">
+              </div>
+              <div class="card-title">Légende tuile 3</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../img/bg2.jpeg" alt="Photo / figure statique" style="width:100%; height:100%; object-fit: cover">
+              </div>
+              <div class="card-title">Image fixe (pas un GIF)</div>
+            </div>
+          </div>
+
+          <!-- Introduction: optional inline figure (GRO860); inline math example $x_{k+1}$ -->
+          <div class="content-card">
+            <h2>Introduction</h2>
+            <h3 style="margin-top: 0;">Sous-titre optionnel</h3>
+            <p>
+              Développer le fil conducteur : modèles, algorithmes, évaluations. Exemple d&rsquo;expression math inline :
+              état $x_k$, entrée $u_k$ (si MathJax est chargé ci-dessus).
+            </p>
+            <p>
+              Second paragraphe : lien avec d&rsquo;autres cours ou programmes.
+            </p>
+            <img src="../img/placeholder_project.svg" alt="Figure large optionnelle" style="width:100%; max-width: 700px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); margin-top: var(--spacing-sm);">
+          </div>
+
+          <!-- Cibles de formation -->
+          <div class="content-card">
+            <h3>Cibles de formation</h3>
+            <h4>À la fin de ce cours vous serez en mesure de :</h4>
+            <ul>
+              <li>Formuler un objectif d&rsquo;apprentissage mesurable (exemple).</li>
+              <li>Appliquer une méthode ou un outil du cours à un problème type (exemple).</li>
+              <li>Communiquer les résultats par écrit ou en présentation (exemple).</li>
+            </ul>
+          </div>
+
+          <!-- Déroulement et évaluation -->
+          <div class="content-card">
+            <h2>Déroulement du cours et Évaluation</h2>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
+              <div>
+                <h4>Déroulement</h4>
+                <p><strong>Cours magistral :</strong> durée et fréquence (ex. 3 h / semaine).</p>
+                <p><strong>Laboratoires / TP :</strong> durée, outils (Python, ROS, etc.).</p>
+                <p><strong>Étude personnelle :</strong> lectures, vidéos, forums.</p>
+              </div>
+              <div>
+                <h4>Évaluation</h4>
+                <p><strong>Devoirs :</strong> nombre, pondération, politique de retard.</p>
+                <p><strong>Examen :</strong> mi-session / final, documents permis.</p>
+                <p><strong>Projet :</strong> individuel ou équipe, livrables et oral.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional: logistics strip (CSS helper; not yet used on live GMC714/GRO860) -->
+          <div class="logistics-card">
+            <h3>Logistique (bloc optionnel)</h3>
+            <div class="logistics-item">
+              <span class="logistics-label">Local</span>
+              <span class="logistics-value">Pavillon X &mdash; salle 0000</span>
+            </div>
+            <div class="logistics-item">
+              <span class="logistics-label">Horaire</span>
+              <span class="logistics-value">Mar. 13h30 &ndash; 16h30</span>
+            </div>
+            <div class="logistics-item">
+              <span class="logistics-label">Période</span>
+              <span class="logistics-value">Automne 20XX</span>
+            </div>
+          </div>
+
+          <!-- Guide hebdomadaire -->
+          <div class="content-card">
+            <h2 id="guide">Guide du cours</h2>
+            <p class="text-muted">Cette section présente les liens vers le matériel et les livrables semaine par semaine.</p>
+            <table class="syllabus-table" style="margin-top: var(--spacing-sm);">
+              <thead>
+                <tr>
+                  <th>Semaine</th>
+                  <th>Sujet &amp; Matériel</th>
+                  <th>Exercices</th>
+                  <th>Livrables</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="syllabus-week"><h4>1</h4> 1 jan.</td>
+                  <td>
+                    <h4>Introduction</h4>
+                    <p>Thèmes de la séance : définitions, exemples motivants.</p>
+                    <ul>
+                      <li><a href="#">Chapitre PDF &mdash; section 1</a></li>
+                      <li><a href="https://youtu.be/jNQXAC9IVRw">Vidéo YouTube</a></li>
+                    </ul>
+                  </td>
+                  <td>&mdash;</td>
+                  <td><a href="#">Devoir #0 (format)</a></td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>2</h4> 8 jan.</td>
+                  <td>
+                    <h4>Chapitre suivant</h4>
+                    <ul><li><a href="#">Notes &mdash; chapitres 2 et 3</a></li></ul>
+                  </td>
+                  <td>
+                    <ol>
+                      <li>Exercice numéroté A</li>
+                      <li>Exercice numéroté B (colonne utilisée sur GRO860)</li>
+                    </ol>
+                  </td>
+                  <td>Laboratoire #1 &mdash; consignes dans le dépôt</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>3 bis</h4> 15 jan.</td>
+                  <td><h4>Séance spéciale</h4><p>Exemple d&rsquo;intitulé de semaine non numérique simple.</p></td>
+                  <td>&mdash;</td>
+                  <td>&mdash;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- Ressources: mirror GMC714 / GRO860 sidebar -->
+        <div class="project-sidebar">
+          <h3>Ressources</h3>
+          <div class="action-links-row" style="flex-direction: column; align-items: stretch;">
+            <a href="#" class="btn-action">📄 <strong>Notes:</strong> Version PDF complète des notes</a>
+            <a href="#guide" class="btn-action">📅 <strong>Guide:</strong> Sauter vers l&rsquo;horaire hebdomadaire</a>
+            <a href="#" class="btn-action">▶️ <strong>Vidéos:</strong> Playlist de leçons (YouTube)</a>
+            <a href="#" class="btn-action">🎓 <strong>UdeS:</strong> Fiche officielle du cours (admission)</a>
+            <a href="#" class="btn-action">💻 <strong>Dépôt :</strong> GitLab / GitHub du cours (optionnel)</a>
+            <a href="#" class="btn-action">📓 <strong>Colab :</strong> Notebook démo (optionnel)</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
+  </footer>
+  <script src="../js/animations.js"></script>
+</body>
+</html>
