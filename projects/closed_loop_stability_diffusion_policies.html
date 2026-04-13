@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Closed-Loop Stability for Diffusion Policies - Alex Robotics</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="home" style="height: 35vh; min-height: 250px;">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1 style="font-size: 2.5rem; margin-bottom: 0;">Closed-Loop Stability for Diffusion Policies</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container project-container">
+
+        <div class="project-main">
+
+          <div class="content-card">
+            <h2>Abstract</h2>
+            <p>
+              <strong>Diffusion policies</strong> have become a strong option for robotic manipulation under stochastic disturbances because they can represent multimodal action distributions. In standard use, inference relies on a full reverse-time diffusion (denoising) process before an action is applied, while the physical plant is assumed comparatively slow so that plant dynamics and denoising dynamics are effectively decoupled.
+            </p>
+            <p>
+              This line of work studies the opposite regime: <strong>partial denoising</strong>—running the reverse diffusion only partway before commanding the robot—so that the plant evolves in parallel with ongoing denoising on the computer. The plant and the diffusion process are then <strong>coupled</strong>, which raises basic closed-loop questions that do not arise in the usual “frozen plant” picture.
+            </p>
+            <p>
+              We develop <strong>theoretical bounds on closed-loop stability</strong> for such coupled systems and outline a framework aimed at <strong>faster imitation learning</strong> when full denoising at every step is too costly for real-time use. The analysis also highlights how properties of the demonstrations (for example, their variance) enter a stability-oriented view of the controller.
+            </p>
+          </div>
+
+          <div class="content-card">
+            <h2>Contributions (from the preprint)</h2>
+            <ul>
+              <li>Formalize closed-loop interaction between a dynamical plant and a diffusion policy when denoising is only partially completed before actuation.</li>
+              <li>Provide theoretical stability bounds tailored to this coupled setting.</li>
+              <li>Discuss implications for real-time imitation learning and for interpreting stability in terms of demonstration statistics.</li>
+            </ul>
+          </div>
+
+          <div class="content-card">
+            <h3>Publications &amp; Resources</h3>
+            <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
+              <a href="https://arxiv.org/abs/2511.15520" class="btn-action">📄 <strong>Article (arXiv):</strong> G. Lauzier, A. Girard and F. Ferland, "Theoretical Closed-loop Stability Bounds for Dynamical System Coupled with Diffusion Policies," arXiv:2511.15520, 2025.</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="project-sidebar">
+          <h3>Project Details</h3>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Preprint</div>
+            <div class="project-meta-value">arXiv:2511.15520 (cs.RO), submitted Nov.&nbsp;2025</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Authors</div>
+            <div class="project-meta-value">Gabriel Lauzier, Alexandre Girard, François Ferland</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Status</div>
+            <div class="project-meta-value">Completed (preprint)</div>
+          </div>
+
+          <div class="project-meta-item">
+            <div class="project-meta-label">Keywords</div>
+            <div class="project-meta-value">Diffusion policy, closed-loop stability, imitation learning, coupled dynamical systems, robotics.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/animations.js"></script>
+</body>
+</html>
