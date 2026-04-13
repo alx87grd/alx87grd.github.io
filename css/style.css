@@ -34,6 +34,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --transition-speed: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --transition-reveal: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ==========================================================================
@@ -143,6 +144,12 @@ p, ul, ol {
   margin-bottom: var(--spacing-sm);
 }
 
+.lead {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
 ul, ol {
   padding-left: var(--spacing-md);
 }
@@ -244,7 +251,8 @@ ul, ol {
   font-weight: 500;
 }
 
-.nav-item a:hover {
+.nav-item a:hover,
+.nav-item a.active {
   text-decoration: none;
   color: var(--color-primary);
 }
@@ -317,6 +325,21 @@ ul, ol {
   background-color: #0f172a; /* Fallback */
 }
 
+.hero--sub {
+  height: 40vh;
+  min-height: 300px;
+}
+
+.hero--detail {
+  height: 35vh;
+  min-height: 250px;
+}
+
+.hero--detail .hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
 /* 1.2s duration: keep in mind when tuning js/animations.js FIRST_MAIN_DELAY_MS (~1050) */
 .hero-img {
   position: absolute;
@@ -366,6 +389,7 @@ ul, ol {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-img,
   .hero-content h1,
   .hero-content p {
     animation: none;
@@ -483,6 +507,16 @@ ul, ol {
 .card-title a:hover {
   color: var(--color-primary);
   text-decoration: none;
+}
+
+.card-content {
+  padding: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.card-content > *:last-child {
+  margin-bottom: 0;
 }
 
 .resource-card .card-title a {
@@ -644,18 +678,6 @@ ul, ol {
 .project-partner-names {
   font-size: 0.9rem;
   line-height: 1.35;
-}
-
-.project-summary {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: var(--color-text-main);
-  background-color: var(--color-bg-off);
-  padding: var(--spacing-md);
-  border-left: 4px solid var(--color-primary);
-  border-radius: var(--border-radius);
-  margin-bottom: var(--spacing-lg);
-  font-weight: 500;
 }
 
 /* ==========================================================================
@@ -875,8 +897,8 @@ main > section:first-of-type:not(:has(.project-container)) :is(
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity var(--transition-reveal),
+              transform var(--transition-reveal);
   transition-delay: 0s; /* JS sets per-element for grid stagger */
   will-change: opacity, transform;
 }

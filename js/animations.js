@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    ['.profile-card', '.logistics-card', '.syllabus-table', '.footer .container'].forEach((sel) => {
+    ['.logistics-card', '.syllabus-table', '.footer .container'].forEach((sel) => {
         document.querySelectorAll(sel).forEach((el) => revealElement(el));
     });
 
