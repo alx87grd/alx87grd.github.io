@@ -1,27 +1,23 @@
 /**
- * Scroll Reveal Animations
+ * Scroll reveal (IntersectionObserver) for content as you scroll.
  *
- * Above-the-fold content inside <main> is revealed after the hero image animation
- * (~1.2s) so it doesn’t pop in while the hero is still settling. Everything below
- * the fold still uses IntersectionObserver. Hero copy stays on its own timing.
+ * Page load only:
+ *   - Hero title + subtitle: pure CSS (see style.css .hero-content) — fixed timing, no IO.
+ *   - First <main> section on listing pages: one setTimeout after hero image (~1.2s), then
+ *     .revealed + stagger. Skipped when that section contains .project-container (long reads).
  */
 document.addEventListener('DOMContentLoaded', () => {
-    /** Align first main-row motion with css .hero-img heroImgReveal (1.2s) */
-    const HERO_MAIN_SYNC_S = 1.05;
+    /** After ~hero image (1.2s in style.css); first main section reveals then + stagger */
+    const FIRST_MAIN_DELAY_MS = 1050;
 
     const observerOptions = {
         threshold: [0, 0.1, 0.5],
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px 180px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                const isHeroContent = entry.target.closest('.hero-content');
-                if (!isHeroContent && (entry.intersectionRatio > 0.4 || entry.boundingClientRect.top < window.innerHeight * 0.7)) {
-                    entry.target.style.transitionDelay = '0s';
-                }
-
                 entry.target.classList.add('revealed');
                 observer.unobserve(entry.target);
             }
@@ -65,49 +61,36 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     }
 
-    /** First-screen <main> content: defer to post-hero timing instead of instant IO reveal */
-    function isInitiallyVisibleInMain(el) {
-        if (!el.closest('main')) return false;
-        const r = el.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const edge = 32;
-        return r.bottom > edge && r.top < vh - edge;
-    }
+    // ── Register .reveal targets (same coverage as before; hero handled in CSS only) ──
 
-    // ── 1. Content cards — single block ──
-    document.querySelectorAll('.content-card').forEach(card => {
+    document.querySelectorAll('.content-card').forEach((card) => {
         revealElement(card);
     });
 
-    // ── 2. Section header rows: flex container with leading .section-title (e.g. index) ──
-    document.querySelectorAll('main section .container > div').forEach(div => {
+    document.querySelectorAll('main section .container > div').forEach((div) => {
         if (isFlexSectionHeaderRow(div)) {
             revealElement(div);
         }
     });
 
-    // ── 3. Nested intro: .container > .container-narrow (e.g. material colab lead) ──
-    document.querySelectorAll('main section .container > .container-narrow').forEach(narrow => {
+    document.querySelectorAll('main section .container > .container-narrow').forEach((narrow) => {
         if (isNestedIntroNarrow(narrow)) {
             revealElement(narrow);
         }
     });
 
-    // ── 4. Block wrappers inside narrow columns (students culture, location, etc.) ──
-    document.querySelectorAll('main section .container-narrow > div').forEach(div => {
+    document.querySelectorAll('main section .container-narrow > div').forEach((div) => {
         if (div.classList.contains('grid') || div.classList.contains('content-card')) return;
         revealElement(div);
     });
 
-    // ── 5. Course / long-form: prose blocks under .project-main ──
-    document.querySelectorAll('main .project-main > div').forEach(div => {
+    document.querySelectorAll('main .project-main > div').forEach((div) => {
         if (div.classList.contains('content-card')) return;
         if (div.querySelector(':scope > .grid')) return;
         revealElement(div);
     });
 
-    // ── 6. Section titles (skip when parent block already animates them) ──
-    document.querySelectorAll('.section-title').forEach(title => {
+    document.querySelectorAll('.section-title').forEach((title) => {
         if (title.classList.contains('reveal')) return;
 
         const narrow = title.closest('.container-narrow');
@@ -126,39 +109,65 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElement(title);
     });
 
-    // ── 7. Grid cards — stagger ──
-    document.querySelectorAll('.grid').forEach(grid => {
-        const cards = grid.querySelectorAll('.card');
-        cards.forEach((card, index) => {
-            revealElement(card, index * 0.15);
+    const GRID_ROW_TOL_PX = 14;
+    const GRID_SINGLE_ROW_STEP = 0.15;
+    const GRID_SINGLE_ROW_CAP = 1.05;
+    const GRID_MULTI_ROW_STEP = 0.09;
+    const GRID_MULTI_ROW_MAX_ROWS = 7;
+    const GRID_MULTI_COL_STEP = 0.05;
+    const GRID_MULTI_COL_MAX = 5;
+
+    document.querySelectorAll('.grid').forEach((grid) => {
+        const cards = [...grid.querySelectorAll('.card')];
+        if (cards.length === 0) return;
+
+        cards.sort((a, b) => {
+            const ra = a.getBoundingClientRect();
+            const rb = b.getBoundingClientRect();
+            if (Math.abs(ra.top - rb.top) < GRID_ROW_TOL_PX) return ra.left - rb.left;
+            return ra.top - rb.top;
+        });
+
+        const rows = [];
+        let lastTop = null;
+        cards.forEach((card) => {
+            const t = card.getBoundingClientRect().top;
+            if (rows.length === 0 || Math.abs(t - lastTop) > GRID_ROW_TOL_PX) {
+                rows.push([]);
+                lastTop = t;
+            }
+            rows[rows.length - 1].push(card);
+        });
+
+        const multiRow = rows.length > 1;
+
+        rows.forEach((rowCards, ri) => {
+            rowCards.forEach((card, ci) => {
+                let stagger;
+                if (multiRow) {
+                    const r = Math.min(ri, GRID_MULTI_ROW_MAX_ROWS);
+                    const c = Math.min(ci, GRID_MULTI_COL_MAX);
+                    stagger = r * GRID_MULTI_ROW_STEP + c * GRID_MULTI_COL_STEP;
+                } else {
+                    stagger = Math.min(ci * GRID_SINGLE_ROW_STEP, GRID_SINGLE_ROW_CAP);
+                }
+                revealElement(card, stagger);
+            });
         });
     });
 
-    // ── 8. Hero — title then subtitle (observed; not in <main>) ──
-    document.querySelectorAll('.hero-content h1').forEach(el => {
-        revealElement(el, 0);
-        el.style.transitionDelay = '0s';
-    });
-    document.querySelectorAll('.hero-content p').forEach(el => {
-        revealElement(el, 0);
-        el.style.transitionDelay = '0.6s';
-    });
+    document.querySelectorAll('.profile-card').forEach((el) => revealElement(el));
+    document.querySelectorAll('.logistics-card').forEach((el) => revealElement(el));
+    document.querySelectorAll('.syllabus-table').forEach((el) => revealElement(el));
+    document.querySelectorAll('.footer .container').forEach((el) => revealElement(el));
 
-    // ── 9. Other named blocks ──
-    document.querySelectorAll('.profile-card').forEach(el => revealElement(el));
-    document.querySelectorAll('.logistics-card').forEach(el => revealElement(el));
-    document.querySelectorAll('.syllabus-table').forEach(el => revealElement(el));
-    document.querySelectorAll('.footer .container').forEach(el => revealElement(el));
-
-    // ── 10. Lead copy: direct <p> children of .container inside sections ──
-    document.querySelectorAll('main section .container > p').forEach(p => {
+    document.querySelectorAll('main section .container > p').forEach((p) => {
         if (p.closest('.content-card')) return;
         if (!p.parentElement?.classList.contains('container')) return;
         revealElement(p);
     });
 
-    // ── 11. h2 outside content-cards (skip if part of a block already revealed) ──
-    document.querySelectorAll('main section h2').forEach(el => {
+    document.querySelectorAll('main section h2').forEach((el) => {
         if (el.classList.contains('reveal')) return;
         if (el.closest('.content-card')) return;
         if (el.closest('.hero-content')) return;
@@ -185,18 +194,16 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElement(el);
     });
 
-    // ── Wire IO vs. deferred first-screen main reveals ──
-    const deferredMain = [];
+    const firstMainSection = document.querySelector('main > section');
+    const useFirstMainLoadBatch =
+        !!firstMainSection && !firstMainSection.querySelector('.project-container');
+
+    const loadBatch = [];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    document.querySelectorAll('.reveal').forEach(el => {
-        if (el.closest('.hero-content')) {
-            observer.observe(el);
-            return;
-        }
-
-        if (!reducedMotion && isInitiallyVisibleInMain(el)) {
-            deferredMain.push(el);
+    document.querySelectorAll('.reveal').forEach((el) => {
+        if (useFirstMainLoadBatch && firstMainSection.contains(el)) {
+            loadBatch.push(el);
             return;
         }
 
@@ -205,30 +212,26 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    function runDeferredMainReveals() {
-        if (reducedMotion) {
-            deferredMain.forEach(el => {
-                el.style.transitionDelay = '0s';
-                el.classList.add('revealed');
-            });
-            return;
-        }
-
-        deferredMain.sort((a, b) => {
+    function revealLoadBatch() {
+        loadBatch.sort((a, b) => {
             const ra = a.getBoundingClientRect().top;
             const rb = b.getBoundingClientRect().top;
             if (ra !== rb) return ra - rb;
             return a.getBoundingClientRect().left - b.getBoundingClientRect().left;
         });
 
-        deferredMain.forEach(el => {
+        loadBatch.forEach((el) => {
             const stagger = parseFloat(el.dataset.revealStagger || '0');
-            el.style.transitionDelay = `${HERO_MAIN_SYNC_S + stagger}s`;
+            el.style.transitionDelay = `${stagger}s`;
             el.classList.add('revealed');
         });
     }
 
-    requestAnimationFrame(() => {
-        requestAnimationFrame(runDeferredMainReveals);
-    });
+    if (loadBatch.length > 0) {
+        if (reducedMotion) {
+            revealLoadBatch();
+        } else {
+            setTimeout(revealLoadBatch, FIRST_MAIN_DELAY_MS);
+        }
+    }
 });

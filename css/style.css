@@ -341,6 +341,39 @@ ul, ol {
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
+/* Hero copy: load-only animation (no JS — stays in phase with itself) */
+.hero-content h1,
+.hero-content p {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.hero-content h1 {
+  animation: heroTextReveal 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.18s;
+}
+
+.hero-content p {
+  animation: heroTextReveal 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.78s;
+}
+
+@keyframes heroTextReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content h1,
+  .hero-content p {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @keyframes heroImgReveal {
   from {
     opacity: 0;
