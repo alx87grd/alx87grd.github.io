@@ -412,6 +412,17 @@ ul, ol {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
+/* Logos / placeholders until a cover thumbnail exists (same box as project cards) */
+.card-img-wrapper.card-img-wrapper--contain {
+  background: var(--color-bg-off);
+}
+
+.card-img-wrapper.card-img-wrapper--contain img {
+  object-fit: contain;
+  object-position: center;
+  padding: 1rem;
+}
+
 .card-title {
   padding: var(--spacing-sm);
   background: white;
@@ -479,6 +490,19 @@ ul, ol {
 .mb-2 { margin-bottom: var(--spacing-sm); }
 .mb-4 { margin-bottom: var(--spacing-md); }
 .mt-4 { margin-top: var(--spacing-md); }
+
+/* Colab: intro + category headings use the same card grids as projects */
+#colab .container-narrow {
+  margin-bottom: var(--spacing-md);
+}
+
+#colab h3.section-title {
+  margin-top: var(--spacing-lg);
+}
+
+#colab .container-narrow + h3.section-title {
+  margin-top: 0;
+}
 
 /* ==========================================================================
    Project Pages Specific
