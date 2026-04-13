@@ -334,26 +334,21 @@ ul, ol {
   padding: var(--spacing-md);
 }
 
+/* Hero copy: load-only keyframes (no JS); image uses heroImgReveal below */
 .hero-content h1 {
   color: white;
   font-size: 3rem;
   margin-bottom: var(--spacing-sm);
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-/* Hero copy: load-only animation (no JS — stays in phase with itself) */
-.hero-content h1,
-.hero-content p {
   opacity: 0;
   transform: translateY(14px);
-}
-
-.hero-content h1 {
   animation: heroTextReveal 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   animation-delay: 0.18s;
 }
 
 .hero-content p {
+  opacity: 0;
+  transform: translateY(14px);
   animation: heroTextReveal 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   animation-delay: 0.78s;
 }
@@ -828,36 +823,38 @@ ul, ol {
 
 /* 
    ==========================================================================
-   Animations (Triggered by Scroll)
+   Animations (scroll reveal + first-section load)
    ========================================================================== 
 */
 
 /*
- * First main section (listing pages): same hidden state as .reveal before JS runs, so
- * content is not painted at full opacity then hidden (visible → fade-out flash).
- * :not(.reveal) drops this rule once animations.js adds .reveal. Skips long-form pages
- * where the first section uses .project-container (scroll-only reveals there).
+ * First main section (no .project-container): match .reveal opacity before JS to avoid a
+ * full-opacity flash. :not(.reveal) stops applying once JS adds .reveal. Titles that are
+ * only inside a flex row (index) are omitted via .container > .section-title.
  */
-/* Direct .container child only — index wraps some titles in a flex row that owns .reveal */
-main > section:first-of-type:not(:has(.project-container)) .container > .section-title:not(.reveal),
-main > section:first-of-type:not(:has(.project-container)) .content-card:not(.reveal),
-main > section:first-of-type:not(:has(.project-container)) .grid .card:not(.reveal),
-main > section:first-of-type:not(:has(.project-container)) .container > p:not(.reveal),
-main > section:first-of-type:not(:has(.project-container)) .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
-main > section:first-of-type:not(:has(.project-container)) .container > div:has(> h2.section-title):not(.grid):not(.reveal),
-main > section:first-of-type:not(:has(.project-container)) .container > div:has(> h3.section-title):not(.grid):not(.reveal) {
+main > section:first-of-type:not(:has(.project-container)) :is(
+  .container > .section-title:not(.reveal),
+  .content-card:not(.reveal),
+  .grid .card:not(.reveal),
+  .container > p:not(.reveal),
+  .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
+  .container > div:has(> h2.section-title):not(.grid):not(.reveal),
+  .container > div:has(> h3.section-title):not(.grid):not(.reveal)
+) {
   opacity: 0;
   transform: translateY(24px);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  main > section:first-of-type:not(:has(.project-container)) .container > .section-title:not(.reveal),
-  main > section:first-of-type:not(:has(.project-container)) .content-card:not(.reveal),
-  main > section:first-of-type:not(:has(.project-container)) .grid .card:not(.reveal),
-  main > section:first-of-type:not(:has(.project-container)) .container > p:not(.reveal),
-  main > section:first-of-type:not(:has(.project-container)) .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
-  main > section:first-of-type:not(:has(.project-container)) .container > div:has(> h2.section-title):not(.grid):not(.reveal),
-  main > section:first-of-type:not(:has(.project-container)) .container > div:has(> h3.section-title):not(.grid):not(.reveal) {
+  main > section:first-of-type:not(:has(.project-container)) :is(
+    .container > .section-title:not(.reveal),
+    .content-card:not(.reveal),
+    .grid .card:not(.reveal),
+    .container > p:not(.reveal),
+    .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
+    .container > div:has(> h2.section-title):not(.grid):not(.reveal),
+    .container > div:has(> h3.section-title):not(.grid):not(.reveal)
+  ) {
     opacity: 1;
     transform: none;
   }
@@ -879,7 +876,7 @@ main > section:first-of-type:not(:has(.project-container)) .container > div:has(
   transform: translateY(0);
 }
 
-/* 3. Handling accessibility: if user prefers reduced motion, show immediately */
+/* 3. Reduced motion: show revealed state without transition */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     transition: none;
@@ -887,8 +884,3 @@ main > section:first-of-type:not(:has(.project-container)) .container > div:has(
     transform: none;
   }
 }
-
-/* 
-   Special case: if the user prefers a triggered animation (not scroll-scrubbed), 
-   it would require JS. But for CSS-only, scroll-scrubbing is the native way.
-*/

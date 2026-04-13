@@ -1,13 +1,8 @@
 /**
- * Scroll reveal (IntersectionObserver) for content as you scroll.
- *
- * Page load only:
- *   - Hero title + subtitle: pure CSS (see style.css .hero-content) — fixed timing, no IO.
- *   - First <main> section on listing pages: one setTimeout after hero image (~1.2s), then
- *     .revealed + stagger. Skipped when that section contains .project-container (long reads).
+ * Scroll: IntersectionObserver + .reveal / .revealed.
+ * Load: first main section (no .project-container) uses one timeout + stagger; hero text is CSS-only.
  */
 document.addEventListener('DOMContentLoaded', () => {
-    /** After ~hero image (1.2s in style.css); first main section reveals then + stagger */
     const FIRST_MAIN_DELAY_MS = 1050;
 
     const observerOptions = {
@@ -60,8 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return false;
     }
-
-    // ── Register .reveal targets (same coverage as before; hero handled in CSS only) ──
 
     document.querySelectorAll('.content-card').forEach((card) => {
         revealElement(card);
@@ -156,10 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.querySelectorAll('.profile-card').forEach((el) => revealElement(el));
-    document.querySelectorAll('.logistics-card').forEach((el) => revealElement(el));
-    document.querySelectorAll('.syllabus-table').forEach((el) => revealElement(el));
-    document.querySelectorAll('.footer .container').forEach((el) => revealElement(el));
+    ['.profile-card', '.logistics-card', '.syllabus-table', '.footer .container'].forEach((sel) => {
+        document.querySelectorAll(sel).forEach((el) => revealElement(el));
+    });
 
     document.querySelectorAll('main section .container > p').forEach((p) => {
         if (p.closest('.content-card')) return;
@@ -212,14 +204,14 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    function revealLoadBatch() {
-        loadBatch.sort((a, b) => {
-            const ra = a.getBoundingClientRect().top;
-            const rb = b.getBoundingClientRect().top;
-            if (ra !== rb) return ra - rb;
-            return a.getBoundingClientRect().left - b.getBoundingClientRect().left;
-        });
+    function sortTopThenLeft(a, b) {
+        const ra = a.getBoundingClientRect();
+        const rb = b.getBoundingClientRect();
+        return ra.top - rb.top || ra.left - rb.left;
+    }
 
+    function revealLoadBatch() {
+        loadBatch.sort(sortTopThenLeft);
         loadBatch.forEach((el) => {
             const stagger = parseFloat(el.dataset.revealStagger || '0');
             el.style.transitionDelay = `${stagger}s`;
