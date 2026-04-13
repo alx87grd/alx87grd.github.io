@@ -257,6 +257,27 @@ ul, ol {
   color: var(--color-primary);
 }
 
+.nav-utilities {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: var(--spacing-md);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.nav-utilities a {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-utilities a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 /* Mobile Menu Checkbox Hack */
 .nav-toggle-input {
   display: none;
@@ -280,6 +301,10 @@ ul, ol {
 @media (max-width: 768px) {
   .nav-toggle-label {
     display: block;
+  }
+
+  .nav-utilities {
+    display: none;
   }
   
   .nav-menu {
