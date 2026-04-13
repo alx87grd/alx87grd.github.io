@@ -832,6 +832,37 @@ ul, ol {
    ========================================================================== 
 */
 
+/*
+ * First main section (listing pages): same hidden state as .reveal before JS runs, so
+ * content is not painted at full opacity then hidden (visible → fade-out flash).
+ * :not(.reveal) drops this rule once animations.js adds .reveal. Skips long-form pages
+ * where the first section uses .project-container (scroll-only reveals there).
+ */
+/* Direct .container child only — index wraps some titles in a flex row that owns .reveal */
+main > section:first-of-type:not(:has(.project-container)) .container > .section-title:not(.reveal),
+main > section:first-of-type:not(:has(.project-container)) .content-card:not(.reveal),
+main > section:first-of-type:not(:has(.project-container)) .grid .card:not(.reveal),
+main > section:first-of-type:not(:has(.project-container)) .container > p:not(.reveal),
+main > section:first-of-type:not(:has(.project-container)) .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
+main > section:first-of-type:not(:has(.project-container)) .container > div:has(> h2.section-title):not(.grid):not(.reveal),
+main > section:first-of-type:not(:has(.project-container)) .container > div:has(> h3.section-title):not(.grid):not(.reveal) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > section:first-of-type:not(:has(.project-container)) .container > .section-title:not(.reveal),
+  main > section:first-of-type:not(:has(.project-container)) .content-card:not(.reveal),
+  main > section:first-of-type:not(:has(.project-container)) .grid .card:not(.reveal),
+  main > section:first-of-type:not(:has(.project-container)) .container > p:not(.reveal),
+  main > section:first-of-type:not(:has(.project-container)) .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
+  main > section:first-of-type:not(:has(.project-container)) .container > div:has(> h2.section-title):not(.grid):not(.reveal),
+  main > section:first-of-type:not(:has(.project-container)) .container > div:has(> h3.section-title):not(.grid):not(.reveal) {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* 1. We define the initial state of elements to be revealed */
 .reveal {
   opacity: 0;
