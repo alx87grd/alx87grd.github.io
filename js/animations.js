@@ -1,20 +1,16 @@
 /**
  * Scroll Reveal Animations
  *
- * Registers elements in dependency order so headings/text are not double-animated.
- * Patterns:
- *   - .content-card — one block
- *   - Flex “section header” rows (index): title + link move together
- *   - Nested .container > .container-narrow — intro title + paragraph together
- *   - .container-narrow > div wrappers (students, etc.)
- *   - Course pages: .project-main > div prose blocks (no direct .grid child)
- *   - .section-title, then .grid > .card stagger
- *   - Direct intro paragraphs under .container
- *   - Hero, footer, misc components
+ * Above-the-fold content inside <main> is revealed after the hero image animation
+ * (~1.2s) so it doesn’t pop in while the hero is still settling. Everything below
+ * the fold still uses IntersectionObserver. Hero copy stays on its own timing.
  */
 document.addEventListener('DOMContentLoaded', () => {
+    /** Align first main-row motion with css .hero-img heroImgReveal (1.2s) */
+    const HERO_MAIN_SYNC_S = 1.05;
+
     const observerOptions = {
-        threshold: [0.1, 0.5],
+        threshold: [0, 0.1, 0.5],
         rootMargin: '0px 0px -50px 0px'
     };
 
@@ -32,13 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    function revealElement(el, delay) {
+    function revealElement(el, staggerSec = 0) {
         if (!el || el.classList.contains('reveal')) return;
         el.classList.add('reveal');
-        if (delay !== undefined) {
-            el.style.transitionDelay = `${delay}s`;
-        }
-        observer.observe(el);
+        el.dataset.revealStagger = String(staggerSec ?? 0);
     }
 
     function isFlexSectionHeaderRow(div) {
@@ -55,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             && !el.parentElement.classList.contains('container-narrow');
     }
 
-    /** h2 sits in a block wrapper whose parent is .container-narrow (students culture, etc.) */
     function isInNarrowWrapperDiv(el) {
         let p = el.parentElement;
         while (p && p !== document.body) {
@@ -71,6 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
             p = p.parentElement;
         }
         return false;
+    }
+
+    /** First-screen <main> content: defer to post-hero timing instead of instant IO reveal */
+    function isInitiallyVisibleInMain(el) {
+        if (!el.closest('main')) return false;
+        const r = el.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const edge = 32;
+        return r.bottom > edge && r.top < vh - edge;
     }
 
     // ── 1. Content cards — single block ──
@@ -133,9 +134,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ── 8. Hero — title then subtitle ──
-    document.querySelectorAll('.hero-content h1').forEach(el => revealElement(el, 0));
-    document.querySelectorAll('.hero-content p').forEach(el => revealElement(el, 0.6));
+    // ── 8. Hero — title then subtitle (observed; not in <main>) ──
+    document.querySelectorAll('.hero-content h1').forEach(el => {
+        revealElement(el, 0);
+        el.style.transitionDelay = '0s';
+    });
+    document.querySelectorAll('.hero-content p').forEach(el => {
+        revealElement(el, 0);
+        el.style.transitionDelay = '0.6s';
+    });
 
     // ── 9. Other named blocks ──
     document.querySelectorAll('.profile-card').forEach(el => revealElement(el));
@@ -176,5 +183,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         revealElement(el);
+    });
+
+    // ── Wire IO vs. deferred first-screen main reveals ──
+    const deferredMain = [];
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll('.reveal').forEach(el => {
+        if (el.closest('.hero-content')) {
+            observer.observe(el);
+            return;
+        }
+
+        if (!reducedMotion && isInitiallyVisibleInMain(el)) {
+            deferredMain.push(el);
+            return;
+        }
+
+        const stagger = parseFloat(el.dataset.revealStagger || '0');
+        el.style.transitionDelay = `${stagger}s`;
+        observer.observe(el);
+    });
+
+    function runDeferredMainReveals() {
+        if (reducedMotion) {
+            deferredMain.forEach(el => {
+                el.style.transitionDelay = '0s';
+                el.classList.add('revealed');
+            });
+            return;
+        }
+
+        deferredMain.sort((a, b) => {
+            const ra = a.getBoundingClientRect().top;
+            const rb = b.getBoundingClientRect().top;
+            if (ra !== rb) return ra - rb;
+            return a.getBoundingClientRect().left - b.getBoundingClientRect().left;
+        });
+
+        deferredMain.forEach(el => {
+            const stagger = parseFloat(el.dataset.revealStagger || '0');
+            el.style.transitionDelay = `${HERO_MAIN_SYNC_S + stagger}s`;
+            el.classList.add('revealed');
+        });
+    }
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(runDeferredMainReveals);
     });
 });
