@@ -9,7 +9,8 @@
   hero <h1>        Same short title as <title> (no site suffix)
   Abstract         Long-form summary; use <strong> for key terms
   Extra body cards Optional: Contributions, Methods, etc. (h2 + paragraphs or lists)
-  Publications     One <a class="btn-action"> per line; prefix with emoji + <strong>Type:</strong>
+  Publications     See tools/PUBLICATIONS_LINKS.md for the exact HTML + citation format. One
+                     <a class="btn-action"> per line; emoji + <strong>Type:</strong> + citation.
   Project Media    <h3 class="section-title"> then .grid of .card (+ optional .resource-card)
   Sidebar          Only include rows you need. Partner: optional logo in ../logo/ + .project-meta-partner (see below).
                    Other labels: Team | Date | Status | Funding | Preprint | Authors | Keywords
@@ -88,11 +89,11 @@
             </ol>
           </div>
 
-          <!-- Publications & resources: stack links vertically (matches live project pages) -->
+          <!-- Publications & resources: stack links vertically — full spec: ../tools/PUBLICATIONS_LINKS.md -->
           <div class="content-card">
             <h3>Publications &amp; Resources</h3>
             <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-top: 0;">
-              Replace <code>#</code> links; keep one resource per <code>&lt;a&gt;</code>. Prefix labels mirror existing pages.
+              Replace <code>#</code> links; keep one resource per <code>&lt;a&gt;</code>. Follow <code>tools/PUBLICATIONS_LINKS.md</code> for wrapper markup and labels.
             </p>
             <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
               <a href="#" class="btn-action">📄 <strong>Article (IEEE):</strong> A. Author, "Paper Title," IEEE Transactions on Robotics, vol. 00, pp. 000&ndash;000, 20XX.</a>

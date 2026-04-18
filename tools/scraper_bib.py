@@ -12,6 +12,11 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 BIBLIO_PATH = SCRIPT_DIR / "biblio.json"
 
 LINKS = [
+    "https://doi.org/10.1109/ICRA.2016.7487658",
+    "https://doi.org/10.1109/TRO.2013.2296104",
+    "https://doi.org/10.1109/TMECH.2014.2307006",
+    "https://doi.org/10.3390/electronics13112041",
+    "https://doi.org/10.3390/act14020092",
     "https://arxiv.org/abs/2205.15137",
     "https://arxiv.org/abs/2205.15178",
     "https://arxiv.org/abs/2205.15201",
