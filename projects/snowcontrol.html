@@ -1,92 +1,91 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title> Control laws for autonomous cars in winter conditions </title>
   <meta charset="UTF-8">
+  <title>Low-Adhesion Vehicle Control - Alex Robotics</title>
+  
   <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
-
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="/index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="../courses/gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="../courses/gmc714/">GMC714</a>
+      </div>
     </div>
-  </div>
-  </div>
-
-  <!-- Header -->
-  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-    <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="200">
-    <div class="w3-display-middle w3-margin-top w3-center">
-      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span
-          class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-      <!--<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Research, Coding, Prototypes, Classes, Software</b></span> <span class="w3-hide-small w3-text-light-grey">UdeS</span></h1>
-    -->
+  </nav>
+  <header class="hero hero--detail" id="home">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>Low-Adhesion Vehicle Control</h1>
     </div>
   </header>
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        <div class="project-main">
 
-  <!-- Page content -->
-  <div class="w3-content w3-padding" style="max-width:1564px">
+          <div class="content-card">
+            <h2>Abstract</h2>
+            <p>
+              Autonomous vehicles face significant challenges in low-adhesion conditions such as snow and ice. We are developing smart vehicle controllers that adapt their behaviors dynamically according to road conditions.
+            </p>
+          </div>
 
-    <div class="w3-container w3-padding-16">
-      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-        Control laws for autonomous cars in winter conditions
-      </h1>
+          <div class="content-card">
+            <h3>Publications &amp; Resources</h3>
+            <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
+              <a href="https://doi.org/10.3390/electronics13112041" class="btn-action">📄 <strong>Journal (MDPI Electronics):</strong> W. Therrien, O. Lecompte, and A. Girard, &quot;Using the Buckingham &pi; Theorem for Multi-System Transfer Learning: A Case-Study with 3 Vehicles Sharing a Database,&quot; Electronics, vol. 13, no. 11, p. 2041, 2024.</a>
+              <a href="https://arxiv.org/abs/2310.17545" class="btn-action">📄 <strong>arXiv preprint:</strong> W. Therrien, O. Lecompte, and A. Girard, &quot;Using Buckingham's π Theorem for Multi-System Learning Transfer: a Case-study with 3 Vehicles Sharing a Database,&quot; 2024.</a>
+              <a href="https://doi.org/10.1109/TIV.2022.3188942" class="btn-action">📄 <strong>Journal (IEEE T-IV):</strong> O. Lecompte, W. Therrien and A. Girard, &quot;Experimental investigation of a maneuver selection algorithm for vehicles in low adhesion conditions,&quot; IEEE Transactions on Intelligent Vehicles, vol. 7, no. 3, pp. 407&ndash;412, 2022.</a>
+              <a href="https://arxiv.org/abs/2205.15178" class="btn-action">📄 <strong>arXiv preprint:</strong> O. Lecompte, W. Therrien and A. Girard, &quot;Experimental investigation of a maneuver selection algorithm for vehicles in low adhesion conditions,&quot; 2024.</a>
+            </div>
+          </div>
 
-      <p>Article: <a href="https://arxiv.org/abs/2205.15178"> Development of a hybrid model-based data-driven collision
-          avoidance algorithm for vehicles in low adhesion conditions </a> </p>
+          <h3 class="section-title">Project Media</h3>
+          <div class="grid">
+            <div class="card">
+              <div class="card-img-wrapper"><img src="../img/xmax.png" alt="Low-Adhesion Vehicle Control — illustration" style="width:100%; height:250px; object-fit: cover"></div>
+            </div>
+          </div>
 
-      <p>
-        Open-position (MS/PhD): <a href="../PDF/position_winter_ai.pdf"> AI for smart adaptive controllers </a>
-      </p>
-      </ul>
-
-      <p>
-        We are working on smart vehicles controllers that adapt their behaviors according to road conditions (snow, ice,
-        etc.). A custom 1/5th scale test car equipped with indepedent motor on each wheel is used for experimental
-        validations
-      </p>
+        </div>
+        <div class="project-sidebar">
+          <h3>Project Details</h3>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Team</div>
+            <div class="project-meta-value">Olivier Lecompte (MS), William Therrien (MS), Proj. Alexandre Girard</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Date</div>
+            <div class="project-meta-value">2022</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Keywords</div>
+            <div class="project-meta-value">Vehicle Dynamics, Low-Adhesion Control, Hybrid AI/Model-based Architectures, Multi-System Transfer.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
     </div>
-
-    <div class="w3-container">
-      <img src="../IMG/xmax.png" alt="p4" style="width:60%">
-    </div>
-  
-
-
-    <div class="w3-container w3-padding-16">
-      <p>
-        <b>UdeS Team:</b> Olivier Lecompte (MS student) and Prof. Alexandre Girard
-      </p>
-    </div>
-
-    <h4 class="w3-border-bottom w3-border-light-grey">
-      Publications
-    </h4>
-
-    <ul>
-      <li> <a href="https://ieeexplore.ieee.org/abstract/document/9816135"> Experimental Investigation of a Maneuver
-          Selection Algorithm for Vehicles in Low Adhesion Conditions</a></li>
-    </ul>
-
-
-
-
-  </div>
-
-
-  <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-16">
-    <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-        UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-        LinkedIn.com/in/alx87grd </a> </p>
   </footer>
-
+  <script src="../js/animations.js"></script>
 </body>
-
 </html>

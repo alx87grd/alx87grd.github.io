@@ -1,0 +1,966 @@
+/* ==========================================================================
+   Variables & Root
+   ========================================================================== */
+:root {
+  /* Colors */
+  --color-primary: #1e3a8a; /* Deep UdeS-like blue */
+  --color-primary-dark: #1e40af;
+  --color-primary-light: #dbeafe;
+  --color-text-main: #334155;
+  --color-text-muted: #64748b;
+  --color-text-light: #f8fafc;
+  --color-bg-main: #ffffff;
+  --color-bg-off: #f1f5f9;
+  --color-border: #e2e8f0;
+  
+  /* Typography */
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  
+  /* Misc */
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition-speed: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --transition-reveal: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ==========================================================================
+   Reset & Base Details
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  border: 3px solid var(--color-bg-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.nav-brand:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.nav-menu a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn-action:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.footer a:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 2px;
+}
+
+img, iframe {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  display: block;
+}
+
+iframe {
+  border: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-top: var(--spacing-lg); }
+h3 { font-size: 1.5rem; }
+
+p, ul, ol {
+  margin-bottom: var(--spacing-sm);
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+ul, ol {
+  padding-left: var(--spacing-md);
+}
+
+/* ==========================================================================
+   Layout Containers
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.container-narrow {
+  max-width: var(--max-width-narrow);
+}
+
+.section {
+  padding: var(--spacing-lg) 0;
+}
+
+.section-bg {
+  background: linear-gradient(180deg, var(--color-bg-off) 0%, var(--color-bg-main) 100%);
+}
+
+/* ==========================================================================
+   Content Cards — Universal content container (Apple-inspired)
+   ========================================================================== */
+.content-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.content-card h2 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.content-card h3 {
+  margin-top: 0;
+}
+
+.content-card > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Title — Standalone heading that animates before a grid */
+.section-title {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.nav-brand span {
+  color: var(--color-primary);
+}
+
+.nav-menu {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item a {
+  color: var(--color-text-main);
+  font-weight: 500;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.nav-utilities {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: var(--spacing-md);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.nav-utilities a {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-utilities a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Mobile Menu Checkbox Hack */
+.nav-toggle-input {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav-toggle-label span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text-main);
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-utilities {
+    display: none;
+  }
+  
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .nav-item {
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+  }
+  
+  .nav-item a {
+    display: block;
+    padding: var(--spacing-sm);
+    text-align: center;
+  }
+
+  .nav-toggle-input:checked ~ .nav-menu {
+    display: flex;
+  }
+}
+
+/* ==========================================================================
+   Hero Header
+   ========================================================================== */
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px; /* Offset for navbar */
+  overflow: hidden;
+  background-color: #0f172a; /* Fallback */
+}
+
+.hero--sub {
+  height: 40vh;
+  min-height: 300px;
+}
+
+.hero--detail {
+  height: 35vh;
+  min-height: 250px;
+}
+
+.hero--detail .hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+/* 1.2s duration: keep in mind when tuning js/animations.js FIRST_MAIN_DELAY_MS (~1050) */
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.6);
+  animation: heroImgReveal 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  opacity: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding: var(--spacing-md);
+}
+
+/* Hero copy: load-only keyframes (no JS); image uses heroImgReveal below */
+.hero-content h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroTextReveal 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.18s;
+}
+
+.hero-content p {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroTextReveal 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.78s;
+}
+
+@keyframes heroTextReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-img,
+  .hero-content h1,
+  .hero-content p {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes heroImgReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+   Grid & Cards (Projects, Resources)
+   ========================================================================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-img-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.card:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Responsive 16:9 YouTube (and similar) inside resource cards */
+.card-img-wrapper.card-img-wrapper--video-embed {
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: none;
+}
+
+.card-img-wrapper.card-img-wrapper--video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* Logos / placeholders until a cover thumbnail exists (same box as project cards) */
+.card-img-wrapper.card-img-wrapper--contain {
+  background: var(--color-bg-off);
+}
+
+.card-img-wrapper.card-img-wrapper--contain img {
+  object-fit: contain;
+  object-position: center;
+  padding: 1rem;
+}
+
+.card-title {
+  padding: var(--spacing-sm);
+  background: white;
+  border-top: 1px solid var(--color-border);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 60px; /* Fixed height for title area for grid alignment */
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.card-title a {
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  transition: color var(--transition-speed);
+}
+
+.card-title a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.card-content {
+  padding: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.card-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.resource-card .card-title a {
+  display: block;
+  padding: 0.125rem 0.35rem;
+}
+
+/* Specific Resource Cards (like YouTube / PDFs) */
+.resource-card iframe {
+  width: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  background-color: #0f172a;
+  color: var(--color-text-light);
+  padding: var(--spacing-md) 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer a {
+  color: var(--color-primary-light);
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-4 { margin-bottom: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-md); }
+
+/* Colab: intro + category headings use the same card grids as projects */
+#colab .container-narrow {
+  margin-bottom: var(--spacing-md);
+}
+
+#colab h3.section-title {
+  margin-top: var(--spacing-lg);
+}
+
+#colab .container-narrow + h3.section-title {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   Project Pages Specific
+   ========================================================================== */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 900px) {
+  .project-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.project-main {
+  flex: 3;
+}
+
+.project-sidebar {
+  flex: 1;
+  background-color: var(--color-bg-off);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 80px;
+}
+
+.project-meta-item {
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-meta-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-meta-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.project-meta-value {
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+/* Partner row: optional logo(s) + caption (project sidebar) */
+.project-meta-partner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.project-partner-logo-link {
+  display: block;
+  flex: 1 1 calc(50% - 0.375rem);
+  max-width: calc(50% - 0.375rem);
+  min-width: 0;
+  width: auto;
+  text-decoration: none;
+}
+
+.project-partner-logos > .project-partner-logo-link:only-of-type {
+  flex: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+.project-partner-logo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 88px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* Multiple imgs in one strip: each scales within its flex cell */
+.project-partner-logos .project-partner-logo:not(:only-child) {
+  flex: 1 1 calc(50% - 0.375rem);
+  width: auto;
+  max-width: calc(50% - 0.375rem);
+  min-width: 0;
+}
+
+.project-partner-names {
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   Action Buttons (Option A)
+   ========================================================================== */
+.action-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-bg-off);
+  color: var(--color-text-main);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* Pill shape */
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-speed);
+}
+
+.btn-action:hover {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   Project Citation Box
+   ========================================================================== */
+.citation-box {
+  background-color: var(--color-bg-off);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Adjusted for long bibliography links */
+.action-links-row .btn-action {
+  text-align: left;
+  line-height: 1.4;
+  height: auto;
+  white-space: normal;
+}
+
+/* ==========================================================================
+   Teaching & Syllabus
+   ========================================================================== */
+.syllabus-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--spacing-md) 0;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.syllabus-table th {
+  background: var(--color-bg-off);
+  color: var(--color-text-main);
+  text-align: left;
+  padding: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-border);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.syllabus-table td {
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  background: white;
+}
+
+.syllabus-table tr:last-child td {
+  border-bottom: none;
+}
+
+.syllabus-week {
+  font-weight: 700;
+  color: var(--color-primary);
+  width: 120px;
+}
+
+.syllabus-topic h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+}
+
+.syllabus-topic p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.syllabus-resources ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.logistics-card {
+  background: var(--color-bg-off);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.logistics-card h3 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+}
+
+.logistics-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  gap: var(--spacing-sm);
+}
+
+.logistics-label {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.logistics-value {
+  text-align: right;
+  color: var(--color-text-main);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-due { background: rgba(231, 76, 60, 0.1); color: #e74c3c; }
+.badge-done { background: rgba(46, 204, 113, 0.1); color: #2ecc71; }
+
+/* 
+   ==========================================================================
+   Animations (scroll reveal + first-section load)
+   ==========================================================================
+   Overview:
+   - Hero text: keyframes above (.hero-content h1/p) — no .reveal, no animations.js.
+   - Main/footer: animations.js adds .reveal then .revealed (scroll IO or first-section timeout).
+   - Pre-JS block below: same opacity as .reveal for first main section only (listing pages),
+     so content does not flash visible then hide. See agent.md "Page load & scroll animations".
+   ==========================================================================
+*/
+
+/*
+ * Pre-JS hiding: match .reveal opacity before JS to avoid a full-opacity flash.
+ * :not(.reveal) stops applying once JS adds .reveal.
+ *
+ * Block A — Listing pages (no .project-container): titles, cards, grids, etc.
+ * Block B — Project/course pages (.project-container): content-cards + sidebar.
+ */
+main > section:first-of-type:not(:has(.project-container)) :is(
+  .container > .section-title:not(.reveal),
+  .content-card:not(.reveal),
+  .grid .card:not(.reveal),
+  .container > p:not(.reveal),
+  .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
+  .container > div:has(> h2.section-title):not(.grid):not(.reveal),
+  .container > div:has(> h3.section-title):not(.grid):not(.reveal)
+) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.project-container :is(
+  .content-card:not(.reveal),
+  .project-sidebar:not(.reveal),
+  .project-main > div:not(.content-card):not(.reveal),
+  .project-main > .section-title:not(.reveal)
+) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > section:first-of-type:not(:has(.project-container)) :is(
+    .container > .section-title:not(.reveal),
+    .content-card:not(.reveal),
+    .grid .card:not(.reveal),
+    .container > p:not(.reveal),
+    .container-narrow > div:not(.grid):not(.content-card):not(.reveal),
+    .container > div:has(> h2.section-title):not(.grid):not(.reveal),
+    .container > div:has(> h3.section-title):not(.grid):not(.reveal)
+  ) {
+    opacity: 1;
+    transform: none;
+  }
+
+  .project-container :is(
+    .content-card:not(.reveal),
+    .project-sidebar:not(.reveal),
+    .project-main > div:not(.content-card):not(.reveal),
+    .project-main > .section-title:not(.reveal)
+  ) {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* .reveal = hidden; .reveal.revealed = visible (JS adds .revealed after scroll or load timeout). */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--transition-reveal),
+              transform var(--transition-reveal);
+  transition-delay: 0s; /* JS sets per-element for grid stagger */
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* If scripts are disabled, .reveal is never applied — default visible layout (progressive enhancement). */
+@media (prefers-reduced-motion: reduce) {
+  /* Skip motion on scroll-reveal targets; hero copy also resets above. */
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

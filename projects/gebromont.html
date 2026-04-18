@@ -1,72 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> GE Bromont </title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8">
+  <title>Precision Manufacturing Control - Alex Robotics</title>
+  
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="/index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="../courses/gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="../courses/gmc714/">GMC714</a>
+      </div>
     </div>
-  </div>
-</div>
+  </nav>
+  <header class="hero hero--detail" id="home">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>Precision Manufacturing Control</h1>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        <div class="project-main">
+          <div class="content-card">
+            <h2>Abstract</h2>
+            <p>
+              This project, in close collaboration with GE advanced robotic team at Bromont, we improved a precise robotized manufacturing process for the production of aerospace components.
+            </p>
+          </div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="200">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-    <!--<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Research, Coding, Prototypes, Classes, Software</b></span> <span class="w3-hide-small w3-text-light-grey">UdeS</span></h1>
-    -->
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <div class="w3-container w3-padding-16" id="title">
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-      Advanced robot controllers for intelligent manufacturing
-     </h1>
-     <p>
-      <b>Client/Partner:</b> GE Bromont
-     </p>
-     <p>
-      <b>Technical challenges:</b> Controls, kinematics, sensing, actuation.
-     </p>
-     <p>
-      <b>UdeS Team:</b> Alex Lecavalier (MS), ..., Prof. Alexandre Girard
-     </p>
-     <p>
-      This project, in close collaboration with GE advanced robotic team at Bromont, aims to develop new manufacturing process leveraging new robotic technologies.
-    </p>
-    <img src="../IMG/fanuc.jpg" alt="p4" style="width:100%">
-    <!-- <ul class="w3-ul">
-      <li>Video:<a href="https://www.youtube.com/c/AlexandreGirard87"> Video</a> </li>
-      <li>Article: <a href="https://arxiv.org/abs/2205.15201"> Article </a></li>
-      <li>Code: <a href="https://arxiv.org/abs/2205.15201"> Code </a></li>
-    </ul> -->
-
-  </div>
-
-
-
-
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-  LinkedIn.com/in/alx87grd </a>  </p>
-</footer>
-
+          <!-- <h3 class="section-title">Project Media</h3>
+          <div class="grid">
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/fanuc.jpg" alt="Precision Manufacturing Control — illustration" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">Manufacturing cell</div>
+            </div>
+          </div> -->
+        </div>
+        <div class="project-sidebar">
+          <h3>Project Details</h3>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Partner</div>
+            <div class="project-meta-value project-meta-partner">
+              <div class="project-partner-logos">
+                <img class="project-partner-logo" src="../logo/ge.png" width="120" height="36" alt="GE Aerospace">
+              </div>
+              <span class="project-partner-names">GE Aerospace, Bromont</span>
+            </div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Team</div>
+            <div class="project-meta-value">Alex Lecavalier (MS) and Prof. Alexandre Girard</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Keywords</div>
+            <div class="project-meta-value">Controls, kinematics, sensing, actuation.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
+  </footer>
+  <script src="../js/animations.js"></script>
 </body>
 </html>

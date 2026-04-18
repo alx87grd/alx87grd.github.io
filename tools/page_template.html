@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+  REFERENCE: Root-level page — preview as tools/page_template.html (../css, ../img, ../js).
+  After copying beside index.html, drop the ../ prefix on local assets and nav (css/, index.html, …).
+  For research project pages, see tools/project_template.html.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example Site Page (Template) - Alex Robotics</title>
+  
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Short description for search and social cards (optional).">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="../courses/gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="../courses/gmc714/">GMC714</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero hero--sub" id="home">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>Example Site Page (Template)</h1>
+      <p>One line of context under the title (used on Students, long-form sections, etc.).</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="content-card">
+          <h2>Section with content-card</h2>
+          <p>
+            Use <code>.content-card</code> for framed blocks on marketing or resource pages. This mirrors
+            project abstracts but without the <code>project-container</code> sidebar layout.
+          </p>
+        </div>
+
+        <h3 class="section-title">Card grid (resources, highlights)</h3>
+        <div class="grid">
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="../img/bg2.jpeg" alt="Thumbnail placeholder">
+            </div>
+            <div class="card-title">Card with title</div>
+            <div class="card-content">
+              <p>Supporting text inside <code>.card-content</code> when you need more than a title.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="../img/placeholder_project.svg" alt="SVG placeholder" style="width:100%; height:200px; object-fit: contain; background: var(--color-bg-off);">
+            </div>
+            <div class="card-title">Second column</div>
+            <div class="card-content">
+              <p>Dummy copy so you can check alignment and gaps in the grid.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-bg" id="example-band">
+      <div class="container container-narrow">
+        <h2 class="section-title">Narrow container on tinted band</h2>
+        <p>
+          Combine <code>section section-bg</code> with <code>container container-narrow</code> for readable
+          width on essays, calls to action, or application instructions.
+        </p>
+        <p style="margin-bottom: var(--spacing-md);">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </p>
+        <a href="../students.html" class="btn-action" style="background: white; color: var(--color-primary); padding: 1rem 2rem; display: inline-block;">Example CTA button</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/animations.js"></script>
+</body>
+</html>

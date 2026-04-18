@@ -1,138 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> Dimensionless Policies </title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
-  </script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
+  <meta charset="UTF-8">
+  <title>UAV Power Line Inspection - Alex Robotics</title>
+  
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="/index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
-    </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="200">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-    <!--<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Research, Coding, Prototypes, Classes, Software</b></span> <span class="w3-hide-small w3-text-light-grey">UdeS</span></h1>
-    -->
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <div class="w3-container w3-padding-16" >
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-      Model-Based Real-Time Estimation of Overhead Power Lines Using LiDAR for Drone Inspection
-     </h1>
-     <p>
-      This article explores using a non-linear programming approach to estimate the position of overhead power lines in real-time using a LiDAR sensor mounted on a drone. The method is based on a geometric model of the power line, which allows for efficient estimation even in challenging conditions such as occlusions or noise.
-      </p>
-
-      <h4 class="w3-border-bottom w3-border-light-grey">
-        Conference article
-      </h4>
-      <p>Alexandre Girard, Steven A. Parkison and Philippe Hamelin <em> Model-Based Real-Time Estimation of Overhead Power Lines Using LiDAR for Drone Inspection</em> accepted for publication at IEEE CASE 2025</p>
-
-      Preprint on arxiv at this link
-       <a href="https://arxiv.org/abs/2506.20812"> https://arxiv.org/abs/2506.20812 </a>
-
-      <h4 class="w3-border-bottom w3-border-light-grey">
-        Source code
-      </h4>
-      <ul>
-        <li><a href="https://github.com/alx87grd/catenary">Open source estimation library in Python</a></li>
-        <li><a href="https://colab.research.google.com/drive/10_0sNztttdJt7fCVf6RT6b8Ib6KUG8tr?usp=sharing">Colab page for reproducing the simulation results</a></li>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
       </ul>
-      
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-display-container">
-      <div class="w3-display-topleft w3-black w3-padding">
-          Video presentation
-      </div>
-      <iframe style="width:100%" height="245" width="400" src="https://www.youtube.com/embed/KMsOjzCREwk?si=Ukgk5U1k73tjooGO"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-
-    <div class="w3-display-container">
-      <div class="w3-display-topleft w3-black w3-padding">
-        Concept
-      </div>
-      <img src="../IMG/powerlineestimation.png" alt="p1" style="width:500px; height:700px; object-fit: cover">
-    </div>
-
-
-
-
-    <!-- <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          Concept
-        </div>
-        <img src="../IMG/dimensionlesspolicies.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div> -->
-
-    <!-- <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          Architecture
-        </div>
-        <img src="../IMG/archi_para.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="../courses/gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="../courses/gmc714/">GMC714</a>
       </div>
     </div>
+  </nav>
+  <header class="hero hero--detail" id="home">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>UAV Power Line Inspection</h1>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        <div class="project-main">
 
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          Topics
+          <div class="content-card">
+            <h2>Abstract</h2>
+            <p>
+              This article explores using a non-linear programming approach to estimate the position of overhead power lines in real-time using a LiDAR sensor mounted on a drone. The method is based on a geometric model of the power line, which allows for efficient estimation even in challenging conditions such as occlusions or noise.
+            </p>
+          </div>
+
+          <div class="content-card">
+            <h3>Publications &amp; Resources</h3>
+            <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
+              <a href="https://ieeexplore.ieee.org/document/11163932" class="btn-action">📄 <strong>Conference (CASE):</strong> A. Girard, S. A. Parkison and P. Hamelin, &quot;Model-Based Real-Time Pose and Sag Estimation of Overhead Power Lines Using LiDAR for Drone Inspection,&quot; IEEE International Conference on Automation Science and Engineering (CASE), pp. 2469–2476, 2025.</a>
+              <a href="https://arxiv.org/abs/2506.20812" class="btn-action">📄 <strong>arXiv preprint:</strong> A. Girard, S. A. Parkison and P. Hamelin, &quot;Model-Based Real-Time Pose and Sag Estimation of Overhead Power Lines Using LiDAR for Drone Inspection,&quot; 2025.</a>
+              <a href="https://github.com/alx87grd/catenary" class="btn-action">💻 <strong>Code (GitHub):</strong> Open source estimation library in Python</a>
+              <a href="https://colab.research.google.com/drive/10_0sNztttdJt7fCVf6RT6b8Ib6KUG8tr?usp=sharing" class="btn-action">📓 <strong>Code (Colab):</strong> Colab page for reproducing the simulation results</a>
+            </div>
+          </div>
+
+          <h3 class="section-title">Project Media</h3>
+          <div class="grid">
+            <div class="card resource-card">
+              <div class="card-img-wrapper">
+                <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="100%" src="https://www.youtube.com/embed/KMsOjzCREwk?si=Ukgk5U1k73tjooGO" style="width:100%" title="UAV Power Line Inspection (YouTube)" width="100%"></iframe>
+              </div>
+              <div class="card-title">Video presentation</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/powerlineestimation.png" alt="Power line estimation concept" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">Concept</div>
+            </div>
+          </div>
+
         </div>
-        <img src="../IMG/3fields.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
+        <div class="project-sidebar">
+          <h3>Project Details</h3>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Partner</div>
+            <div class="project-meta-value project-meta-partner">
+              <div class="project-partner-logos">
+                <img class="project-partner-logo" src="../logo/hydro.png" width="120" height="36" alt="Hydro-Québec">
+              </div>
+              <span class="project-partner-names">Hydro-Québec (IREQ)</span>
+            </div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Date</div>
+            <div class="project-meta-value">2025</div>
+          </div>
+        </div>
       </div>
-    </div> -->
-
-
-  </div>
-
-
-  <!-- <div class="w3-container w3-padding-16" >
-     <p>
-      <b>UdeS Team:</b> William Therrien (MS student), ... , and Prof. Alexandre Girard
-     </p>
-
-  </div> -->
-
-
-  <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-16">
-    <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-    UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-    LinkedIn.com/in/alx87grd </a>  </p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
   </footer>
-
+  <script src="../js/animations.js"></script>
 </body>
 </html>

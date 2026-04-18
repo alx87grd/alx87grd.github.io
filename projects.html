@@ -1,436 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Projects</title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8">
+  <title>Research Portfolio - Alex Robotics</title>
+  
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of research projects from actuators design to software development">
+  <meta property="og:title" content="Research Portfolio - Alex Robotics">
+  <meta property="og:description" content="Portfolio of research projects from actuators design to software development">
+  <meta property="og:url" content="https://www.alexandregirard.com/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.alexandregirard.com/img/bg3.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research Portfolio - Alex Robotics">
+  <meta name="twitter:description" content="Portfolio of research projects from actuators design to software development">
+  <link rel="canonical" href="https://www.alexandregirard.com/projects.html">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#on-going" class="w3-bar-item w3-button">On-going</a>
-      <a href="#udes-prof" class="w3-bar-item w3-button">UdeS</a>
-      <a href="#mit" class="w3-bar-item w3-button">MIT</a>
-      <a href="https://scholar.google.com/citations?user=1qdSFXQAAAAJ&hl=en&oi=ao" class="w3-bar-item w3-button">Publications</a>
-      <a href="https://github.com/alx87grd" class="w3-bar-item w3-button">Code</a>
-    </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="IMG/bg3.jpg" alt="sky" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <div class="w3-container" id="on-going">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> On-going at UdeS </h2>
-    <p> Please contact me, and check <a href="students.html">this page</a>, if you are a prospective graduate student interested in working on those topics:</p>
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/scope.html">
-            Scope (advanced driving assistance)
-          </a>
-        </div>
-        <img src="IMG/maverick.jpeg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="projects.html" class="active">Research</a></li>
+        <li class="nav-item"><a href="material.html">Resources</a></li>
+        <li class="nav-item"><a href="students.html">Students</a></li>
+        <li class="nav-item"><a href="index.html#about">About</a></li>
+      </ul>
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="courses/gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="courses/gmc714/">GMC714</a>
       </div>
     </div>
+  </nav>
 
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/arjo_alliance.html">
-            Collaborative robotics for mobility in healthcare settings
-          </a>
-        </div>
-        <img src="IMG/arjo.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
+  <!-- Smaller Hero for Sub-Pages -->
+  <header class="hero hero--sub" id="home">
+    <img class="hero-img" src="img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>Research Projects</h1>
+      <p>Portfolio of research projects from actuators design to software development</p>
     </div>
+  </header>
 
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/physic_ai.html">
-            Physics-based AI
-          </a>
+  <main>
+    <section class="section" id="on-going">
+      <div class="container">
+        <h2 class="section-title">Active</h2>
+        <!-- <p style="margin-bottom: var(--spacing-md);">Check <a href="students.html">this page</a> if you are a prospective student.</p> -->
+
+        <div class="grid mt-4">
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/dimensionless_robotics.html"><img src="img/dg2026_main.png" alt="Generalizing Robotic Control"></a>
+            </div>
+            <div class="card-title"><a href="projects/dimensionless_robotics.html">Generalizing Robotic Control</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/walking_robot.html"><img src="img/bi_modal_leg.png" alt="Efficient Walking Robot"></a>
+            </div>
+            <div class="card-title"><a href="projects/walking_robot.html">Efficient Walking Robot</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/scope.html"><img src="img/maverick.jpeg" alt="Scope"></a>
+            </div>
+            <div class="card-title"><a href="projects/scope.html">Off-Road Autonomous Driving</a></div>
+          </div>
         </div>
-        <img src="IMG/vi.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
       </div>
+    </section>
+
+    <section class="section section-bg" id="udes-prof">
+      <div class="container">
+        <h2 class="section-title">UdeS (2017-now)</h2>
+        <!-- <p style="margin-bottom: var(--spacing-md);">Projects conducted at Université de Sherbrooke as a Professor of engineering.</p> -->
+
+        <div class="grid mt-4">
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/closed_loop_stability_diffusion_policies.html"><img src="img/diffusion_stable.png" alt="Placeholder"></a>
+            </div>
+            <div class="card-title"><a href="projects/closed_loop_stability_diffusion_policies.html">Closed-Loop Stability for Diffusion Policies</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/estimationpowerlines.html"><img src="img/powerlines.png" alt="Power lines"></a>
+            </div>
+            <div class="card-title"><a href="projects/estimationpowerlines.html">UAV Power Line Inspection</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/dimensionlesspolicies.html"><img src="img/dimensionlesspolicies.png" alt="Dimensionless policies"></a>
+            </div>
+            <div class="card-title"><a href="projects/dimensionlesspolicies.html">Dimensionless Control Policies</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/snowcontrol.html"><img src="img/xmax.png" alt="Snow control"></a>
+            </div>
+            <div class="card-title"><a href="projects/snowcontrol.html">Low-Adhesion Vehicle Control</a></div>
+          </div>          
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/tmotorarm.html"><img src="img/tmotorarm1.jpg" alt="2 DoF Arm"></a>
+            </div>
+            <div class="card-title"><a href="projects/tmotorarm.html">Low-Cost 2DoF Robotic Arm</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/variabletransmission.html"><img src="img/hydrostatic.png" alt="Reconfigurable Hydrostatics"></a>
+            </div>
+            <div class="card-title"><a href="projects/variabletransmission.html">Multi-modal & Reconfigurable Hydrostatics</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/maxi_move_5.html"><img src="img/motionassist.jpg" alt="Smart motorized assistance for floor lifts"></a>
+            </div>
+            <div class="card-title"><a href="projects/maxi_move_5.html">Smart Motorized Assistance for Floor Lifts</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/floor_lift_system.html"><img src="img/arjo.jpg" alt="2 DOF Robot"></a>
+            </div>
+            <div class="card-title"><a href="projects/floor_lift_system.html">Collaborative Patient Transfer 2 DOF Robot</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/ceiling_lift.html"><img src="img/2speed_ceiling_actuator.png" alt="Dual-speed actuators for collaborative ceiling robots"></a>
+            </div>
+            <div class="card-title"><a href="projects/ceiling_lift.html">Dual-speed Actuators for Collaborative Ceiling Robots</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/nadile.html"><img src="img/nadile.jpg" alt="LineDrone power-line inspection"></a>
+            </div>
+            <div class="card-title"><a href="projects/nadile.html">Automatic landing controllers for inspection drones</a></div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/gebromont.html"><img src="img/fanuc.jpg" alt="Fanuc"></a>
+            </div>
+            <div class="card-title"><a href="projects/gebromont.html">Precision Manufacturing Control</a></div>
+          </div>
+
+          <div class="card resource-card">
+            <div class="card-img-wrapper">
+              <iframe loading="lazy" title="Third robotic leg (SRL) project video on YouTube" height="100%" src="https://www.youtube.com/embed/b7qlB9nanGs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card-title"><a href="projects/srl_leg.html">Third Robotic Leg (SRL)</a></div>
+          </div>
+          <div class="card resource-card">
+            <div class="card-img-wrapper">
+              <iframe loading="lazy" title="High-performance haptics project video on YouTube" height="100%" src="https://www.youtube.com/embed/vlbI-mE2Kks" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card-title"><a href="projects/haptic_rendering.html">High-Performance Haptics</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/udesracecar.html"><img src="img/udesracecar.jpg" alt="UdeS Racecar"></a>
+            </div>
+            <div class="card-title"><a href="projects/udesracecar.html">Educational Autonomous Racecar</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="https://github.com/SherbyRobotics/pyro"><img src="img/pyro/classes.png" alt="Pyro library"></a>
+            </div>
+            <div class="card-title"><a href="https://github.com/SherbyRobotics/pyro">Pyro: Python Robotics Library</a></div>
+          </div>
+          
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/force_control.html"><img src="img/force_control_ss.png" alt="Force Control"></a>
+            </div>
+            <div class="card-title"><a href="projects/force_control.html">Force-Control Algorithms</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/srl_arm.html"><img src="img/srl_arm.jpg" alt="Wearable Arms"></a>
+            </div>
+            <div class="card-title"><a href="projects/srl_arm.html">Wearable Robotic Arms</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/ankle_exo.html"><img src="img/ankle_exo.png" alt="Ankle Exo"></a>
+            </div>
+            <div class="card-title"><a href="projects/ankle_exo.html">Ankle Exoskeletons</a></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mit">
+      <div class="container">
+        <h2 class="section-title">Massachusetts Institute of Technology (2013-2017)</h2>
+        <!-- <p style="margin-bottom: var(--spacing-md);">Research I conducted as a Ph.D. student at MIT.</p> -->
+
+        <div class="grid mt-4">
+          <!-- <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/dsdm.html"><img src="img/dsdm_arm.jpg" alt="DSDM Arm"></a>
+            </div>
+            <div class="card-title"><a href="projects/dsdm.html">Lightweight Robotic Arms</a></div>
+          </div> -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/climbing_robot.html"><img src="img/climbing1.jpg" alt="Climbing Robots"></a>
+            </div>
+            <div class="card-title"><a href="projects/climbing_robot.html">Climbing Manufacturing Robots</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/dsdm.html"><img src="img/dsdm.jpg" alt="DSDM Transmission"></a>
+            </div>
+            <div class="card-title"><a href="projects/dsdm.html">Variable Transmission Actuators for Robots</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/optimalcontrolmit.html"><img src="img/opti2.png" alt="Optimal Control"></a>
+            </div>
+            <div class="card-title"><a href="projects/optimalcontrolmit.html">Optimal Policy Synthesis</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/segway.html"><img src="img/segway_concept.png" alt="Segway"></a>
+            </div>
+            <div class="card-title"><a href="projects/segway.html">Whole-Body Balancing Control</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/planningmit.html"><img src="img/rrt.png" alt="RRT"></a>
+            </div>
+            <div class="card-title"><a href="projects/planningmit.html">Sampling-based Path Planning</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-bg" id="bing">
+      <div class="container">
+        <h2 class="section-title">Université de Sherbrooke (2006-2012)</h2>
+        <!-- <p style="margin-bottom: var(--spacing-md);">Early projects conducted during M.Sc. and undergraduate studies.</p> -->
+
+        <div class="grid mt-4">
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/binary.html"><img src="img/binary1.png" alt="Control laws for binary robots"></a>
+            </div>
+            <div class="card-title"><a href="projects/binary.html">Control laws for Binary Robots</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/softsensor.html"><img src="img/softsensor.jpg" alt="Soft polymer sensors"></a>
+            </div>
+            <div class="card-title"><a href="projects/softsensor.html">Soft Polymer Sensors</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/kuka_impedance.html"><img src="img/kuka1.jpg" alt="Kuka"></a>
+            </div>
+            <div class="card-title"><a href="projects/kuka_impedance.html">Industrial Robot Impedance Control</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/phoebus.html"><img src="img/phoebus.webp" alt="Phoebus"></a>
+            </div>
+            <div class="card-title"><a href="projects/phoebus.html">Robotized Transmission for Electric Vehicles</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/fuelpowered.html"><img src="img/fuel.jpg" alt="Fuel"></a>
+            </div>
+            <div class="card-title"><a href="projects/fuelpowered.html">Fuel-Powered Fluidic Muscle</a></div>
+          </div>
+          <div class="card">
+            <div class="card-img-wrapper">
+              <a href="projects/miscprog.html"><img src="img/sodoku.png" alt="Sodoku"></a>
+            </div>
+            <div class="card-title"><a href="projects/miscprog.html">Algorithmic Programming</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
     </div>
+  </footer>
 
-
-    <!-- <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/nadile.html">
-            Automatic landing controllers for inspection drones
-          </a>
-        </div>
-        <img src="IMG/nadile.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div> -->
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/variabletransmission.html">
-            Wearable robotics
-          </a>
-        </div>
-        <img src="IMG/hydrostatic.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-  
-      <!-- <div class="w3-container w3-padding-32" id="portfolio">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">2020</h3>
-      </div> -->
-  
-      
-
-  </div>
-
-  <div class="w3-container" id="udes-prof">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> UdeS (2017-2025) </h2>
-    <p>This section regroup projects I conducted at Université de Sherbrooke as a Professor of engineering.</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <!-- Project Section -->
-    <!-- <div class="w3-container w3-padding-32" id="portfolio">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">2022</h3>
-    </div> -->
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/estimationpowerlines.html">
-            Power Lines Estimation
-          </a>
-        </div>
-        <img src="IMG/powerlines.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/dimensionlesspolicies.html">
-            Dimensionless Policies
-          </a>
-        </div>
-        <img src="IMG/dimensionlesspolicies.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/snowcontrol.html">
-            Control laws for autonomous cars in winter conditions
-          </a>
-        </div>
-        <img src="IMG/xmax.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/gebromont.html">
-            Advanced robot controllers for intelligent manufacturing
-          </a>
-        </div>
-        <img src="IMG/fanuc.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/arjo_control.html">
-          Control laws for a motorized patient lift
-          </a>
-        </div>
-        <img src="IMG/arjo_control.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-  <!--
-    <div class="w3-container w3-padding-32" id="portfolio">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">2021</h3>
-    </div> -->
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/srl_leg.html">
-            A supernumerary Robotic Leg
-          </a>
-        </div>
-        <iframe style="width:100%" height="245" src="https://www.youtube.com/embed/b7qlB9nanGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/haptic_rendering.html">
-            Actuators for high-performance haptic rendering
-          </a>
-        </div>
-        <iframe style="width:100%" height="245" src="https://www.youtube.com/embed/vlbI-mE2Kks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/force_control.html">
-            Controllers for high-performance force control
-          </a>
-        </div>
-        <img src="IMG/force_control_ss.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/srl_arm.html">
-            Lightweight wearable robotic arms
-          </a>
-        </div>
-        <img src="IMG/srl_arm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/ankle_exo.html">
-            A multifunctional ankle exoskeleton to assist walking, jumping, and landing
-          </a>
-        </div>
-        <img src="IMG/ankle_exo.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/udesracecar.html">
-            UdeS racecar autonomous platform
-          </a>
-        </div>
-        <img src="IMG/udesracecar.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/tmotorarm.html">
-            Open-Source 2 DoF arm
-          </a>
-        </div>
-        <img src="IMG/tmotorarm1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-</div>
-
-  <!-- <div class="w3-container w3-padding-32" id="portfolio">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">2018</h3>
-  </div> -->
-
-  <div class="w3-container w3-padding-32" id="mit">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> MIT (2013-2017) </h2>
-    <p>This section is project conducted at MIT as a PhD student.</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <!-- Project Section -->
-    <!-- <div class="w3-container w3-padding-32" id="portfolio">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">2022</h3>
-    </div> -->
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/dsdm.html">
-            Custom lighweight robotic arm
-          </a>
-        </div>
-        <img src="IMG/dsdm_arm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/climbing_robot.html">
-            Manufacturing climbing robots
-          </a>
-        </div>
-        <img src="IMG/climbing1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/dsdm.html">
-            Variable transmission actuators for robotics
-          </a>
-        </div>
-        <img src="IMG/dsdm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/optimalcontrolmit.html">
-            Optimal control policies using dynamic programming
-          </a>
-        </div>
-        <img src="IMG/opti2.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/segway.html">
-            Using arms in the balancing dynamics
-          </a>
-        </div>
-        <img src="IMG/segway_concept.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/planningmit.html">
-            Motion Planning Algorithms for Robotic Arms
-          </a>
-        </div>
-        <img src="IMG/rrt.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    
-
-  </div>
-
-  <div class="w3-container w3-padding-32" id="bing">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"> UdeS (2006-2012) </h2>
-    <p>This section is project conducted at UdeS as a MScA and undergraduate student.</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <!-- Project Section -->
-    <!-- <div class="w3-container w3-padding-32" id="portfolio">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">2022</h3>
-    </div> -->
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/binary.html">
-            Control laws for binary soft robots
-          </a>
-        </div>
-        <img src="IMG/binary1.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/softsensor.html">
-            Soft polymer 2 DoF sensor
-          </a>
-        </div>
-        <img src="IMG/softsensor.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/kuka_impedance.html">
-            Impedance Controller for Cooperating Industrial Robots
-          </a>
-        </div>
-        <img src="IMG/kuka1.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/phoebus.html">
-            Two-speed robotized transmission for an electric car
-          </a>
-        </div>
-        <img src="IMG/phoebus.webp" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/fuelpowered.html">
-            Fuel-Powered Air-Muscle Actuator
-          </a>
-        </div>
-        <img src="IMG/fuel.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          <a href="projects/miscprog.html">
-            Miscellaneous Programming Projects
-          </a>
-        </div>
-        <img src="IMG/sodoku.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-  </div>
-
-
-<!-- End page content -->
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-  LinkedIn.com/in/alx87grd </a>  </p>
-</footer>
-
+  <script src="js/animations.js"></script>
 </body>
 </html>

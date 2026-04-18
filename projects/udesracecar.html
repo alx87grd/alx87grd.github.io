@@ -1,89 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> UdeS racecar </title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8">
+  <title>Educational Autonomous Racecar - Alex Robotics</title>
+  
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="/index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
-    </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="200">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-    <!--<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Research, Coding, Prototypes, Classes, Software</b></span> <span class="w3-hide-small w3-text-light-grey">UdeS</span></h1>
-    -->
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <div class="w3-container w3-padding-16" >
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-      UdeS racecar autonomous platform
-     </h1>
-     <p>
-      We have developed a flexible and open autonomous car platform for research and teaching based on a traxxas slash rc-car, the idea is derived from the MIT-racecar. The main difference is that the UdeS platform has a low-level microcontroller (arduino) for allowing to quickly prototype low-level control laws in addition to a high-level ROS-based computer for perception and motion planning algorithms.
-    </p>
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <iframe style="width:100%"  height="250" src="https://www.youtube.com/embed/SddmapmYrEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="../courses/gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="../courses/gmc714/">GMC714</a>
       </div>
     </div>
+  </nav>
+  <header class="hero hero--detail" id="home">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>Educational Autonomous Racecar</h1>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        <div class="project-main">
+          <div class="content-card">
+            <h2>Abstract</h2>
+            We have developed a flexible and open autonomous car platform for research and teaching based on a traxxas slash rc-car, the idea is derived from the MIT-racecar. The main difference is that the UdeS platform has a low-level microcontroller (arduino) for allowing to quickly prototype low-level control laws in addition to a high-level ROS-based computer for perception and motion planning algorithms
+          </div>
 
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          Prototypes
+          <div class="content-card">
+            <h3>Resources & Code</h3>
+            <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
+              <a href="https://github.com/SherbyRobotics/racecar" class="btn-action">💻 <strong>Source Code:</strong> SherbyRobotics/racecar (ROS 2)</a>
+              <a href="https://cad.onshape.com/documents/9d3f435f340b50b281de3ac4/w/60d94a6915ed0711b2290521/e/45c11c7ee9e7e6dfaec5c7e5" class="btn-action">🏗️ <strong>Hardware CAD:</strong> Onshape - UdeS Racecar</a>
+              <a href="https://www.youtube.com/embed/SddmapmYrEs" class="btn-action">🎬 <strong>Video:</strong> Prototype Demonstrations</a>
+            </div>
+          </div>
+
+          <h3 class="section-title">Project Media</h3>
+          <div class="grid">
+            <div class="card resource-card">
+              <div class="card-img-wrapper">
+                <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="100%" src="https://www.youtube.com/embed/SddmapmYrEs" style="width:100%" title="Educational Autonomous Racecar (YouTube)" width="100%"></iframe>
+              </div>
+              <div class="card-title">Prototypes</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/udesracecar.jpg" alt="UdeS Racecar" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">Hardware</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/udesracecar2.png" alt="System Architecture" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">Architecture</div>
+            </div>
+          </div>
         </div>
-        <img src="../IMG/udesracecar.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          Architecture
+        <div class="project-sidebar">
+          <h3>Project Details</h3>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Team</div>
+            <div class="project-meta-value">Dominique Baril (B.Ing.), Team SherbyRobotics, and Prof. Alexandre Girard</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Keywords</div>
+            <div class="project-meta-value">Autonomous Vehicles, ROS 2, Arduino, Gazebo, Education, Traxxas Slash.</div>
+          </div>
         </div>
-        <img src="../IMG/udesracecar2.png" alt="p1" style="width:100%; height:250px; object-fit: cover">
       </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
     </div>
-
-  </div>
-
-
-  <div class="w3-container w3-padding-16" >
-     <p>
-      <b>UdeS Team:</b> Domique Baril (B.Ing. student), ... , and Prof. Alexandre Girard
-     </p>
-
-
-
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-  LinkedIn.com/in/alx87grd </a>  </p>
-</footer>
-
+  </footer>
+  <script src="../js/animations.js"></script>
 </body>
 </html>

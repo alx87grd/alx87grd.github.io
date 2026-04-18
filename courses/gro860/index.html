@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GRO860 - Apprentissage par renforcement et commande optimale</title>
+  
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../../students.html">Students</a></li>
+        <li class="nav-item"><a href="../../index.html#about">About</a></li>
+      </ul>
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="../gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="../gmc714/">GMC714</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero hero--detail">
+    <img class="hero-img" src="../../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>GRO860</h1>
+      <p style="font-size: 1.2rem; opacity: 0.9;">Apprentissage par renforcement et commande optimale</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        
+        <!-- Main Content Column -->
+        <div class="project-main">
+          
+          <!-- Section 1: Preface -->
+          <div class="content-card">
+            <h2>Préface</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start; gap: var(--spacing-lg);">
+              <div style="flex: 1.2;">
+                <h3>Pourquoi ce cours?</h3>
+                <ul>
+                  <li>Comprendre les fondements de l'apprentissage par renforcement et la commande optimale</li>
+                  <li>Faire les liens avec la science des asservissements;</li>
+                  <li>Apprendre à utiliser des algorithmes pour synthétiser des politiques optimales</li>
+                </ul>
+                <h5 style="font-style: italic; border-left: 4px solid var(--color-primary); padding-left: var(--spacing-sm);">"Du choix des forces dans un robot jusqu'au choix de la pièce à déplacer dans un jeu d'échec."</h5>
+                <p>Cours à option à l'université de sherbrooke, typiquement offert à l'automne, sigle <a href="https://www.usherbrooke.ca/admission/fiches-cours/GRO860/apprentissage-par-renforcement-et-commande-optimale/"><b>GRO860</b></a></p>
+              </div>
+              <div style="flex: 1; display: flex; justify-content: center;">
+                <div class="card resource-card" style="width: 100%; max-width: 480px; height: fit-content; align-self: start;">
+                  <div class="card-img-wrapper card-img-wrapper--video-embed">
+                    <iframe loading="lazy" title="Vidéo de présentation du cours GRO860" width="100%" height="100%" src="https://www.youtube.com/embed/tbuEGkAQ1Lk?si=Uc6Y41mjVdl_umwZ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="card-title" style="height: auto; min-height: 50px; flex-grow: 0; padding: 1rem;">Vidéo de présentation du cours</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Media Grid -->
+          <h3 class="section-title">Aperçu visuel</h3>
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../../img/courses/gro860/cost2go_animation-2.gif" style="width:100%; height:100%; object-fit: cover" alt="Coût à venir">
+              </div>
+              <div class="card-title">Approximation du coût-à-venir</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper" style="height: 180px;">
+                <img src="../../img/courses/gro860/policy_animation-2.gif" style="width:100%; height:100%; object-fit: cover" alt="Politique">
+              </div>
+              <div class="card-title">Visualisation de politiques optimales</div>
+            </div>
+          </div>
+
+          <!-- Section 3: Introduction -->
+          <div style="margin-top: var(--spacing-lg);">
+            <h2>Introduction</h2>
+            <h3>Une approche unifiée pour la science de la prise de decision en temps réel.</h3>
+            <p>Le but du cours est de faire le lien entre le domaine des asservissements et les algorithmes de décision basé sur l'IA. Le cours présentera les outils pour vous permettre de de traduire un problème de décisions en temps réel sous la représentation mathématique adapté pour synthétiser et optimiser une politique de décision, avec des applications dans plusieurs domaines de la robotique à la finance.</p>
+            <p>Ce cours présente les approches pour prendre des décisions intelligentes sous un cadre théorique unifié basé sur le principe de la programmation dynamique. Il vise d'abord a établir les liens entre les approches issues du domaine de l'ingénierie (la science des asservissements et la commande optimale) et les approches issues des sciences informatiques (recherche opérationnelle et l'apprentissage par renforcement) qui ont en fait les même bases mathématiques.</p>
+            <p>Plusieurs problèmes en apparence très différents, sont en fait des problèmes qu'on peut analyser et résoudre avec les mêmes outils mathématiques</p>
+            <img src="../../img/dp_app.png" alt="Applications" style="width:100%; max-width:700px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+          </div>
+
+          <!-- Section 4: Cibles de formation -->
+          <div style="margin-top: var(--spacing-lg);">
+            <h3>Cibles de formation</h3>
+            <p>À la fin de ce cours, vous serez en mesure de :</p>
+            <ul>
+              <li>Formuler un problème complexe de décision séquentielle en temps réel sour la forme d'un problème de commande optimale ou d'apprentissage par renforcement.</li>
+              <li>Concevoir et optimiser une loi de commande ou une politique de décision intelligente en utilisant les algorithmes adaptés.</li>
+              <li>Évaluer la performance et la robustesse d'une politique de décision dans un environnement de simulation.</li>
+            </ul>
+          </div>
+
+          <!-- Section 5: Déroulement du cours et Évaluation -->
+          <div style="margin-top: var(--spacing-lg);">
+            <h2>Déroulement du cours et Évaluation</h2>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
+              <div>
+                <h4>Déroulement</h4>
+                <p>Le cours combine des séances de cours théorique, des démonstrations algorithmiques et des laboratoires pratiques (Python/Gymnasium) pour mettre en œuvre les concepts d'apprentissage par renforcement.</p>
+              </div>
+              <div>
+                <h4>Évaluation</h4>
+                <p>L'évaluation repose sur des devoirs analytiques et de programmation (Python), un examen théorique mi-session et un projet final de session au choix de l'étudiant.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 6: Weekly Guide -->
+          <div style="margin-top: var(--spacing-lg);">
+            <h2 id="guide">Guide du cours</h2>
+            <p class="text-muted">Cette section présente les liens vers le matériel et les livrables semaines par semaines:</p>
+            <table class="syllabus-table" style="margin-top: var(--spacing-sm);">
+              <thead>
+                <tr>
+                  <th>Semaine</th>
+                  <th>Matériel</th>
+                  <th>Exercices</th>
+                  <th>Livrables</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="syllabus-week"><h4>1</h4> 25 Août</td>
+                  <td>
+                    <h4>Introduction</h4>
+                    <p>Formulation du problème: fonction de coût, contraintes, politique, etc.</p>
+                    <ul><li>Lectures = Notes chapitre 1</li></ul>
+                  </td>
+                  <td><ol><li>C.1.1</li><li>C.1.2</li><li>C.1.3</li><li>C.1.4 : Learn to fly with PPO</li></ol></td>
+                  <td>C.1.5 : Fonction de coût pour un pendule</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>2</h4> 8 Sept</td>
+                  <td>
+                    <h4>Programmation dynamique</h4>
+                    <ul><li>Lectures : Notes chapitre 2</li></ul>
+                  </td>
+                  <td><ol><li>C.2.3 : Thermostat optimal</li><li>C.2.4 : Chemin le plus court dans un graphe</li></ol></td>
+                  <td>C.2.1 : Navigation optimale dans un graphe</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>3</h4> 15 Sept</td>
+                  <td>
+                    <h4>Commande stochastique</h4>
+                    <ul><li>Lectures = Notes chapitre 3 et 4</li></ul>
+                  </td>
+                  <td><ol><li>C.3.2 Gestion d'une diva à l'opéra</li><li>C.4.1 Commande minimax pour tic-tac-toe</li><li>C.3.3 Stratégie optimale aux échecs</li></ol></td>
+                  <td>C.3.1 Loi de commande pour une suspension active</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>4</h4> 22 Sept</td>
+                  <td>
+                    <h4>Équation de Bellman et algorithmes</h4>
+                    <ul><li>Lectures = Notes chapitres 5 et 7</li></ul>
+                  </td>
+                  <td><ol><li>C.6.2 : Algorithme d'itération de valeur</li><li>C.6.3 : Évaluation d'une politique</li></ol></td>
+                  <td>C.6.1 Gestion optimale d'un barrage</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>5</h4> 29 Sept</td>
+                  <td>
+                    <h4>Laboratoire Pratique</h4>
+                    <ul>
+                      <li><a href="https://gymnasium.farama.org">Gymnasium</a> et <a href="https://stable-baselines3.readthedocs.io/en/master/">Stable-baseline3</a></li>
+                    </ul>
+                  </td>
+                  <td><ol><li>C.8.1</li><li>C.8.2</li></ol></td>
+                  <td>C.8.3</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>6</h4> 6 Oct</td>
+                  <td>
+                    <h4>Apprentissage par renforcement (Q-learning)</h4>
+                    <ul><li>Lecture = Notes chapitre 8</li></ul>
+                  </td>
+                  <td><ol><li>C.7.3 From DP to Q-learning</li><li>C.7.4 Q-learning avec des échantillons</li></ol></td>
+                  <td>C.7.1 Q-learning pour une navigation optimale</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>7</h4> 27 Oct</td>
+                  <td>
+                    <h4>Solution LQR</h4>
+                    <ul><li>Lectures = Notes chapitre 6</li></ul>
+                  </td>
+                  <td><ol><li>C.5.2 Équation HJB et solution LQR</li></ol></td>
+                  <td>C.5.1 Solution LQR par dynamique</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>8</h4> 3 Nov</td>
+                  <td>
+                    <h4>Approximation de fonctions</h4>
+                    <ul><li>Lecture = Notes chapitre 9</li></ul>
+                  </td>
+                  <td><ol><li>C.7.5</li><li>C.7.6</li></ol></td>
+                  <td>C.7.2 Q-learning approx.</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>9</h4> 10 Nov</td>
+                  <td><h4>Familles d'algorithmes</h4></td>
+                  <td>-</td>
+                  <td>Définition de projet</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>10</h4> 17 Nov</td>
+                  <td><h4>Examen Théorique</h4></td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>11-12</h4></td>
+                  <td><h4>Support projet</h4></td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="syllabus-week"><h4>13</h4> 8 Déc</td>
+                  <td><h4>Présentations finales</h4></td>
+                  <td>-</td>
+                  <td>Projet de session</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- Sidebar Column -->
+        <div class="project-sidebar">
+          <h3>Ressources</h3>
+          <div class="action-links-row" style="flex-direction: column; align-items: stretch;">
+            <a href="../../pdf/Notes_OptiRL.pdf" class="btn-action">📄 <strong>Notes:</strong> Notes de cours (Alex)</a>
+            <a href="#guide" class="btn-action">📅 <strong>Guide:</strong> Sauter vers l'horaire</a>
+            <a href="https://youtube.com/playlist?list=PL6adNeJ0A8UtNslNQfAHAzcjHcQixBSnu&si=oGP7Ri38O4wpnoiL" class="btn-action">▶️ <strong>Vidéos:</strong> Playlist (Alex)</a>
+            <a href="https://www.usherbrooke.ca/admission/fiches-cours/GRO860/apprentissage-par-renforcement-et-commande-optimale/" class="btn-action">🎓 <strong>UdeS:</strong> Fiche officielle du cours</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
+  </footer>
+  <script src="../../js/animations.js"></script>
+</body>
+</html>

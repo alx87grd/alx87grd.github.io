@@ -1,2 +1,14 @@
 # OS Files #
 .DS_Store
+Thumbs.db
+
+# Editor / local #
+.vscode/
+.claude/
+*.swp
+*.swo
+*~
+
+# Python #
+__pycache__/
+*.pyc

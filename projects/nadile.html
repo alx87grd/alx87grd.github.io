@@ -1,81 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> Nadile </title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8">
+  <title>Automatic landing controllers for inspection drones - Alex Robotics</title>
+  
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="/index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="../courses/gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="../courses/gmc714/">GMC714</a>
+      </div>
     </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="200">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-    <!--<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Research, Coding, Prototypes, Classes, Software</b></span> <span class="w3-hide-small w3-text-light-grey">UdeS</span></h1>
-    -->
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <div class="w3-container w3-padding-16" id="title">
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-      Nadile: Advanced drone controllers for autonomous electric line inspection
-     </h1>
-     <p>
-      <b>Client/Partner:</b> Hydro-Quebec (IREQ) and Dronevolt
-     </p>
-     <p>
-      <b>Technical challenges:</b> Controls, sensing, estimation, drone dynamics.
-     </p>
-     <p>
-      <b>UdeS Team:</b> Étienne Gendron (MS), Bastien Périard(MS), ..., Prof. Alexandre Girard, Prof. François Ferland, Prof. David Rancourt and Prof Alexis Lussier-Desbiens
-     </p>
-
-     <p>
+  </nav>
+  <header class="hero hero--detail" id="home">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>Automatic landing controllers for inspection drones</h1>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        <div class="project-main">
+          <div class="content-card">
+            <h2>Abstract</h2>
+<p>
       The goal of this project is to make autonomous the LineDrone developed by Hydro-Quebec. Control challenges to address include high-bandwidth localisation of the drone with respect to the cable, robust motion controller that can resist wind gusts, planing trajectories in uncertain environments.
     </p>
-    <img src="../IMG/nadile.jpg" alt="p4" style="width:100%">
+          </div>
 
-    <h4 class="w3-border-bottom w3-border-light-grey">
-      Publications
-    </h4>
- 
-    <ul >
-      <li> <a href="https://cdnsciencepub.com/doi/full/10.1139/dsa-2023-0036"> Assessing Wind Impact on Semi-Autonomous Drone Landings for In-Contact Power Line Inspection</a></li>
-    </ul>
-    <!-- <ul class="w3-ul">
-      <li>Video:<a href="https://www.youtube.com/c/AlexandreGirard87"> Video</a> </li>
-      <li>Article: <a href="https://arxiv.org/abs/2205.15201"> Article </a></li>
-      <li>Code: <a href="https://arxiv.org/abs/2205.15201"> Code </a></li>
-    </ul> -->
-
-  </div>
-
-
-
-
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-  LinkedIn.com/in/alx87grd </a>  </p>
-</footer>
-
+          <div class="content-card">
+            <h3>Publications &amp; Resources</h3>
+            <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
+              <a href="https://cdnsciencepub.com/doi/full/10.1139/dsa-2023-0036" class="btn-action">📄 <strong>Journal (Drone Systems and Applications):</strong> É. Gendron, P. Nadile, P. Hamelin, and A. Girard, &quot;Assessing Wind Impact on Semi-Autonomous Drone Landings for In-Contact Power Line Inspection,&quot; vol. 12, 2024.</a>
+              <a href="https://arxiv.org/abs/2309.05467" class="btn-action">📄 <strong>arXiv preprint:</strong> É. Gendron, M.-A. Leclerc, S. Hovington, É. Perron, D. Rancourt, A. Lussier-Desbiens, P. Hamelin and A. Girard, &quot;Assessing Wind Impact on Semi-Autonomous Drone Landings for In-Contact Power Line Inspection,&quot; 2024.</a>
+            </div>
+          </div>
+          <h3 class="section-title">Project Media</h3>
+          <div class="grid">
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/nadile.jpg" alt="Automatic landing controllers for inspection drones — illustration" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">Drone inspection</div>
+            </div>
+          </div>
+        </div>
+<div class="project-sidebar"><h3>Project Details</h3><div class="project-meta-item"><div class="project-meta-label">Partner</div><div class="project-meta-value project-meta-partner"><div class="project-partner-logos"><img class="project-partner-logo" src="../logo/hydro.png" width="120" height="36" alt="Hydro-Québec"></div><span class="project-partner-names">Hydro-Québec (IREQ) and Dronevolt</span></div></div><div class="project-meta-item"><div class="project-meta-label">Team</div><div class="project-meta-value">Étienne Gendron (MS), Bastien Périard(MS), ..., Prof. Alexandre Girard, Prof. François Ferland, Prof. David Rancourt and Prof Alexis Lussier-Desbiens</div></div><div class="project-meta-item"><div class="project-meta-label">Date</div><div class="project-meta-value">2024</div></div><div class="project-meta-item"><div class="project-meta-label">Keywords</div><div class="project-meta-value">Controls, sensing, estimation, drone dynamics.</div></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
+    </div>
+  </footer>
+  <script src="../js/animations.js"></script>
 </body>
 </html>

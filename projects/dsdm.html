@@ -1,131 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> Variable transmission actuators for robotics </title>
-<meta charset="UTF-8">
-<meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8">
+  <title>Variable Transmission Actuators for Robots - Alex Robotics</title>
+  
+  <meta name="author" content="Alexandre Girard, Sherbrooke, Québec, Canada" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="/index.html" class="w3-bar-item w3-button"><b>Alex</b> Robotics</a>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand"><b>Alex</b><span>Robotics</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../projects.html">Research</a></li>
+        <li class="nav-item"><a href="../material.html">Resources</a></li>
+        <li class="nav-item"><a href="../students.html">Students</a></li>
+        <li class="nav-item"><a href="../index.html#about">About</a></li>
+      </ul>
+      <div class="nav-utilities" aria-label="Current students links">
+        <a href="../courses/gro860/">GRO860</a>
+        <span aria-hidden="true">|</span>
+        <a href="../courses/gmc714/">GMC714</a>
+      </div>
     </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="../IMG/bg3.jpg" alt="sky" width="1500" height="200">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Alex</b></span> <span class="w3-hide-small w3-text-light-grey">Robotics</span></h1>
-    <!--<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Research, Coding, Prototypes, Classes, Software</b></span> <span class="w3-hide-small w3-text-light-grey">UdeS</span></h1>
-    -->
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <div class="w3-container w3-padding-16" >
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-      Variable transmission actuators for robotics
-     </h1>
-     <p>
-      Part of my work at MIT in d’Arbeloff Laboratory, I developed a 3-DoF robotic arm using custom actuators with variable gear-ratios. The aim is to develop a lightweight & high-payload architecture for mobile and portable robots.
+  </nav>
+  <header class="hero hero--detail" id="home">
+    <img class="hero-img" src="../img/bg3.jpg" alt="sky">
+    <div class="hero-content">
+      <h1>Variable Transmission Actuators for Robots</h1>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container project-container">
+        <div class="project-main">
+          <div class="content-card">
+            <h2>Abstract</h2>
+<p>
+      Part of my work at MIT in d’Arbeloff Laboratory, I developed a 3-DoF robotic arm using custom actuators with variable gear-ratios. The aim is to develop a lightweight &amp; high-payload architecture for mobile and portable robots.
     </p>
-  </div>
-
-  <div class="w3-row-padding">
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <iframe style="width:100%"  height="245" src="https://www.youtube.com/embed/mUVrkDZr0kU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          Prototype actuator
+          </div>
+          <div class="content-card">
+            <h3>Publications &amp; Resources</h3>
+            <div class="action-links-row" style="flex-direction: column; align-items: flex-start;">
+              <a href="https://dspace.mit.edu/handle/1721.1/111689" class="btn-action">📚 <strong>PhD thesis (MIT DSpace):</strong> A. Girard, &quot;Fast and strong lightweight robots based on variable gear ratio actuators and control algorithms leveraging the natural dynamics,&quot; 2017.</a>
+              <a href="https://ieeexplore.ieee.org/abstract/document/7814203" class="btn-action">📄 <strong>Journal (IEEE T-RO):</strong> A. Girard and H. H. Asada, &quot;Leveraging natural load dynamics with variable gear-ratio actuators,&quot; IEEE Transactions on Robotics, vol. 33, no. 2, pp. 285&ndash;298, 2017.</a>
+              <a href="https://arxiv.org/abs/2405.14441" class="btn-action">📄 <strong>arXiv preprint:</strong> A. Girard and H. H. Asada, &quot;Leveraging Natural Load Dynamics with Variable Gear-ratio Actuators,&quot; 2024.</a>
+              <a href="https://arxiv.org/abs/2205.15137" class="btn-action">📄 <strong>arXiv preprint:</strong> A. Girard and H. H. Asada, &quot;A Fast Gear-Shifting Actuator for Robotic Tasks with Contacts,&quot; 2022.</a>
+              <a href="https://arxiv.org/abs/2405.16652" class="btn-action">📄 <strong>arXiv preprint:</strong> A. Girard and H. H. Asada, &quot;A two-speed actuator for robotics with fast seamless gear shifting,&quot; 2024.</a>
+              <a href="https://ieeexplore.ieee.org/document/7354047" class="btn-action">📄 <strong>Conference (IEEE IROS):</strong> A. Girard and H. H. Asada, &quot;A two-speed actuator for robotics with fast seamless gear shifting,&quot; 2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 410&ndash;417, 2015.</a>
+              <a href="https://github.com/alx87grd/DSDM_Robotics_ROS" class="btn-action">💻 <strong>Code (GitHub):</strong> DSDM_Robotics_ROS</a>
+            </div>
+          </div>
+          <h3 class="section-title">Project Media</h3>
+          <div class="grid">
+            <div class="card resource-card">
+              <div class="card-img-wrapper">
+                <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="100%" src="https://www.youtube.com/embed/mUVrkDZr0kU" style="width:100%" title="Variable Transmission Actuators — clip 1 (YouTube)" width="100%"></iframe>
+              </div>
+              <div class="card-title">Prototype actuator</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/dsdm.jpg" alt="Variable Transmission Actuators — figure 1" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">Prototype actuator</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/dsdm_arm.jpg" alt="Variable Transmission Actuators — figure 2" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">3 DoF arm</div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img src="../img/dsdm_parts.jpg" alt="Variable Transmission Actuators — figure 3" style="width:100%; height:250px; object-fit: cover">
+              </div>
+              <div class="card-title">Actuator custom parts</div>
+            </div>
+            <div class="card resource-card">
+              <div class="card-img-wrapper">
+                <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="100%" src="https://www.youtube.com/embed/sUQzNf7PA1o" style="width:100%" title="Variable Transmission Actuators — clip 2 (YouTube)" width="100%"></iframe>
+              </div>
+              <div class="card-title">Prototype actuator</div>
+            </div>
+            <div class="card resource-card">
+              <div class="card-img-wrapper">
+                <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="100%" src="https://www.youtube.com/embed/jCVQUA-ui88" style="width:100%" title="Variable Transmission Actuators — clip 3 (YouTube)" width="100%"></iframe>
+              </div>
+              <div class="card-title">Prototype actuator</div>
+            </div>
+            <div class="card resource-card">
+              <div class="card-img-wrapper">
+                <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="100%" src="https://www.youtube.com/embed/-JjZsVoRaN8" style="width:100%" title="Variable Transmission Actuators — clip 4 (YouTube)" width="100%"></iframe>
+              </div>
+              <div class="card-title">Prototype actuator</div>
+            </div>
+          </div>
         </div>
-        <img src="../IMG/dsdm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
+<div class="project-sidebar"><h3>Project Details</h3><div class="project-meta-item"><div class="project-meta-label">Team</div><div class="project-meta-value">Alexandre Girard (PhD student) and Prof. H. Harry Asada</div></div><div class="project-meta-item"><div class="project-meta-label">Date</div><div class="project-meta-value">2017</div></div><div class="project-meta-item"><div class="project-meta-label">Keywords</div><div class="project-meta-value">Mechanical design, robotics, controls, software, motion planning.</div></div></div>
       </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">UdeS</a></p>
     </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          3 DoF arm
-        </div>
-        <img src="../IMG/dsdm_arm.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">
-          Actuator custom parts
-        </div>
-        <img src="../IMG/dsdm_parts.jpg" alt="p1" style="width:100%; height:250px; object-fit: cover">
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <iframe style="width:100%"  height="245" src="https://www.youtube.com/embed/sUQzNf7PA1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <iframe style="width:100%"  height="245" src="https://www.youtube.com/embed/jCVQUA-ui88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <iframe style="width:100%"  height="245" src="https://www.youtube.com/embed/-JjZsVoRaN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class="w3-container w3-padding-16" >
-    <p>
-     <b>Technical challenges:</b> Mechanical design, robotics, controls, software, motion planning.
-    </p>
-    <p>
-     <b>MIT Team:</b> Alexandre Girard (PhD student) and Prof. H. Harry Asada
-    </p>
-
-   <h4 class="w3-border-bottom w3-border-light-grey">
-     Links:
-   </h4>
-
-   <ul class="w3-ul">
-     <li>Thesis: <a href="https://dspace.mit.edu/handle/1721.1/111689"> Fast and strong lightweight robots based on variable gear ratio actuators and control algorithms leveraging the natural dynamics </a></li>
-     <li>Article: <a href="https://ieeexplore.ieee.org/abstract/document/7814203"> Leveraging Natural Load Dynamics with Variable Gear-ratio Actuators </a></li>
-     <li>Article: <a href="https://arxiv.org/abs/2205.15137"> A Fast Gear-Shifting Actuator for Robotic Tasks with Contacts </a></li>
-     <li>Article: <a href="https://ieeexplore.ieee.org/document/7354047"> A two-speed actuator for robotics with fast seamless gear shifting </a></li>
-     <li>Code: <a href="github.com/alx87grd/DSDM_Robotics_ROS"> github link </a></li>
-   </ul>
-
-
-
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Alexandre Girard | alex.girard@usherbrooke.ca | <a href="https://www.usherbrooke.ca">
-  UdeS </a> | <a href="https://www.linkedin.com/in/alx87grd">
-  LinkedIn.com/in/alx87grd </a>  </p>
-</footer>
-
+  </footer>
+  <script src="../js/animations.js"></script>
 </body>
 </html>
